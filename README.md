@@ -1,12 +1,11 @@
 # Worksense
----
 
 ### Table of contents
-* [Developers] (#devs)
-* [How to clone this project] (#clone)
-* [How to deploy this project] (#deploy)
-* [Third parties] (#third)
-* [Config files] (#config)
+* [Developers](#devs)
+* [How to clone this project](#clone)
+* [How to deploy this project](#deploy)
+* [Third parties](#third)
+* [Config files](#config)
 
 ## <a name="devs"></a> Developers
 * Megan Lau - Project Lead - <lau.me@northeastern.edu>
