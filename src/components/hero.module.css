@@ -7,41 +7,33 @@
 
 .heroImage {
   /*
-    Ensure golden ratio for the hero size while limiting it to some extend to
+    Ensure golden ratio for the hero size while limiting it to some extent to
     the viewport width
   */
-  height: 61.8vh;
-  max-height: 400px;
+  height: 90vh;
+  max-height: 1080px;
 }
 
-.heroDetails {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
-  font-size: 14px;
-  padding: 0 0.5em;
-}
-
-@media(min-width: 600px) {
-  .heroDetails {
-    font-size: 16px;
+@media only screen and (min-width: 1440px) {
+  .heroImage {
+    max-height: 800px;
   }
 }
 
-@media(min-width: 1000px) {
-  .heroDetails {
-    font-size: 20px;
+@media only screen and (min-width: 1024px) {
+  .heroImage {
+    max-height: 768px;
   }
 }
 
-.heroHeadline {
-  margin: 0;
+@media only screen and (min-width: 768px) {
+  .heroImage {
+    max-height: 1024px;
+  }
 }
 
-.heroTitle {
-  margin: 0;
-  font-size: 1.125em;
-  font-weight: bold;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .heroImage {
+    max-height: 896px;
+  }
 }
