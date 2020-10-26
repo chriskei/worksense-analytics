@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 
-export const BLOG_PAGE_QUERY= graphql`
-  query BlogIndexQuery {
+export const BLOG_PAGE_QUERY = graphql`
+{
     site {
       siteMetadata {
         title

@@ -3,17 +3,24 @@ import Img from 'gatsby-image'
 
 import styles from './hero.module.css'
 
-export default ({ data }) => (
+const HeroImage = ({ data }) => {
+  const sources = [data.mobile.fluid,
+    { ...data.desktop.fluid,
+      media: `(min-width: 768px)`,
+    },
+    { ...data.tablet.fluid,
+      media: `(min-width: 414px)`,
+    }
+  ]
+  return (
   <div className={styles.hero}>
     <Img
       className={styles.heroImage}
-      alt={data.name}
-      fluid={data.heroImage.fluid}
+      alt={data.title}
+      fluid={sources}
     />
-    <div className={styles.heroDetails}>
-      <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p className={styles.heroTitle}>{data.title}</p>
-      <p>{data.shortBio.shortBio}</p>
-    </div>
   </div>
-)
+  );
+};
+
+export default HeroImage;
