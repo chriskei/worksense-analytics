@@ -1,7 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
-
-import styles from './hero.module.css'
+import HeroImg from './styled.js'
 
 const HeroImage = ({ data }) => {
   const sources = [data.mobile.fluid,
@@ -13,13 +11,10 @@ const HeroImage = ({ data }) => {
     }
   ]
   return (
-  <div className={styles.hero}>
-    <Img
-      className={styles.heroImage}
-      alt={data.title}
-      fluid={sources}
-    />
-  </div>
+    <HeroImg alt={data.title}
+    fluid={sources}>
+    </HeroImg>
+    
   );
 };
 
