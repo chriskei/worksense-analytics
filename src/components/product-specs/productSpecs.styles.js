@@ -10,7 +10,7 @@ const FeatureContainer = styled.div`
 
 const FeatureHeader = styled.h1`
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 `
 
 export { FeatureContainer, FeatureHeader }

@@ -9,11 +9,10 @@ class OurTeam extends React.Component {
 
     return (
         <Layout location={this.props.location}>
+            <h1>Our Team Page Placeholder</h1>
         </Layout>
     )
     }
 }
 
 export default OurTeam;
-
-//export const pageQuery = graphql``
