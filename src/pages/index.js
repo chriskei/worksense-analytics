@@ -10,7 +10,7 @@ import { MissionStatement } from '../components/mission-statement/mission-statem
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import ProductSpecs from '../components/product-specs/productSpecs.js'
 import Testimonials from '../components/testimonials/testimonials.js'
-import base from '../components/base.css'
+
 
 class RootIndex extends React.Component {
   render() {
@@ -19,7 +19,6 @@ class RootIndex extends React.Component {
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
     const productFeature = get(this, 'props.data.contentfulProductSpecs');
-    const Text = get(this, 'props.data.allContentfulText.nodes');
 
     return (
       <Layout location={this.props.location}>
@@ -35,16 +34,16 @@ class RootIndex extends React.Component {
             header={textNodes[5].text.text}
             body={textNodes[6].text.text}
           />
+          <ProductSpecs 
+            productHeader = {textNodes[0].text.text}
+            productImg={productFeature.productPreviewImage.fluid}
+            productDescription={productFeature.specDescription.specDescription}
+          />
+          <Testimonials 
+            testHeader = {textNodes[1].text.text}
+            testBody = {textNodes[2].text.text}
+          />
         </div>
-        <ProductSpecs 
-        productHeader = {Text[2].text.text}
-        productImg={productFeature.productPreviewImage.fluid}
-        productDescription={productFeature.specDescription.specDescription}
-        />
-        <Testimonials 
-        testHeader = {Text[1].text.text}
-        testBody = {Text[0].text.text}
-        />
       </Layout>
     )
   }
@@ -107,7 +106,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulProductSpecs(contentful_id: {eq: "31xhfbVRrqekDhzY4hx6fd"}) {
+    contentfulProductSpecs(contentful_id: {eq: "7HwVJlMb3EG03qCpa0HZN3"}) {
       productPreviewImage {
         fluid(maxHeight: 500, maxWidth: 500) {
           sizes
