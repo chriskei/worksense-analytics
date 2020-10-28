@@ -12,9 +12,8 @@ const HeroImage = ({ data }) => {
   ]
   return (
     <HeroImg alt={data.title}
-    fluid={sources}>
+      fluid={sources}>
     </HeroImg>
-    
   );
 };
 
