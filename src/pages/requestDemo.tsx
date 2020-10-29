@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout.js'
 
 export interface RequestDemoProps {
   location: any

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import { Layout } from '../components/layout'
+import { Layout } from '../components/layout.js'
 import { HeroImage } from '../components/HeroImage/heroImage.js'
 import ArticlePreview from '../components/article-preview'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
@@ -62,7 +62,6 @@ export const pageQuery = graphql`
             src
           }
         }
-      }
     }
     contentfulAsset(contentful_id: { eq: "3tfuyKj6fbYPO0dFuphBAO" }) {
       fluid {
