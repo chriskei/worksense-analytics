@@ -2,10 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout.js'
+import { HeroImage } from '../components/HeroImage/heroImage.js'
 import ArticlePreview from '../components/article-preview'
-import HeroImage from '../components/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 
@@ -40,29 +39,29 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    site {
-      siteMetadata {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      contentfulHeroImage(contentful_id: {eq: "16nJKq9QmPQ1Mgn7jnaAmg"}) {
+        id
         title
-      }
-    }
-    contentfulHeroImage(contentful_id: { eq: "16nJKq9QmPQ1Mgn7jnaAmg" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
+        desktop {
+          fluid {
+            src
+          }
         }
-      }
-      tablet {
-        fluid {
-          src
+        tablet {
+          fluid {
+            src
+          }
         }
-      }
-      mobile {
-        fluid {
-          src
+        mobile {
+          fluid {
+            src
+          }
         }
-      }
     }
     contentfulAsset(contentful_id: { eq: "3tfuyKj6fbYPO0dFuphBAO" }) {
       fluid {
