@@ -39,27 +39,28 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    site {
-      siteMetadata {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      contentfulHeroImage(contentful_id: {eq: "16nJKq9QmPQ1Mgn7jnaAmg"}) {
+        id
         title
-      }
-    }
-    contentfulHeroImage(contentful_id: { eq: "16nJKq9QmPQ1Mgn7jnaAmg" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
+        desktop {
+          fluid {
+            src
+          }
         }
-      }
-      tablet {
-        fluid {
-          src
+        tablet {
+          fluid {
+            src
+          }
         }
-      }
-      mobile {
-        fluid {
-          src
+        mobile {
+          fluid {
+            src
+          }
         }
       }
     }
