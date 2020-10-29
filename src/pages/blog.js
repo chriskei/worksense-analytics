@@ -15,4 +15,4 @@ class BlogIndex extends React.Component {
   }
 }
 
-export { BlogIndex }
+export default BlogIndex
