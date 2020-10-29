@@ -18,4 +18,4 @@ const ProductSpecs = (props) => {
     );
 };
 
-export default ProductSpecs;
+export { ProductSpecs }

@@ -3,10 +3,12 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 
-export default function ourTeamPage() {
+const ourTeamPage = (props) => {
     return (
         <Layout>
             <h1>Our Team Page Placeholder</h1>
         </Layout>
     )
 }
+
+export { ourTeamPage }
