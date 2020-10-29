@@ -82,6 +82,7 @@ export const pageQuery = graphql`
           ]
         }
       }
+<<<<<<< HEAD
     ) {
       nodes {
         text {
@@ -89,5 +90,7 @@ export const pageQuery = graphql`
         }
       }
     }
+=======
+>>>>>>> Fixed queries for products page and for navigation bar
   }
 `
