@@ -39,8 +39,8 @@ class RootIndex extends React.Component {
             productDescription={productFeature.specDescription.specDescription}
           />
           <Testimonials 
-            testHeader = {textNodes[1].text.text}
-            testBody = {textNodes[2].text.text}
+            testHeader = {textNodes[2].text.text}
+            testBody = {textNodes[1].text.text}
           />
         </div>
       </Layout>
