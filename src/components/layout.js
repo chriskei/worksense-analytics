@@ -16,7 +16,7 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <NavBar data = {navImage}/>
+        <NavBar />
         {children}
       </Container>
     )

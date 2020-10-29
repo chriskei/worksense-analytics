@@ -6,45 +6,39 @@ import Layout from '../components/layout'
 import HeroImage from '../components/HeroImage/heroImage.js'
 
 
-const OurProducts = () => {
-    const productHero = get(this, 'data.contentfulHeroImage')
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+const OurProducts = ( props ) => {
+    const productHero = get(props, 'data.contentfulHeroImage')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={location}>
         <HeroImage data = {productHero} />
         <h1>Our Products Page Placeholder</h1>
       </Layout>
     );
   };
   
-  export default OurProducts;
+export default OurProducts;
 
-  export const pageQuery = graphql`
-    query ProductsQuery {
-      site {
-        siteMetadata {
-          title
+export const pageQuery = graphql`
+  query ProductsQuery {
+    contentfulHeroImage(contentful_id: {eq: "1JzD8Q61WL1G42UuF4lrGb"}) {
+      id
+      title
+      desktop {
+        fluid {
+          src
         }
       }
-      contentfulHeroImage(contentful_id: {eq: "16nJKq9QmPQ1Mgn7jnaAmg"}) {
-        id
-        title
-        desktop {
-          fluid {
-            src
-          }
+      tablet {
+        fluid {
+          src
         }
-        tablet {
-          fluid {
-            src
-          }
-        }
-        mobile {
-          fluid {
-            src
-          }
+      }
+      mobile {
+        fluid {
+          src
         }
       }
     }
+  }
 `

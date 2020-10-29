@@ -9,10 +9,9 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const heroImage = get(this, 'props.data.contentfulHeroImage');
-    const navImage = get(this, 'props.data.contentfulLogo');
     
     return (
-      <Layout location={this.props.location} navImage = {navImage}>
+      <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <HeroImage data= {heroImage} />
@@ -50,17 +49,5 @@ export const pageQuery = graphql`
           }
         }
       }
-      contentfulLogo(contentful_id: {eq: "3hnpJSkwyNGp6Vz23qHuIn"}) {
-        id
-        title
-        logoImage {
-          fixed(width: 100, height: 100) {
-            src
-            aspectRatio
-            width
-            height
-          }
-        }
-    }
   }
 `
