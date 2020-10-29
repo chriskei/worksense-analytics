@@ -14,4 +14,4 @@ const { testHeader, testBody } = props
 }
 
 
-export default Testimonials;
+export { Testimonials }

@@ -23,4 +23,4 @@ class Layout extends React.Component {
   }
 }
 
-export { Layout }
+export {Layout}

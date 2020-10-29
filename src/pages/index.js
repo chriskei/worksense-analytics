@@ -7,8 +7,8 @@ import { HeroImage } from '../components/HeroImage/heroImage.js'
 import ArticlePreview from '../components/article-preview'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
-import ProductSpecs from '../components/product-specs/productSpecs.js'
-import Testimonials from '../components/testimonials/testimonials.js'
+import { ProductSpecs } from '../components/product-specs/productSpecs.js'
+import { Testimonials } from '../components/testimonials/testimonials.js'
 
 
 class RootIndex extends React.Component {
