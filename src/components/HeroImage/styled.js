@@ -6,4 +6,4 @@ const HeroImg = styled(Img)`
     max-height: 1080px;
 `;
 
-export default { HeroImg };
+export { HeroImg }

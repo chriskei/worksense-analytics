@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
-import HeroImage from '../components/HeroImage/heroImage.js'
+import { Layout } from '../components/layout'
+import { HeroImage } from '../components/HeroImage/heroImage.js'
 
 
-const OurProducts = ( props ) => {
+const OurProductsPage = ( props ) => {
     const productHero = get(props, 'data.contentfulHeroImage')
 
     return (
@@ -17,7 +17,7 @@ const OurProducts = ( props ) => {
     );
   };
   
-export default OurProducts;
+export default OurProductsPage;
 
 export const pageQuery = graphql`
   query ProductsQuery {

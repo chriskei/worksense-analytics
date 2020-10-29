@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import base from './base.css'
 import Container from './container'
-import Navigation from './navigation'
+import { NavBar } from './NavBar/navigation.js'
 
-class Template extends React.Component {
+class Layout extends React.Component {
+
   render() {
     const { location, children } = this.props
     let header
@@ -23,4 +24,8 @@ class Template extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 export default Template
+=======
+export { Layout }
+>>>>>>> Changed to non-default exports for templates, components, and styled components
