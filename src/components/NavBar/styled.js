@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const Navigation = styled.div`
+const Navigation = styled.div`
     display: flex;
     justify-content: center;
     list-style: none;
@@ -12,9 +12,11 @@ export const Navigation = styled.div`
     font-size: 1.25em;
 `;
 
-export const NavLink = styled(Link)`
+const NavLink = styled(Link)`
     display: inline-flex;
     align-items: center;
     margin: 0 1em;
     color: currentColor;
 `;
+
+export { Navigation, NavLink }

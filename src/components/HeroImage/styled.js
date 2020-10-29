@@ -18,4 +18,4 @@ const HeroImg = styled(Img)`
     }
 `;
 
-export default HeroImg;
+export { HeroImg }

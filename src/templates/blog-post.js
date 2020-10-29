@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout.js'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export { BlogPostTemplate }
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

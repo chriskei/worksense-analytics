@@ -1,9 +1,9 @@
 import React from 'react'
 import base from './base.css'
 import Container from './container'
-import NavBar from './NavBar/navigation.js'
+import { NavBar } from './NavBar/navigation.js'
 
-class Template extends React.Component {
+class Layout extends React.Component {
 
   render() {
     const { location, children, navImage } = this.props
@@ -23,4 +23,4 @@ class Template extends React.Component {
   }
 }
 
-export default Template;
+export { Layout }

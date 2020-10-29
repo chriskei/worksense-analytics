@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
-import HeroImage from '../components/HeroImage/heroImage.js'
+import { Layout } from '../components/layout'
+import { HeroImage } from '../components/HeroImage/heroImage.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -21,7 +21,7 @@ class RootIndex extends React.Component {
   }
 }
 
-export default RootIndex;
+export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {

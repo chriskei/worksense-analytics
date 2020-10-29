@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroImg from './styled.js'
+import { HeroImg } from './styled.js'
 
 const HeroImage = ({ data }) => {
   const sources = [data.mobile.fluid,
@@ -14,7 +14,7 @@ const HeroImage = ({ data }) => {
     <HeroImg alt={data.title}
       fluid={sources}>
     </HeroImg>
-  );
-};
+  )
+}
 
-export default HeroImage;
+export { HeroImage }

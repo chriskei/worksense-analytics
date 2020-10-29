@@ -30,11 +30,11 @@ const NavBar = () => {
         </NavLink>
         <NavLink to="/ourProducts/">Our Products</NavLink>
         <NavLink to="/ourTeam/">Our Team</NavLink>
-        <NavLink to="/requestDemo">Request Demo</NavLink>
+        <NavLink to="/requestDemo/">Request Demo</NavLink>
       </Navigation>
     </nav>
   )} />
   );
 };
 
-export default NavBar;
+export { NavBar }
