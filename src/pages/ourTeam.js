@@ -11,4 +11,4 @@ const ourTeamPage = (props) => {
     )
 }
 
-export { ourTeamPage }
+export default ourTeamPage

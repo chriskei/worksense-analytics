@@ -6,7 +6,7 @@ import styles from './blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import { Button } from '../components/button';
-import { BLOG_PAGE_QUERY } from '../queries/blog.js';
+import { BLOG_PAGE_QUERY } from '../queries/blog.js';
 
 class BlogIndex extends React.Component {
   render() {
