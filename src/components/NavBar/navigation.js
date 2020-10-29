@@ -20,7 +20,8 @@ const NavBar = () => {
           }
         }
       }
-  `}
+    `
+  }
   render={data => (
     <nav role="navigation">
       <Navigation>
