@@ -1,9 +1,10 @@
 import React from 'react'
-import { FeatureContainer, FeatureHeader } from './productSpecs.styles'
+import { FeatureContainer, FeatureHeader, ProductImage } from './productSpecs.styles'
 import Img from 'gatsby-image'
 
 const ProductSpecs = (props) => {
     const { productHeader, productImg, productDescription } = props
+    console.log("in component: product img is ", productImg)
     return (
         <div>
             <FeatureHeader>
@@ -11,7 +12,7 @@ const ProductSpecs = (props) => {
             </FeatureHeader>
         
             <FeatureContainer>
-                <Img alt="Product Feature" fluid={productImg} />
+                <ProductImage alt="Product Feature" fluid={productImg} />
                 <p>{productDescription}</p>
             </FeatureContainer>
         </div>

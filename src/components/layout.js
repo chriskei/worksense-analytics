@@ -1,7 +1,7 @@
 import React from 'react'
 import base from './base.css'
 import Container from './container'
-import { NavBar } from './NavBar/navigation.js'
+import { NavBar } from './NavBar/navBar.js'
 
 class Layout extends React.Component {
 
@@ -23,4 +23,4 @@ class Layout extends React.Component {
   }
 }
 
-export {Layout}
+export { Layout }

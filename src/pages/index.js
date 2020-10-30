@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import { Layout } from '../components/layout.js'
 import { HeroImage } from '../components/HeroImage/heroImage.js'
-import ArticlePreview from '../components/article-preview'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import { ProductSpecs } from '../components/product-specs/productSpecs.js'
@@ -35,7 +34,7 @@ class RootIndex extends React.Component {
           />
           <ProductSpecs 
             productHeader = {textNodes[0].text.text}
-            productImg={productFeature.productPreviewImage.fluid}
+            productImg={productFeature.productPreviewImage[0].fluid}
             productDescription={productFeature.specDescription.specDescription}
           />
           <Testimonials 
