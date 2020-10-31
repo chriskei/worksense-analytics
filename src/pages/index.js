@@ -3,12 +3,11 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import { Layout } from '../components/layout.js'
-import { HeroImage } from '../components/HeroImage/heroImage.js'
+import { HeroImage } from '../components/hero-image/hero-image.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
-import { ProductSpecs } from '../components/product-specs/productSpecs.js'
+import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { Testimonials } from '../components/testimonials/testimonials.js'
-
 
 class RootIndex extends React.Component {
   render() {
@@ -16,7 +15,7 @@ class RootIndex extends React.Component {
     const heroImage = get(this, 'props.data.contentfulHeroImage')
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
-    const productFeature = get(this, 'props.data.contentfulProductSpecs');
+    const productFeature = get(this, 'props.data.contentfulProductSpecs')
 
     return (
       <Layout location={this.props.location}>
@@ -32,14 +31,14 @@ class RootIndex extends React.Component {
             header={textNodes[5].text.text}
             body={textNodes[6].text.text}
           />
-          <ProductSpecs 
-            productHeader = {textNodes[0].text.text}
+          <ProductSpecs
+            productHeader={textNodes[0].text.text}
             productImg={productFeature.productPreviewImage[0].fluid}
             productDescription={productFeature.specDescription.specDescription}
           />
-          <Testimonials 
-            testHeader = {textNodes[2].text.text}
-            testBody = {textNodes[1].text.text}
+          <Testimonials
+            testHeader={textNodes[2].text.text}
+            testBody={textNodes[1].text.text}
           />
         </div>
       </Layout>
@@ -47,33 +46,33 @@ class RootIndex extends React.Component {
   }
 }
 
-export default RootIndex 
+export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-      site {
-        siteMetadata {
-          title
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    contentfulHeroImage(contentful_id: { eq: "16nJKq9QmPQ1Mgn7jnaAmg" }) {
+      id
+      title
+      desktop {
+        fluid {
+          src
         }
       }
-      contentfulHeroImage(contentful_id: {eq: "16nJKq9QmPQ1Mgn7jnaAmg"}) {
-        id
-        title
-        desktop {
-          fluid {
-            src
-          }
+      tablet {
+        fluid {
+          src
         }
-        tablet {
-          fluid {
-            src
-          }
+      }
+      mobile {
+        fluid {
+          src
         }
-        mobile {
-          fluid {
-            src
-          }
-        }
+      }
     }
     contentfulAsset(contentful_id: { eq: "3tfuyKj6fbYPO0dFuphBAO" }) {
       fluid {
@@ -92,7 +91,7 @@ export const pageQuery = graphql`
             "1T9C8FZgiv01te3bLaw3BS"
             "1lwPdXfrVB7f3qTLBkDOEn"
             "4Jzc5NlkyQb1Q0EOvCZEww"
-            "3uMgGxmfbdUp6kbhIWNur6"  
+            "3uMgGxmfbdUp6kbhIWNur6"
             "19Zz0RUKpy1FQULSR783EM"
           ]
         }
@@ -104,7 +103,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulProductSpecs(contentful_id: {eq: "7HwVJlMb3EG03qCpa0HZN3"}) {
+    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
       productPreviewImage {
         fluid(maxHeight: 500, maxWidth: 500) {
           sizes
