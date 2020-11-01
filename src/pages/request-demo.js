@@ -1,11 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Layout } from '../components/layout.js'
 
-export interface RequestDemoProps {
-  location: any
-}
-
-const RequestDemo: FC<RequestDemoProps> = (props) => {
+const RequestDemoPage = ( props ) => {
   const { location } = props
 
   return (
@@ -15,4 +11,4 @@ const RequestDemo: FC<RequestDemoProps> = (props) => {
   )
 }
 
-export default RequestDemo
+export default RequestDemoPage

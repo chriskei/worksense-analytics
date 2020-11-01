@@ -1,10 +1,9 @@
 import React from 'react'
 import base from './base.css'
 import Container from './container'
-import { NavBar } from './NavBar/navigation.js'
+import { NavBar } from './nav-bar/nav-bar.js'
 
 class Layout extends React.Component {
-
   render() {
     const { location, children, navImage } = this.props
     let header
@@ -23,4 +22,4 @@ class Layout extends React.Component {
   }
 }
 
-export {Layout}
+export { Layout }
