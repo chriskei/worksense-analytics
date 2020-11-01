@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Navigation, NavLink } from './styled.js'
+import { Navigation, NavLink } from './nav-bar.styles.js'
 
 const NavBar = () => {
   return (
