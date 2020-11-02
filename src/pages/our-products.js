@@ -3,14 +3,17 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout.js'
 import { HeroImage } from '../components/hero-image/hero-image.js'
+import { FutureProducts } from '../components/future-products/future-products'
 
 const OurProductsPage = (props) => {
   const productHero = get(props, 'data.contentfulHeroImage')
+  const futureProducts = get(props, 'data.contentfulProductSpecs')
 
   return (
     <Layout location={location}>
       <HeroImage data={productHero} />
-      <h1>Our Products Page Placeholder</h1>
+      <h1 style={{ marginLeft: '1em' }}>Our Products Page Placeholder</h1>
+      <FutureProducts data={futureProducts} />
     </Layout>
   )
 }
@@ -36,6 +39,18 @@ export const pageQuery = graphql`
         fluid {
           src
         }
+      }
+    }
+    contentfulProductSpecs(contentful_id: { eq: "1bZxTeFs7XrJzlAhbZWHg2" }) {
+      title
+      productPreviewImage {
+        fluid {
+          src
+          aspectRatio
+        }
+      }
+      specDescription {
+        specDescription
       }
     }
   }
