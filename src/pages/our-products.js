@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import { Layout } from '../components/layout.js'
 import { HeroImage } from '../components/hero-image/hero-image.js'
 import { FutureProducts } from '../components/future-products/future-products'
+import { PageHeader } from '../components/page-header/page-header.js'
 
 const OurProductsPage = (props) => {
   const productHero = get(props, 'data.contentfulHeroImage')
@@ -12,7 +13,7 @@ const OurProductsPage = (props) => {
   return (
     <Layout location={location}>
       <HeroImage data={productHero} />
-      <h1 style={{ marginLeft: '1em' }}>Our Products Page Placeholder</h1>
+        <PageHeader title = {'Our Products Page Placeholder'}></PageHeader>
       <FutureProducts data={futureProducts} />
     </Layout>
   )

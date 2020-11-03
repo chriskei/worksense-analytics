@@ -20,7 +20,7 @@ const NavLink = styled(Link)`
     text-decoration: none;
 `;
 
-const NavButton= styled.div`
+const NavButtonContainer= styled.div`
     display: inline-flex;
     align-items: center;
     margin: 0 1em;
@@ -28,4 +28,4 @@ const NavButton= styled.div`
     text-decoration: none !important;
 `;
 
-export { Navigation, NavLink, NavButton }
+export { Navigation, NavLink, NavButtonContainer }
