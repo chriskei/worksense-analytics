@@ -21,7 +21,7 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <HeroImage data={heroImage} />
+          <HeroImage imgData={heroImage} />
           <MissionStatement
             header={textNodes[3].text.text}
             body={textNodes[4].text.text}
