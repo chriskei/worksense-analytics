@@ -1,17 +1,19 @@
 import React from 'react'
 import { HeroImg } from './hero-image.styles.js'
 
-const HeroImage = ({ data }) => {
-  const sources = [data.mobile.fluid,
-    { ...data.desktop.fluid,
+const HeroImage = (props) => {
+  const { imgData } = props
+
+  const sources = [imgData.mobile.fluid,
+    { ...imgData.desktop.fluid,
       media: `(min-width: 768px)`,
     },
-    { ...data.tablet.fluid,
+    { ...imgData.tablet.fluid,
       media: `(min-width: 414px)`,
     }
   ]
   return (
-    <HeroImg alt={data.title}
+    <HeroImg alt={imgData.title}
     fluid={sources}>
     </HeroImg>
     

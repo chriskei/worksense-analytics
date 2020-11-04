@@ -12,9 +12,13 @@ const OurProductsPage = (props) => {
 
   return (
     <Layout location={location}>
-      <HeroImage data={productHero} />
-        <PageHeader title = {'Our Products Page Placeholder'}></PageHeader>
-      <FutureProducts data={futureProducts} />
+      <HeroImage imgData={productHero} />
+      <PageHeader title={'Our Products Page Placeholder'}></PageHeader>
+      <FutureProducts
+        title={futureProducts.title}
+        description={futureProducts.specDescription.specDescription}
+        imgData={futureProducts.productPreviewImage}
+      />
     </Layout>
   )
 }
