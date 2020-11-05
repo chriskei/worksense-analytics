@@ -7,7 +7,7 @@ import { HeroImage } from '../components/hero-image/hero-image.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
-import { Testimonials } from '../components/testimonials/testimonials.js'
+import { PressRelease } from '../components/press-release/press-release.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -16,6 +16,7 @@ class RootIndex extends React.Component {
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
     const productFeature = get(this, 'props.data.contentfulProductSpecs')
+    const pressRelease = get(this, 'props.data.contentfulPressRelease')
 
     return (
       <Layout location={this.props.location}>
@@ -23,22 +24,23 @@ class RootIndex extends React.Component {
           <Helmet title={siteTitle} />
           <HeroImage imgData={heroImage} />
           <MissionStatement
-            header={textNodes[3].text.text}
-            body={textNodes[4].text.text}
+            header={textNodes[2].text.text}
+            body={textNodes[3].text.text}
           />
           <WorkplaceBiases
             imgData={workplaceBiasesImage}
-            header={textNodes[5].text.text}
-            body={textNodes[6].text.text}
+            header={textNodes[4].text.text}
+            body={textNodes[5].text.text}
           />
           <ProductSpecs
             productHeader={textNodes[0].text.text}
             productImg={productFeature.productPreviewImage[0].fluid}
             productDescription={productFeature.specDescription.specDescription}
           />
-          <Testimonials
-            testHeader={textNodes[2].text.text}
-            testBody={textNodes[1].text.text}
+          <PressRelease
+            pressHeader={textNodes[1].text.text}
+            pressImg={pressRelease.pressImage.fluid}
+            pressText={pressRelease.pressText.pressText}
           />
         </div>
       </Layout>
@@ -93,10 +95,11 @@ export const pageQuery = graphql`
             "4Jzc5NlkyQb1Q0EOvCZEww"
             "3uMgGxmfbdUp6kbhIWNur6"
             "19Zz0RUKpy1FQULSR783EM"
-          ]
+            "v1VPCeu4WaWIdpM5pmDxc"
+            ]
+          }
         }
-      }
-    ) {
+      ) {
       nodes {
         text {
           text
@@ -105,7 +108,7 @@ export const pageQuery = graphql`
     }
     contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
       productPreviewImage {
-        fluid(maxHeight: 500, maxWidth: 500) {
+        fluid {
           sizes
           aspectRatio
           src
@@ -115,6 +118,17 @@ export const pageQuery = graphql`
       }
       specDescription {
         specDescription
+      }
+    }
+    contentfulPressRelease(contentful_id: { eq: "64Mb2Cm6X6mYMbnun7X01l" }) {
+      pressImage {
+        fluid {
+          aspectRatio
+          src
+        }
+      }
+      pressText {
+        pressText
       }
     }
   }
