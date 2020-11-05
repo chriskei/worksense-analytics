@@ -4,7 +4,7 @@ import { FlexContainer, MemberImg, LeftContainer, RightContainer, InfoContainer,
 const ContactCard = ( props ) => {
     const { name, position, picture, description, links } = props
     return (
-        <div>
+        <>
             <FlexContainer>
                 <LeftContainer>
                     <MemberImg alt="Member Picture" fluid={picture}/>
@@ -18,7 +18,7 @@ const ContactCard = ( props ) => {
                 <Name>{name}</Name>
                 <Position>{position}</Position>
             </InfoContainer>
-        </div>
+        </>
     )
 }
 
