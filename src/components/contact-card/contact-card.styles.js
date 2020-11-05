@@ -5,7 +5,7 @@ const FlexContainer = styled.div`
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 6rem;
+    margin-top: 5rem;
     border: solid;
     width: 65%;
 `;

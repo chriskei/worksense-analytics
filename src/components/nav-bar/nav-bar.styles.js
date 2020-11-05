@@ -17,6 +17,15 @@ const NavLink = styled(Link)`
     align-items: center;
     margin: 0 1em;
     color: currentColor;
+    text-decoration: none;
 `;
 
-export { Navigation, NavLink }
+const NavButtonContainer= styled.div`
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1em;
+    color: currentColor;
+    text-decoration: none !important;
+`;
+
+export { Navigation, NavLink, NavButtonContainer }
