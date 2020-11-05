@@ -12,12 +12,9 @@ const FlexContainer = styled.div`
 
 const MemberImg = styled(Img)`
     flex: 1 1 50%;
-    margin: 0 50px 0 50px;
     & > p {
         position: relative;
     }
-    margin-left: 0;
-    margin-right: 0;
 `;
 
 const LeftContainer = styled.div`

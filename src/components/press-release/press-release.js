@@ -9,7 +9,6 @@ const PressRelease = (props) => {
       <PressHeader>
         <h1>{pressHeader}</h1>
       </PressHeader>
-
       <PressContainer>
         <PressImg alt="Press Release" fluid={pressImg} />
         <p>{pressText}</p>
