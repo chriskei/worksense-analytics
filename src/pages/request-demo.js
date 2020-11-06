@@ -13,7 +13,7 @@ const RequestDemoPage = (props) => {
     demoHeader,
     faqHeader,
     sampleText,
-    demoImage,
+    demoImage
   } = data
 
   return (

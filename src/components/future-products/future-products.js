@@ -10,14 +10,8 @@ const FutureProducts = (props) => {
         <h1>{header}</h1>
         <p>{description}</p>
       </FlexText>
-      <FlexImg
-        alt={(header, 'image')}
-        fluid={imgData[0].fluid}
-      />
-      <FlexImg
-        alt={(header, 'image')}
-        fluid={imgData[1].fluid}
-      />
+      <FlexImg alt={(header, 'image')} fluid={imgData[0].fluid} />
+      <FlexImg alt={(header, 'image')} fluid={imgData[1].fluid} />
     </FlexContainer>
   )
 }

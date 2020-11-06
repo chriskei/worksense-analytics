@@ -34,7 +34,9 @@ const NavBar = () => {
             </NavLink>
             <NavLink to="/our-products/">Our Products</NavLink>
             <NavLink to="/our-team/">Our Team</NavLink>
-            <NavButtonContainer><RequestDemoButton></RequestDemoButton></NavButtonContainer>
+            <NavButtonContainer>
+              <RequestDemoButton />
+            </NavButtonContainer>
           </Navigation>
         </nav>
       )}

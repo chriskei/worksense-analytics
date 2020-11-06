@@ -63,6 +63,9 @@ public
 # gatsby cache folder
 .cache
 
+# husky folder
+.husky
+
 # secrets
 .contentful.json
 .env*

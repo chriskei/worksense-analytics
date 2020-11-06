@@ -31,6 +31,7 @@
     "eslint-plugin-react": "^7.19.0",
     "gatsby": "^2.24.91",
     "gh-pages": "^2.2.0",
+    "husky": "^5.0.0-beta.0",
     "inquirer": "^7.1.0",
     "prettier": "^2.0.4",
     "rimraf": "^3.0.2",
@@ -40,6 +41,15 @@
     "node": ">=10.13.0"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "husky": {
+    "hooks": {
+      "private": true,
+      "scripts": {
+        "postinstall": "husky install",
+        "pre-commit": "npm run format && npm run lint -- --fix"
+      }
+    }
+  },
   "keywords": [
     "gatsby",
     "contentful"
@@ -55,11 +65,11 @@
     "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
+    "format": "prettier --trailing-comma none --no-semi --single-quote --arrow-parens always --write 'src/**/*.js' 'bin/*.js'",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
-    "postinstall": "node ./bin/hello.js",
+    "postinstall": "npx husky install",
     "setup": "node ./bin/setup.js",
     "start": "npm run develop",
     "heroku-postbuild": "gatsby build",

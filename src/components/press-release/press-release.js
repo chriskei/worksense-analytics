@@ -5,7 +5,7 @@ const PressRelease = (props) => {
   const { pressHeader, pressImg, pressText } = props
 
   return (
-    <div>
+    <>
       <PressHeader>
         <h1>{pressHeader}</h1>
       </PressHeader>
@@ -13,7 +13,7 @@ const PressRelease = (props) => {
         <PressImg alt="Press Release" fluid={pressImg} />
         <p>{pressText}</p>
       </PressContainer>
-    </div>
+    </>
   )
 }
 

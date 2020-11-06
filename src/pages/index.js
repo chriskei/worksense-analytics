@@ -96,10 +96,10 @@ export const pageQuery = graphql`
             "3uMgGxmfbdUp6kbhIWNur6"
             "19Zz0RUKpy1FQULSR783EM"
             "v1VPCeu4WaWIdpM5pmDxc"
-            ]
-          }
+          ]
         }
-      ) {
+      }
+    ) {
       nodes {
         text {
           text
