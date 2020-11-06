@@ -11,7 +11,7 @@ const OurProductsPage = (props) => {
   const futureProducts = get(props, 'data.contentfulProductSpecs')
 
   return (
-    <Layout location={location}>
+    <Layout>
       <HeroImage imgData={productHero} />
       <PageHeader title={'Our Products Page Placeholder'}></PageHeader>
       <FutureProducts

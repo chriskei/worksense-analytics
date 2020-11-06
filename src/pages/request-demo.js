@@ -17,7 +17,7 @@ const RequestDemoPage = (props) => {
   } = data
 
   return (
-    <Layout location={location}>
+    <Layout>
       <h1>Request Demo Page Placeholder</h1>
       <h4>{sampleText}</h4>
       <hr />

@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <HeroImage imgData={heroImage} />

@@ -1,12 +1,10 @@
 import React from 'react'
-import base from './base.css'
 import Container from './container'
 import { NavBar } from './nav-bar/nav-bar.js'
 
 class Layout extends React.Component {
   render() {
-    const { location, children, navImage } = this.props
-    let header
+    const { children } = this.props
 
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {

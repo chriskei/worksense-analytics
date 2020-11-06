@@ -9,7 +9,7 @@ const ourTeamPage = ( props ) => {
     const contactCard = get(props, 'data.contentfulContactCard')
 
     return (
-        <Layout location={location}>
+        <Layout>
             <PageHeader title={'Meet Our Team!'}></PageHeader>
             <ContactCard
                 name={contactCard.name}
