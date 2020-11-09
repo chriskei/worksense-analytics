@@ -20,10 +20,21 @@ class RootIndex extends React.Component {
     const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
-    const stats = get(this, 'props.data.contentfulStatistics');
-    const statsData = [{ highlight: stats.highlightedNumber1, description: stats.description1.description1 },
-                        { highlight: stats.highlightedNumber2, description: stats.description2.description2 },
-                        { highlight: stats.highlightedNumber3, description: stats.description3.description3 }]
+    const stats = get(this, 'props.data.contentfulStatistics')
+    const statsData = [
+      {
+        highlight: stats.highlightedNumber1,
+        description: stats.description1.description1
+      },
+      {
+        highlight: stats.highlightedNumber2,
+        description: stats.description2.description2
+      },
+      {
+        highlight: stats.highlightedNumber3,
+        description: stats.description3.description3
+      }
+    ]
 
     return (
       <Layout bg={colors.blue}>
@@ -146,7 +157,7 @@ export const pageQuery = graphql`
         pressText
       }
     }
-    contentfulStatistics(contentful_id: {eq: "15TTjYQhffGRdtJgwFpHy2"}) {
+    contentfulStatistics(contentful_id: { eq: "15TTjYQhffGRdtJgwFpHy2" }) {
       highlightedNumber1
       description1 {
         description1

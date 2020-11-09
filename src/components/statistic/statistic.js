@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  StatisticContainer,
-  Highlight
-} from './statistic.styles.js'
+import { StatisticContainer, Highlight } from './statistic.styles.js'
 
 const Statistic = (props) => {
   const { highlight, description } = props
