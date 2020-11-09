@@ -8,6 +8,7 @@ const Statistic = (props) => {
     <StatisticContainer>
       <Highlight>{highlight}</Highlight>
       <p>{description}</p>
+      <a href="https://worksenseanalytics.com/" target="_blank" rel="noopener noreferrer">Learn more ></a>
     </StatisticContainer>
   )
 }
