@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { colors } from '../../assets/colors'
 
 const Navigation = styled.div`
   display: flex;
