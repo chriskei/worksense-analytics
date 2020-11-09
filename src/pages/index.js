@@ -9,6 +9,8 @@ import { MissionStatement } from '../components/mission-statement/mission-statem
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
+import { Statistic } from '../components/statistic/statistic.js'
+import { StatisticsContainer } from './index.styles.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -18,8 +20,11 @@ class RootIndex extends React.Component {
     const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
+    const stats = get(this, 'props.data.contentfulStatistics');
+    const statsData = [{ highlight: stats.highlightedNumber1, description: stats.description1.description1 },
+                        { highlight: stats.highlightedNumber2, description: stats.description2.description2 },
+                        { highlight: stats.highlightedNumber3, description: stats.description3.description3 }]
 
-    console.log(heroData)
     return (
       <Layout bg={colors.blue}>
         <div>
@@ -38,6 +43,17 @@ class RootIndex extends React.Component {
             header={textNodes[4].text.text}
             body={textNodes[5].text.text}
           />
+          <StatisticsContainer>
+            {statsData.map((statistic, index) => {
+              return (
+                <Statistic
+                  key={index}
+                  highlight={statistic.highlight}
+                  description={statistic.description}
+                ></Statistic>
+              )
+            })}
+          </StatisticsContainer>
           <ProductSpecs
             header={textNodes[0].text.text}
             imgData={productFeature.productPreviewImage[0].fluid}
@@ -128,6 +144,20 @@ export const pageQuery = graphql`
       }
       pressText {
         pressText
+      }
+    }
+    contentfulStatistics(contentful_id: {eq: "15TTjYQhffGRdtJgwFpHy2"}) {
+      highlightedNumber1
+      description1 {
+        description1
+      }
+      highlightedNumber2
+      description2 {
+        description2
+      }
+      highlightedNumber3
+      description3 {
+        description3
       }
     }
   }
