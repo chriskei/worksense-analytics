@@ -11,7 +11,7 @@ const Navigation = styled.div`
   height: 20vh;
   max-height: 100px;
   font-size: 1.25em;
-  background-color: ${props => props.bg};
+  background-color: ${(props) => props.bg};
 `
 
 const NavLink = styled(Link)`

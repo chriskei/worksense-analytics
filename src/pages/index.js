@@ -24,7 +24,11 @@ class RootIndex extends React.Component {
       <Layout bg={colors.blue}>
         <div>
           <Helmet title={siteTitle} />
-          <Hero header={heroData.header} text={heroData.secondaryText} imgData={heroData.image}></Hero>
+          <Hero
+            header={heroData.header}
+            text={heroData.secondaryText}
+            imgData={heroData.image}
+          ></Hero>
           <MissionStatement
             header={textNodes[2].text.text}
             body={textNodes[3].text.text}
@@ -59,7 +63,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulHero(contentful_id: {eq: "1tU16dA9FYnz2O11eaCJiN"}) {
+    contentfulHero(contentful_id: { eq: "1tU16dA9FYnz2O11eaCJiN" }) {
       header
       secondaryText {
         secondaryText

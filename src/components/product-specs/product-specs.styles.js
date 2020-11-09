@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 const FeatureContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: ${props => props.reversed ? "row-reverse" : "row"};
+  flex-direction: ${(props) => (props.reversed ? 'row-reverse' : 'row')};
   padding: 2rem;
 `
 
