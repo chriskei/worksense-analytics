@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { colors } from '../../assets/colors'
 
 const Navigation = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const Navigation = styled.div`
   height: 20vh;
   max-height: 100px;
   font-size: 1.25em;
+  background-color: ${props => props.bg};
 `
 
 const NavLink = styled(Link)`
