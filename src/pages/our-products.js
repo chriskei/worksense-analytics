@@ -12,10 +12,12 @@ const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
   const headers = ourProducts.productSpecsHeaders
   const images = ourProducts.productSpecsImages
-  const descriptions = [ ourProducts.productSpecDescription1.productSpecDescription1,
+  const descriptions = [
+    ourProducts.productSpecDescription1.productSpecDescription1,
     ourProducts.productSpecDescription2.productSpecDescription2,
     ourProducts.productSpecDescription3.productSpecDescription3,
-    ourProducts.productSpecDescription4.productSpecDescription4 ]
+    ourProducts.productSpecDescription4.productSpecDescription4
+  ]
 
   return (
     <Layout bg={colors.tan}>
