@@ -22,7 +22,7 @@ const OurProductsPage = (props) => {
   return (
     <Layout bg={colors.tan}>
       <HeroImage imgData={productPageHero} />
-      <PageHeader title={ourProducts.productSpecsSectionHeader}></PageHeader>
+      <PageHeader title={ourProducts.productSpecsSectionHeader} />
       {headers.map((header, index) => {
         return (
           <ProductSpecs
@@ -30,8 +30,7 @@ const OurProductsPage = (props) => {
             header={header}
             description={descriptions[index]}
             imgData={images[index]}
-            reversed={index % 2 == 0}
-          ></ProductSpecs>
+            reversed={index % 2 == 0} />
         )
       })}
       <h1>{ourProducts.productWalkthroughHeader}</h1>
