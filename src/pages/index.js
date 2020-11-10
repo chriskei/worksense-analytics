@@ -145,7 +145,7 @@ export const pageQuery = graphql`
         pressText
       }
     }
-    contentfulStatistics(contentful_id: {eq: "15TTjYQhffGRdtJgwFpHy2"}) {
+    contentfulStatistics(contentful_id: { eq: "15TTjYQhffGRdtJgwFpHy2" }) {
       header
       highlightedNumbers
       descriptions
