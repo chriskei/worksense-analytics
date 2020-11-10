@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout'
+import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { PageHeader } from '../components/page-header/page-header.js'
 
@@ -9,7 +10,7 @@ const ourTeamPage = (props) => {
   const contactCard = get(props, 'data.contentfulContactCard')
 
   return (
-    <Layout>
+    <Layout bg={colors.tan}>
       <PageHeader title={'Meet Our Team!'}></PageHeader>
       <ContactCard
         name={contactCard.name}

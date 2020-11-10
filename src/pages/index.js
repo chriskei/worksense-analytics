@@ -2,8 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
+import { colors } from '../assets/colors.js'
 import { Layout } from '../components/layout.js'
-import { HeroImage } from '../components/hero-image/hero-image.js'
+import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
@@ -12,17 +13,21 @@ import { PressRelease } from '../components/press-release/press-release.js'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const heroImage = get(this, 'props.data.contentfulHeroImage')
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
     const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
+    const heroData = get(this, 'props.data.contentfulHero')
 
     return (
-      <Layout>
-        <div style={{ background: '#fff' }}>
+      <Layout bg={colors.blue}>
+        <div>
           <Helmet title={siteTitle} />
-          <HeroImage imgData={heroImage} />
+          <Hero
+            header={heroData.header}
+            text={heroData.secondaryText}
+            imgData={heroData.image}
+          ></Hero>
           <MissionStatement
             header={textNodes[2].text.text}
             body={textNodes[3].text.text}
@@ -33,9 +38,9 @@ class RootIndex extends React.Component {
             body={textNodes[5].text.text}
           />
           <ProductSpecs
-            productHeader={textNodes[0].text.text}
-            productImg={productFeature.productPreviewImage[0].fluid}
-            productDescription={productFeature.specDescription.specDescription}
+            header={textNodes[0].text.text}
+            imgData={productFeature.productPreviewImage[0].fluid}
+            description={productFeature.specDescription.specDescription}
           />
           <PressRelease
             pressHeader={textNodes[1].text.text}
@@ -57,21 +62,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulHeroImage(contentful_id: { eq: "16nJKq9QmPQ1Mgn7jnaAmg" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
-        }
+    contentfulHero(contentful_id: { eq: "1tU16dA9FYnz2O11eaCJiN" }) {
+      header
+      secondaryText {
+        secondaryText
       }
-      tablet {
+      image {
         fluid {
-          src
-        }
-      }
-      mobile {
-        fluid {
+          aspectRatio
           src
         }
       }

@@ -2,23 +2,39 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout.js'
-import { HeroImage } from '../components/hero-image/hero-image.js'
-import { FutureProducts } from '../components/future-products/future-products'
-import { PageHeader } from '../components/page-header/page-header.js'
+import { HeroImage } from '../components/hero-image/hero-image'
+import { colors } from '../assets/colors.js'
+import { PageHeader } from '../components/page-header/page-header'
+import { ProductSpecs } from '../components/product-specs/product-specs'
 
 const OurProductsPage = (props) => {
-  const productHero = get(props, 'data.contentfulHeroImage')
-  const futureProducts = get(props, 'data.contentfulProductSpecs')
+  const productPageHero = get(props, 'data.contentfulHeroImage')
+  const ourProducts = get(props, 'data.contentfulOurProductsPage')
+  const headers = ourProducts.productSpecsHeaders
+  const images = ourProducts.productSpecsImages
+  const descriptions = [
+    ourProducts.productSpecDescription1.productSpecDescription1,
+    ourProducts.productSpecDescription2.productSpecDescription2,
+    ourProducts.productSpecDescription3.productSpecDescription3,
+    ourProducts.productSpecDescription4.productSpecDescription4
+  ]
 
   return (
-    <Layout>
-      <HeroImage imgData={productHero} />
-      <PageHeader title={'Our Products Page Placeholder'}></PageHeader>
-      <FutureProducts
-        title={futureProducts.title}
-        description={futureProducts.specDescription.specDescription}
-        imgData={futureProducts.productPreviewImage}
-      />
+    <Layout bg={colors.tan}>
+      <HeroImage imgData={productPageHero} />
+      <PageHeader title={ourProducts.productSpecsSectionHeader} />
+      {headers.map((header, index) => {
+        return (
+          <ProductSpecs
+            key={index}
+            header={header}
+            description={descriptions[index]}
+            imgData={images[index]}
+            reversed={index % 2 == 0}
+          />
+        )
+      })}
+      <h1>{ourProducts.productWalkthroughHeader}</h1>
     </Layout>
   )
 }
@@ -46,17 +62,36 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulProductSpecs(contentful_id: { eq: "1bZxTeFs7XrJzlAhbZWHg2" }) {
-      title
-      productPreviewImage {
+    contentfulOurProductsPage {
+      heroImage {
+        id
+        title
+        fluid {
+          src
+        }
+      }
+      productSpecsSectionHeader
+      productSpecsHeaders
+      productSpecsImages {
+        title
         fluid {
           src
           aspectRatio
         }
       }
-      specDescription {
-        specDescription
+      productSpecDescription1 {
+        productSpecDescription1
       }
+      productSpecDescription2 {
+        productSpecDescription2
+      }
+      productSpecDescription3 {
+        productSpecDescription3
+      }
+      productSpecDescription4 {
+        productSpecDescription4
+      }
+      productWalkthroughHeader
     }
   }
 `

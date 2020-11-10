@@ -1,23 +1,21 @@
 import React from 'react'
 import {
   FeatureContainer,
-  FeatureHeader,
+  FeatureText,
   ProductImage
 } from './product-specs.styles.js'
 
 const ProductSpecs = (props) => {
-  const { productHeader, productImg, productDescription } = props
+  const { header, imgData, description, reversed } = props
 
   return (
-    <>
-      <FeatureHeader>
-        <h1>{productHeader}</h1>
-      </FeatureHeader>
-      <FeatureContainer>
-        <ProductImage alt="Product Feature" fluid={productImg} />
-        <p>{productDescription}</p>
-      </FeatureContainer>
-    </>
+    <FeatureContainer reversed={reversed}>
+      <FeatureText>
+        <h1>{header}</h1>
+        <p>{description}</p>
+      </FeatureText>
+      <ProductImage alt={imgData.title} fluid={imgData.fluid} />
+    </FeatureContainer>
   )
 }
 

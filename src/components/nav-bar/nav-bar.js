@@ -4,7 +4,8 @@ import Img from 'gatsby-image'
 import { Navigation, NavLink, NavButtonContainer } from './nav-bar.styles.js'
 import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const { bg } = props
   return (
     <StaticQuery
       query={graphql`
@@ -25,7 +26,7 @@ const NavBar = () => {
       `}
       render={(data) => (
         <nav role="navigation">
-          <Navigation>
+          <Navigation bg={bg}>
             <NavLink to="/">
               <Img
                 alt={data.contentfulLogo.title}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout } from '../components/layout.js'
+import { colors } from '../assets/colors.js'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
@@ -17,7 +18,7 @@ const RequestDemoPage = (props) => {
   } = data
 
   return (
-    <Layout>
+    <Layout bg={colors.tan}>
       <h1>Request Demo Page Placeholder</h1>
       <h4>{sampleText}</h4>
       <hr />
