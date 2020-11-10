@@ -30,7 +30,8 @@ const OurProductsPage = (props) => {
             header={header}
             description={descriptions[index]}
             imgData={images[index]}
-            reversed={index % 2 == 0} />
+            reversed={index % 2 == 0}
+          />
         )
       })}
       <h1>{ourProducts.productWalkthroughHeader}</h1>
