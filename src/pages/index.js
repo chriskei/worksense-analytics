@@ -21,20 +21,8 @@ class RootIndex extends React.Component {
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
     const stats = get(this, 'props.data.contentfulStatistics')
-    const statsData = [
-      {
-        highlight: stats.highlightedNumber1,
-        description: stats.description1.description1
-      },
-      {
-        highlight: stats.highlightedNumber2,
-        description: stats.description2.description2
-      },
-      {
-        highlight: stats.highlightedNumber3,
-        description: stats.description3.description3
-      }
-    ]
+    const statsHighlights = stats.highlightedNumbers
+    const statsDescriptions = stats.descriptions
 
     return (
       <Layout bg={colors.blue}>
@@ -51,16 +39,16 @@ class RootIndex extends React.Component {
           />
           <WorkplaceBiases
             imgData={workplaceBiasesImage}
-            header={textNodes[4].text.text}
+            header={stats.header}
             body={textNodes[5].text.text}
           />
           <StatisticsContainer>
-            {statsData.map((statistic, index) => {
+            {statsHighlights.map((highlight, index) => {
               return (
                 <Statistic
                   key={index}
-                  highlight={statistic.highlight}
-                  description={statistic.description}
+                  highlight={highlight}
+                  description={statsDescriptions[index]}
                 ></Statistic>
               )
             })}
@@ -157,19 +145,10 @@ export const pageQuery = graphql`
         pressText
       }
     }
-    contentfulStatistics(contentful_id: { eq: "15TTjYQhffGRdtJgwFpHy2" }) {
-      highlightedNumber1
-      description1 {
-        description1
-      }
-      highlightedNumber2
-      description2 {
-        description2
-      }
-      highlightedNumber3
-      description3 {
-        description3
-      }
+    contentfulStatistics(contentful_id: {eq: "15TTjYQhffGRdtJgwFpHy2"}) {
+      header
+      highlightedNumbers
+      descriptions
     }
   }
 `
