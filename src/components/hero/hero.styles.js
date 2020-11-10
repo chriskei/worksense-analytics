@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
 const Waves = styled.div`
   position: absolute;
   top: 75px;
-  width: 100vw;
+  width: 100%;
   z-index: 0;
 `
 
