@@ -10,7 +10,7 @@ import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
-import { StatisticsContainer } from './index.styles.js'
+import { StatisticsContainer } from '../pages-styles/index.styles.js'
 
 class RootIndex extends React.Component {
   render() {
