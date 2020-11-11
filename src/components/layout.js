@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './container'
 import { NavBar } from './nav-bar/nav-bar.js'
 import styles from './base.css'
-import { PageFooter } from'./footer/footer.js'
+import { PageFooter } from './footer/footer.js'
 
 class Layout extends React.Component {
   render() {

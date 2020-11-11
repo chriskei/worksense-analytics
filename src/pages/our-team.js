@@ -10,14 +10,20 @@ const OurTeamPage = (props) => {
   const pageHeader = get(props, 'data.contentfulOurTeamPage.ourTeamPageHeader')
   const member1 = {
     image: get(props, 'data.contentfulOurTeamPage.teamMemberPhotos'),
-    description: get(props, 'data.contentfulOurTeamPage.member1Description.member1Description'),
+    description: get(
+      props,
+      'data.contentfulOurTeamPage.member1Description.member1Description'
+    ),
     socialMedia: get(props, 'data.contentfulOurTeamPage.socialMedia'),
     name: get(props, 'data.contentfulOurTeamPage.name'),
     position: get(props, 'data.contentfulOurTeamPage.position')
   }
   const member2 = {
     image: get(props, 'data.contentfulOurTeamPage.teamMemberPhotos'),
-    description: get(props, 'data.contentfulOurTeamPage.member2Description.member2Description'),
+    description: get(
+      props,
+      'data.contentfulOurTeamPage.member2Description.member2Description'
+    ),
     socialMedia: get(props, 'data.contentfulOurTeamPage.socialMedia'),
     name: get(props, 'data.contentfulOurTeamPage.name'),
     position: get(props, 'data.contentfulOurTeamPage.position')
@@ -64,7 +70,7 @@ export const pageQuery = graphql`
       }
       socialMediaLinks
     }
-    contentfulOurTeamPage(contentful_id: {eq: "3a6fX9j2TR2P0N0E96fACj"}) {
+    contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
       ourTeamPageHeader
       teamMemberPhotos {
         fluid {
