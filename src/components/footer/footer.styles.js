@@ -2,23 +2,26 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const Footer = styled.div`
-  padding: 0;
-  margin: 0;
-  height: 20vh;
-  max-height: 100px;
-  background-color: ${(props) => props.bg};
+  min-height: 23vh;
+  background-color: #D9ECC7;
+  display: inline-flex;
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
 `
 const LeftContainer = styled.div`
+  float: left;
   display: inline-flex;
-  margin: 2rem 2rem 2rem 10rem;
+  min-width: 50%;
+  justify-content: center;
+  align-items: center;
 `
 
 const FooterLink = styled(Link)`
   display: inline-flex;
   align-items: center;
-  color: currentColor;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 1.25em;
+  color: #083D44;
 `
 
 const List = styled.ul`
@@ -28,7 +31,8 @@ const List = styled.ul`
 const RightContainer = styled.div`
   float: right;
   display: inline-flex;
-  margin: 5rem;
+  min-width: 50%;
+  justify-content: center;
 `
 
 const FooterButtonContainer = styled.div`

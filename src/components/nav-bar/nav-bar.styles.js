@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const Navigation = styled.div`
-  display: flex;
-  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -17,8 +15,22 @@ const NavLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
-  color: currentColor;
+  color: #083D44;
   text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+`
+
+const Logo = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 0rem 0rem 3rem;
+`
+
+const NavLinkContainer = styled.div`
+  display: inline-flex;
+  float: right;
+  margin: 2rem 3rem 0rem 0rem;
 `
 
 const NavButtonContainer = styled.div`
@@ -29,4 +41,4 @@ const NavButtonContainer = styled.div`
   text-decoration: none !important;
 `
 
-export { Navigation, NavLink, NavButtonContainer }
+export { Navigation, NavLink, Logo, NavLinkContainer, NavButtonContainer }

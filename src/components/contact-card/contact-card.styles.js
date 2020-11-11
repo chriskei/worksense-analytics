@@ -17,13 +17,7 @@ const MemberImg = styled(Img)`
   }
 `
 
-const LeftContainer = styled.div`
-  flex-direction: column;
-  flex: 1 1 50%;
-  float: left;
-`
-
-const RightContainer = styled.div`
+const TextContainer = styled.div`
   flex-direction: column;
   flex: 1 1 50%;
   display: inline-block;
@@ -55,8 +49,7 @@ const Position = styled.h3`
 export {
   FlexContainer,
   MemberImg,
-  LeftContainer,
-  RightContainer,
+  TextContainer,
   InfoContainer,
   Name,
   Position

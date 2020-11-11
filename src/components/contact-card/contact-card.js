@@ -2,25 +2,22 @@ import React from 'react'
 import {
   FlexContainer,
   MemberImg,
-  LeftContainer,
-  RightContainer,
+  TextContainer,
   InfoContainer,
   Name,
   Position
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
-  const { name, position, picture, description, links } = props
+  const { name, position, picture, description, socialMedia } = props
   return (
     <>
       <FlexContainer>
-        <LeftContainer>
-          <MemberImg alt="Member Picture" fluid={picture} />
-        </LeftContainer>
-        <RightContainer>
+          <MemberImg alt={picture.title} fluid={picture.fluid} />
+        <TextContainer>
           <p>{description}</p>
-          <p>{links}</p>
-        </RightContainer>
+          <p>{socialMedia}</p>
+        </TextContainer>
       </FlexContainer>
       <InfoContainer>
         <Name>{name}</Name>

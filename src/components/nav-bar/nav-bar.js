@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Navigation, NavLink, NavButtonContainer } from './nav-bar.styles.js'
+import { Navigation, Logo, NavLink, NavLinkContainer, NavButtonContainer } from './nav-bar.styles.js'
 import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
 
 const NavBar = (props) => {
@@ -27,17 +27,19 @@ const NavBar = (props) => {
       render={(data) => (
         <nav role="navigation">
           <Navigation bg={bg}>
-            <NavLink to="/">
+            <Logo to="/">
               <Img
                 alt={data.contentfulLogo.title}
                 fixed={data.contentfulLogo.logoImage.fixed}
               />
-            </NavLink>
+            </Logo>
+          <NavLinkContainer>
             <NavLink to="/our-products/">Our Products</NavLink>
             <NavLink to="/our-team/">Our Team</NavLink>
             <NavButtonContainer>
               <RequestDemoButton />
             </NavButtonContainer>
+          </NavLinkContainer>
           </Navigation>
         </nav>
       )}

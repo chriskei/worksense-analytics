@@ -19,7 +19,6 @@ class RootIndex extends React.Component {
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
 
-    console.log(heroData)
     return (
       <Layout bg={colors.blue}>
         <div>
