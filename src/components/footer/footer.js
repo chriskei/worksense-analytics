@@ -11,8 +11,7 @@ import {
 } from '../footer/footer.styles.js'
 import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
 
-const PageFooter = (props) => {
-  const { bg } = props
+const PageFooter = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -33,7 +32,7 @@ const PageFooter = (props) => {
       `}
       render={(data) => (
         <footer role="footer">
-          <Footer bg={bg}>
+          <Footer>
             <LeftContainer>
               <FooterLink to="/">
                 <Img
