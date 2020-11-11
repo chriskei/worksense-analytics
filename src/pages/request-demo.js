@@ -42,7 +42,6 @@ export const pageQuery = graphql`
       demoBody
       demoHeader
       faqHeader
-      sampleText
       demoImage {
         fluid {
           aspectRatio

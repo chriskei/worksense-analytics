@@ -39,12 +39,12 @@ class RootIndex extends React.Component {
             body={textNodes[5].text.text}
           />
           <ProductSpecs
-            header={textNodes[0].text.text}
+            header={textNodes[1].text.text}
             imgData={productFeature.productPreviewImage[0].fluid}
             description={productFeature.specDescription.specDescription}
           />
           <PressRelease
-            pressHeader={textNodes[1].text.text}
+            pressHeader={textNodes[0].text.text}
             pressImg={pressRelease.pressImage.fluid}
             pressText={pressRelease.pressText.pressText}
           />

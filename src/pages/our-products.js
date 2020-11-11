@@ -78,7 +78,7 @@ const OurProductsPage = (props) => {
 
 export default OurProductsPage
 
-export const pageQuery = graphql`
+/*export const pageQuery = graphql`
   query ProductsQuery {
     contentfulHeroImage(contentful_id: { eq: "1JzD8Q61WL1G42UuF4lrGb" }) {
       id
@@ -156,3 +156,4 @@ export const pageQuery = graphql`
     }
   }
 `
+*/
