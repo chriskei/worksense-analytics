@@ -17,7 +17,7 @@ class Layout extends React.Component {
       <Container>
         <NavBar bg={bg} />
         {children}
-        <PageFooter bg={bg} />
+        <PageFooter/>
       </Container>
     )
   }
