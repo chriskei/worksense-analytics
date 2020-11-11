@@ -25,15 +25,15 @@ const OurTeamPage = (props) => {
       {images.map((image, index) => {
         return (
           <ContactCard
-          key={index}
-          picture={image}
-          description={descriptions[index]}
-          socialMedia={socialMedia[index]}
-          name={names[index]}
-          position={positions[index]}
+            key={index}
+            picture={image}
+            description={descriptions[index]}
+            socialMedia={socialMedia[index]}
+            name={names[index]}
+            position={positions[index]}
           />
         )
-        })}
+      })}
     </Layout>
   )
 }

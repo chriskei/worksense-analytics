@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const Footer = styled.div`
   min-height: 23vh;
-  background-color: #D9ECC7;
+  background-color: #d9ecc7;
   display: inline-flex;
   width: 100%;
   font-family: 'Manrope', sans-serif;
@@ -21,7 +21,7 @@ const FooterLink = styled(Link)`
   align-items: center;
   text-decoration: none;
   font-size: 1.25em;
-  color: #083D44;
+  color: #083d44;
 `
 
 const List = styled.ul`

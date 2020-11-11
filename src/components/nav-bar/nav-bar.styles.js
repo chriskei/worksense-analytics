@@ -15,7 +15,7 @@ const NavLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
-  color: #083D44;
+  color: #083d44;
   text-decoration: none;
   font-family: 'Manrope', sans-serif;
   font-weight: bold;

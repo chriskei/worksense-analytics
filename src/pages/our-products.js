@@ -95,4 +95,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
