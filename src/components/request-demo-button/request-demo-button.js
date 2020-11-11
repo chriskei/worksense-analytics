@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 
 const RequestDemoButton = () => {
   return (
-    <ButtonContainer>
-      <Link to="/request-demo/">Request Demo</Link>
-    </ButtonContainer>
+    <Link to="/request-demo/">
+      <ButtonContainer>Request Demo</ButtonContainer>
+    </Link>
   )
 }
 
