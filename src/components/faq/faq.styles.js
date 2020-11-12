@@ -5,7 +5,7 @@ const FaqContainer = styled.div`
   width: 51rem;
   margin-left: auto;
   margin-right: auto;
-  color: ${colors.darkAquamarine};
+  color: ${colors.darkGreen};
 `
 
 const CategoryContainer = styled.div`
@@ -22,7 +22,7 @@ const ImageItem = styled.div`
   height: 20rem;
   padding: 1rem;
   border: solid;
-  border-color: ${colors.aquamarine};
+  border-color: ${colors.blue};
   cursor: pointer;
 `
 

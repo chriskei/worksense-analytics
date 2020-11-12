@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { colors } from '../../assets/colors'
 
 const Navigation = styled.div`
   list-style: none;
@@ -15,7 +16,7 @@ const NavLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
-  color: #083d44;
+  color: ${colors.darkGreen};
   text-decoration: none;
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
