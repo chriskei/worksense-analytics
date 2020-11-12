@@ -22,30 +22,30 @@ const OurTeamPage = (props) => {
   return (
     <Layout bg={colors.tan}>
       {images.length > 0 &&
-      positions.length > 0 && 
-      images.length > 0 &&
-      descriptions.length > 0 &&
-      socialMedia.length > 0 && 
-      names.length == positions.length &&
-      positions.length == images.length &&
-      images.length == descriptions.length &&
-      descriptions.length == socialMedia.length && (
-      <>
-      <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
-      {images.map((image, index) => {
-        return (
-          <ContactCard
-            key={index}
-            picture={image}
-            description={descriptions[index]}
-            socialMedia={socialMedia[index]}
-            name={names[index]}
-            position={positions[index]}
-          />
-        )
-      })}
-      </>
-      )}
+        positions.length > 0 &&
+        images.length > 0 &&
+        descriptions.length > 0 &&
+        socialMedia.length > 0 &&
+        names.length == positions.length &&
+        positions.length == images.length &&
+        images.length == descriptions.length &&
+        descriptions.length == socialMedia.length && (
+          <>
+            <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
+            {images.map((image, index) => {
+              return (
+                <ContactCard
+                  key={index}
+                  picture={image}
+                  description={descriptions[index]}
+                  socialMedia={socialMedia[index]}
+                  name={names[index]}
+                  position={positions[index]}
+                />
+              )
+            })}
+          </>
+        )}
     </Layout>
   )
 }
