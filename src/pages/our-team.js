@@ -6,24 +6,51 @@ import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { PageHeader } from '../components/page-header/page-header.js'
 
-const ourTeamPage = (props) => {
-  const contactCard = get(props, 'data.contentfulContactCard')
+const OurTeamPage = (props) => {
+  const ourTeam = get(props, 'data.contentfulOurTeamPage')
+  const images = ourTeam.teamMemberPhotos
+  const descriptions = [
+    ourTeam.member1Description.member1Description,
+    ourTeam.member2Description.member2Description,
+    ourTeam.member3Description.member3Description,
+    ourTeam.member4Description.member4Description
+  ]
+  const socialMedia = ourTeam.socialMedia
+  const names = ourTeam.name
+  const positions = ourTeam.position
 
   return (
     <Layout bg={colors.tan}>
-      <PageHeader title={'Meet Our Team!'}></PageHeader>
-      <ContactCard
-        name={contactCard.name}
-        position={contactCard.companyPosition}
-        picture={contactCard.memberPicture.fluid}
-        description={contactCard.memberDescription.memberDescription}
-        links={contactCard.socialMediaLinks}
-      />
+      {images.length > 0 &&
+        positions.length > 0 &&
+        images.length > 0 &&
+        descriptions.length > 0 &&
+        socialMedia.length > 0 &&
+        names.length == positions.length &&
+        positions.length == images.length &&
+        images.length == descriptions.length &&
+        descriptions.length == socialMedia.length && (
+          <>
+            <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
+            {images.map((image, index) => {
+              return (
+                <ContactCard
+                  key={index}
+                  picture={image}
+                  description={descriptions[index]}
+                  socialMedia={socialMedia[index]}
+                  name={names[index]}
+                  position={positions[index]}
+                />
+              )
+            })}
+          </>
+        )}
     </Layout>
   )
 }
 
-export default ourTeamPage
+export default OurTeamPage
 
 export const pageQuery = graphql`
   query TeamQuery {
@@ -32,19 +59,29 @@ export const pageQuery = graphql`
         text
       }
     }
-    contentfulContactCard(contentful_id: { eq: "5zwWeA854HvGSny8Nmec2N" }) {
-      name
-      companyPosition
-      memberPicture {
+    contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
+      ourTeamPageHeader
+      teamMemberPhotos {
         fluid {
           aspectRatio
           src
         }
       }
-      memberDescription {
-        memberDescription
+      member1Description {
+        member1Description
       }
-      socialMediaLinks
+      member2Description {
+        member2Description
+      }
+      member3Description {
+        member3Description
+      }
+      member4Description {
+        member4Description
+      }
+      socialMedia
+      name
+      position
     }
   }
 `

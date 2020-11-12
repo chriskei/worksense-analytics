@@ -12,12 +12,12 @@ const Label = styled.label`
 const LabelText = styled.h4`
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  color: ${colors.darkAquamarine};
+  color: ${colors.darkGreen};
 `
 
 const Input = styled.input`
   border-radius: 10px;
-  border-color: ${colors.aquamarine};
+  border-color: ${colors.blue};
   background-color: ${colors.tan};
   padding: 12px 18px 12px 18px;
   font-family: 'Avenir', sans-serif;
@@ -29,7 +29,7 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   border-radius: 10px;
   border-width: 2px;
-  border-color: ${colors.aquamarine};
+  border-color: ${colors.blue};
   background-color: ${colors.tan};
   padding: 12px 18px 12px 18px;
   font-family: 'Avenir', sans-serif;

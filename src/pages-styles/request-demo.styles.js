@@ -3,14 +3,14 @@ import { colors } from '../assets/colors'
 
 const ContactHeader = styled.h1`
   text-align: center;
-  color: ${colors.darkAquamarine};
+  color: ${colors.darkGreen};
   margin-top: 5.5rem;
 `
 
 const RequestDemoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  color: ${colors.darkAquamarine};
+  color: ${colors.darkGreen};
   padding-top: 4rem;
   margin-bottom: 1rem;
 `

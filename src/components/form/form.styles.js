@@ -30,7 +30,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   font-size: 1em;
-  background-color: ${colors.darkAquamarine};
+  background-color: ${colors.darkGreen};
   color: ${colors.tan};
   border-radius: 10px;
   padding: 12px 18px 12px 18px;

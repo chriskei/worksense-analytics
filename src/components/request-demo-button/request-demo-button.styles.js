@@ -13,6 +13,7 @@ const ButtonContainer = styled.button`
   & > a {
     text-decoration: none;
   }
+  font-family: 'Manrope', sans-serif;
 `
 
 export { ButtonContainer }
