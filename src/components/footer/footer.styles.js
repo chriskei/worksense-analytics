@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { colors } from '../../assets/colors'
 
-const Footer = styled.div`
+const StyledFooter = styled.footer`
   min-height: 23vh;
-  background-color: #d9ecc7;
+  background-color: ${colors.paleGreen};
   display: inline-flex;
   width: 100%;
   font-family: 'Manrope', sans-serif;
@@ -21,7 +22,7 @@ const FooterLink = styled(Link)`
   align-items: center;
   text-decoration: none;
   font-size: 1.25em;
-  color: #083d44;
+  color: ${colors.darkGreen};
 `
 
 const List = styled.ul`
@@ -44,7 +45,7 @@ const FooterButtonContainer = styled.div`
 `
 
 export {
-  Footer,
+  StyledFooter,
   RightContainer,
   FooterLink,
   List,

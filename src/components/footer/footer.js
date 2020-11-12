@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import {
-  Footer,
+  StyledFooter,
   RightContainer,
   FooterLink,
   List,
@@ -11,7 +11,7 @@ import {
 } from '../footer/footer.styles.js'
 import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
 
-const PageFooter = () => {
+const Footer = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -31,8 +31,7 @@ const PageFooter = () => {
         }
       `}
       render={(data) => (
-        <footer role="footer">
-          <Footer>
+        <StyledFooter role="footer">
             <LeftContainer>
               <FooterLink to="/">
                 <Img
@@ -42,7 +41,7 @@ const PageFooter = () => {
               </FooterLink>
               <List>
                 <li>
-                  <FooterLink to="/">Contact Us</FooterLink>
+                  <FooterLink to="/request-demo/">Contact Us</FooterLink>
                 </li>
                 <li>
                   <FooterLink to="/our-products/">Products</FooterLink>
@@ -57,11 +56,10 @@ const PageFooter = () => {
                 <RequestDemoButton />
               </FooterButtonContainer>
             </RightContainer>
-          </Footer>
-        </footer>
+        </StyledFooter>
       )}
     />
   )
 }
 
-export { PageFooter }
+export { Footer }
