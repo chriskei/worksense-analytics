@@ -9,6 +9,8 @@ import { MissionStatement } from '../components/mission-statement/mission-statem
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
+import { Statistic } from '../components/statistic/statistic.js'
+import { StatisticsContainer } from '../pages-styles/index.styles.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -18,6 +20,9 @@ class RootIndex extends React.Component {
     const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
+    const stats = get(this, 'props.data.contentfulStatistics')
+    const statsHighlights = stats.highlightedNumbers
+    const statsDescriptions = stats.descriptions
 
     return (
       <Layout bg={colors.blue}>
@@ -34,9 +39,20 @@ class RootIndex extends React.Component {
           />
           <WorkplaceBiases
             imgData={workplaceBiasesImage}
-            header={textNodes[4].text.text}
+            header={stats.header}
             body={textNodes[5].text.text}
           />
+          <StatisticsContainer>
+            {statsHighlights.map((highlight, index) => {
+              return (
+                <Statistic
+                  key={index}
+                  highlight={highlight}
+                  description={statsDescriptions[index]}
+                ></Statistic>
+              )
+            })}
+          </StatisticsContainer>
           <ProductSpecs
             header={textNodes[0].text.text}
             imgData={productFeature.productPreviewImage[0].fluid}
@@ -128,6 +144,11 @@ export const pageQuery = graphql`
       pressText {
         pressText
       }
+    }
+    contentfulStatistics(contentful_id: { eq: "15TTjYQhffGRdtJgwFpHy2" }) {
+      header
+      highlightedNumbers
+      descriptions
     }
   }
 `
