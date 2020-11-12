@@ -26,7 +26,7 @@ const Form = (props) => {
         <Field small={true} name="job" label="Job Title" type="text" />
       </LeftContainer>
       <RightContainer>
-        <Field small={false} id="message" label="Message" />
+        <Field small={false} name="message" label="Message" />
         <ButtonContainer>
           <Button>{submitText}</Button>
         </ButtonContainer>
