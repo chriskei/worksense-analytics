@@ -32,30 +32,30 @@ const Footer = () => {
       `}
       render={(data) => (
         <StyledFooter role="footer">
-            <LeftContainer>
-              <FooterLink to="/">
-                <Img
-                  alt={data.contentfulLogo.title}
-                  fixed={data.contentfulLogo.logoImage.fixed}
-                />
-              </FooterLink>
-              <List>
-                <li>
-                  <FooterLink to="/request-demo/">Contact Us</FooterLink>
-                </li>
-                <li>
-                  <FooterLink to="/our-products/">Products</FooterLink>
-                </li>
-                <li>
-                  <FooterLink to="/">Documentation</FooterLink>
-                </li>
-              </List>
-            </LeftContainer>
-            <RightContainer>
-              <FooterButtonContainer>
-                <RequestDemoButton />
-              </FooterButtonContainer>
-            </RightContainer>
+          <LeftContainer>
+            <FooterLink to="/">
+              <Img
+                alt={data.contentfulLogo.title}
+                fixed={data.contentfulLogo.logoImage.fixed}
+              />
+            </FooterLink>
+            <List>
+              <li>
+                <FooterLink to="/request-demo/">Contact Us</FooterLink>
+              </li>
+              <li>
+                <FooterLink to="/our-products/">Products</FooterLink>
+              </li>
+              <li>
+                <FooterLink to="/">Documentation</FooterLink>
+              </li>
+            </List>
+          </LeftContainer>
+          <RightContainer>
+            <FooterButtonContainer>
+              <RequestDemoButton />
+            </FooterButtonContainer>
+          </RightContainer>
         </StyledFooter>
       )}
     />
