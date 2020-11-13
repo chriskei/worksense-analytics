@@ -2,8 +2,12 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const HeroContainer = styled.div`
-  background: rgb(7,163,178);
-  background: linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%);
+  background: rgb(7, 163, 178);
+  background: linear-gradient(
+    90deg,
+    rgba(7, 163, 178, 1) 0%,
+    rgba(217, 236, 199, 1) 100%
+  );
   height: 125vh;
 `
 

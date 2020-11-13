@@ -24,7 +24,11 @@ class RootIndex extends React.Component {
     const statsDescriptions = stats.descriptions
 
     return (
-      <Layout bg={'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'}>
+      <Layout
+        bg={
+          'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
+        }
+      >
         <div>
           <Helmet title={siteTitle} />
           <Hero
