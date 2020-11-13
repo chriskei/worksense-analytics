@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url(/Manrope-ExtraBold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(/Poppins-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins';
+}

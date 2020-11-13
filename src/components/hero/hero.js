@@ -7,6 +7,7 @@ import {
   HeroText,
   HeroImage
 } from './hero.styles.js'
+import { H1, Body1 } from '../../assets/fonts.js'
 
 const Hero = (props) => {
   const { header, text, imgData } = props
@@ -19,8 +20,8 @@ const Hero = (props) => {
       </Waves>
       <HeroContent>
         <HeroText>
-          <h1>{header}</h1>
-          <p>{text.secondaryText}</p>
+          <H1>{header}</H1>
+          <Body1>{text.secondaryText}</Body1>
         </HeroText>
         <HeroImage alt={imgData.title} fluid={imgData.fluid} />
       </HeroContent>
