@@ -7,9 +7,9 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url(/Poppins-Regular.ttf) format('truetype');
+  src: url(/Poppins-Light.ttf) format('truetype');
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 body {

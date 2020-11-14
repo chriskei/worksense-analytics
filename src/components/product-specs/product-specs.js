@@ -4,6 +4,7 @@ import {
   FeatureText,
   ProductImage
 } from './product-specs.styles.js'
+import { H3, Body2 } from '../../assets/fonts.js'
 
 const ProductSpecs = (props) => {
   const { header, imgData, description, reversed } = props
@@ -11,8 +12,8 @@ const ProductSpecs = (props) => {
   return (
     <FeatureContainer reversed={reversed}>
       <FeatureText>
-        <h1>{header}</h1>
-        <p>{description}</p>
+        <H3>{header}</H3>
+        <Body2>{description}</Body2>
       </FeatureText>
       <ProductImage alt={imgData.title} fluid={imgData.fluid} />
     </FeatureContainer>

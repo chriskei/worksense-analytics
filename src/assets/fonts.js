@@ -8,11 +8,11 @@ const fonts = {
 }
 
 const fontSizes = {
-  h1: `72px`,
-  h2: `56px`,
-  h3: `48px`,
-  body1: `24px`,
-  body2: `18px`
+  h1: `calc(40px + (90 - 40) * ((100vw - 375px) / (1920 - 375)))`,
+  h2: `calc(32px + (64 - 32) * ((100vw - 375px) / (1920 - 375)))`,
+  h3: `calc(26px + (60 - 26) * ((100vw - 375px) / (1920 - 375)))`,
+  body1: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
+  body2: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`,
 }
 
 const H1 = styled.h1`

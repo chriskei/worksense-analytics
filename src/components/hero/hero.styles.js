@@ -23,13 +23,13 @@ const HeroContent = styled.div`
 
 const HeroText = styled.div`
   z-index: 1;
-  flex: 1 1 50%;
+  flex: 1 1 60%;
   margin: 0 0 0 5em;
   padding: 5em 5em 0 0;
 `
 
 const HeroImage = styled(Img)`
-  flex: 1 1 40%;
+  flex: 1 1 30%;
   margin: 10em 5em 0 5em;
 `
 
