@@ -22,7 +22,7 @@ const OurProductsPage = (props) => {
   return (
     <Layout bg={colors.tan}>
       <HeroImage imgData={productPageHero} />
-      <PageHeader title={ourProducts.productSpecsSectionHeader}/>
+      <PageHeader title={ourProducts.productSpecsSectionHeader} />
       {headers.map((header, index) => {
         return (
           <ProductSpecs
