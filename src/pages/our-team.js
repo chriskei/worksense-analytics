@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import { Layout } from './layout'
+import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { PageHeader } from '../components/page-header/page-header.js'
