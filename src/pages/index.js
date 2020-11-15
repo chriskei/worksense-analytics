@@ -2,8 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import { colors } from '../assets/colors.js'
-import { Layout } from '../components/layout.js'
+import { Layout } from '../components/layout/layout.js'
 import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
@@ -25,7 +24,11 @@ class RootIndex extends React.Component {
     const statsDescriptions = stats.descriptions
 
     return (
-      <Layout bg={colors.blue}>
+      <Layout
+        bg={
+          'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
+        }
+      >
         <div>
           <Helmet title={siteTitle} />
           <Hero

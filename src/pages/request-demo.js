@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from '../components/layout.js'
+import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'

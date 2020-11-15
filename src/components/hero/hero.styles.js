@@ -4,10 +4,9 @@ import Img from 'gatsby-image'
 const HeroContainer = styled.div`
   background: rgb(7, 163, 178);
   background: linear-gradient(
-    180deg,
+    90deg,
     rgba(7, 163, 178, 1) 0%,
-    rgba(217, 236, 199, 1) 70%,
-    rgba(217, 236, 199, 0) 100%
+    rgba(217, 236, 199, 1) 100%
   );
   height: 125vh;
 `
@@ -24,13 +23,13 @@ const HeroContent = styled.div`
 
 const HeroText = styled.div`
   z-index: 1;
-  flex: 1 1 50%;
+  flex: 1 1 60%;
   margin: 0 0 0 5em;
-  padding: 15em 5em 0 0;
+  padding: 5em 5em 0 0;
 `
 
 const HeroImage = styled(Img)`
-  flex: 1 1 40%;
+  flex: 1 1 30%;
   margin: 10em 5em 0 5em;
 `
 
