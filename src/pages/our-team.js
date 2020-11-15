@@ -7,30 +7,16 @@ import { ContactCard } from '../components/contact-card/contact-card'
 import { PageHeader } from '../components/page-header/page-header.js'
 
 const OurTeamPage = (props) => {
-  const ourTeam = get(props, 'data.contentfulOurTeamPage')
-  const images = ourTeam.teamMemberPhotos
-  const descriptions = [
-    ourTeam.member1Description.member1Description,
-    ourTeam.member2Description.member2Description,
-    ourTeam.member3Description.member3Description,
-    ourTeam.member4Description.member4Description
-  ]
-  const socialMedia = ourTeam.socialMedia
+  const ourTeam = get(props, 'data.contentfulOurTeamPage.contactCard')
+  const images = ourTeam.memberPicture
+  const descriptions = ourTeam.memberDescription
+  const socialMedia = ourTeam.socialMediaLinks
   const names = ourTeam.name
-  const positions = ourTeam.position
+  const positions = ourTeam.companyPosition
+  const emails = ourTeam.email
 
   return (
     <Layout bg={colors.tan}>
-      {images.length > 0 &&
-        positions.length > 0 &&
-        images.length > 0 &&
-        descriptions.length > 0 &&
-        socialMedia.length > 0 &&
-        names.length == positions.length &&
-        positions.length == images.length &&
-        images.length == descriptions.length &&
-        descriptions.length == socialMedia.length && (
-          <>
             <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
             {images.map((image, index) => {
               return (
@@ -41,11 +27,10 @@ const OurTeamPage = (props) => {
                   socialMedia={socialMedia[index]}
                   name={names[index]}
                   position={positions[index]}
+                  email={emails[index]}
                 />
               )
             })}
-          </>
-        )}
     </Layout>
   )
 }
@@ -59,29 +44,22 @@ export const pageQuery = graphql`
         text
       }
     }
-    contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
-      ourTeamPageHeader
-      teamMemberPhotos {
-        fluid {
-          aspectRatio
-          src
+    contentfulOurTeamPage(contentful_id: {eq: "3a6fX9j2TR2P0N0E96fACj"}) {
+      contactCard {
+        name
+        companyPosition
+        memberPicture {
+          fluid {
+            src
+            aspectRatio
+          }
         }
+        memberDescription {
+          memberDescription
+        }
+        socialMediaLinks
+        email
       }
-      member1Description {
-        member1Description
-      }
-      member2Description {
-        member2Description
-      }
-      member3Description {
-        member3Description
-      }
-      member4Description {
-        member4Description
-      }
-      socialMedia
-      name
-      position
     }
   }
 `

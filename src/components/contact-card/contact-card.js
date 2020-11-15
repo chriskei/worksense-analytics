@@ -9,7 +9,7 @@ import {
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
-  const { name, position, picture, description, socialMedia } = props
+  const { name, position, picture, description, socialMedia, email } = props
   return (
     <>
       <FlexContainer>
@@ -22,6 +22,7 @@ const ContactCard = (props) => {
       <InfoContainer>
         <Name>{name}</Name>
         <Position>{position}</Position>
+        <p>{email}</p>
       </InfoContainer>
     </>
   )
