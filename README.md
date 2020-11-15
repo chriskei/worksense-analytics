@@ -19,7 +19,7 @@
 ## <a name="clone"></a> How to clone and run this project
 
 1. Go the the directory you want a copy of this repo in and run `git clone https://github.com/Scout-NU/worksense-site.git`
-2. Navigate into the "contentful-starter" folder and run `npm i` to install the correct versions of any dependencies being used
+2. Navigate into the "worksense-site" folder and run `npm i` to install the correct versions of any dependencies being used
 3. Run `npm run dev` to start the development environment
 4. Visit <http://localhost:8000/> to view the site
 
