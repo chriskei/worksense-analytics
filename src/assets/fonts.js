@@ -11,8 +11,8 @@ const fontSizes = {
   h1: `calc(40px + (90 - 40) * ((100vw - 375px) / (1920 - 375)))`,
   h2: `calc(32px + (64 - 32) * ((100vw - 375px) / (1920 - 375)))`,
   h3: `calc(26px + (60 - 26) * ((100vw - 375px) / (1920 - 375)))`,
-  body1: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
-  body2: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`
+  heroBody: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
+  p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`
 }
 
 const H1 = styled.h1`
@@ -31,14 +31,14 @@ const H3 = styled.h2`
   font-size: ${fontSizes.h3};
 `
 
-const Body1 = styled.p`
+const HeroBody = styled.p`
   font-family: ${fonts.poppins};
-  font-size: ${fontSizes.body1};
+  font-size: ${fontSizes.heroBody};
 `
 
-const Body2 = styled.p`
+const P = styled.p`
   font-family: ${fonts.poppins};
-  font-size: ${fontSizes.body2};
+  font-size: ${fontSizes.p};
 `
 
-export { H1, H2, H3, Body1, Body2 }
+export { H1, H2, H3, HeroBody, P }
