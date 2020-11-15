@@ -17,20 +17,20 @@ const OurTeamPage = (props) => {
 
   return (
     <Layout bg={colors.tan}>
-            <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
-            {images.map((image, index) => {
-              return (
-                <ContactCard
-                  key={index}
-                  picture={image}
-                  description={descriptions[index]}
-                  socialMedia={socialMedia[index]}
-                  name={names[index]}
-                  position={positions[index]}
-                  email={emails[index]}
-                />
-              )
-            })}
+      <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
+      {images.map((image, index) => {
+        return (
+          <ContactCard
+            key={index}
+            picture={image}
+            description={descriptions[index]}
+            socialMedia={socialMedia[index]}
+            name={names[index]}
+            position={positions[index]}
+            email={emails[index]}
+          />
+        )
+      })}
     </Layout>
   )
 }
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
         text
       }
     }
-    contentfulOurTeamPage(contentful_id: {eq: "3a6fX9j2TR2P0N0E96fACj"}) {
+    contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
       contactCard {
         name
         companyPosition
