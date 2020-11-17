@@ -31,7 +31,7 @@ const OurTeamPage = (props) => {
         images.length == descriptions.length &&
         descriptions.length == socialMedia.length && (
           <>
-            <SectionHeader title={ourTeam.ourTeamPageHeader}></SectionHeader>
+            <SectionHeader title={ourTeam.ourTeamPageHeader} />
             {images.map((image, index) => {
               return (
                 <ContactCard

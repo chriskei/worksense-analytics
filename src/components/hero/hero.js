@@ -26,7 +26,7 @@ const Hero = (props) => {
   return (
     <HeroContainer bg={bg} height={height}>
       <Waves>
-        {BackgroundWave ? <BackgroundWave /> : null}
+        {BackgroundWave && <BackgroundWave />}
         <WaveContainer posn={firstWavePosn}>
           <FirstWave />
         </WaveContainer>
@@ -37,11 +37,10 @@ const Hero = (props) => {
       <HeroContent>
         <HeroText>
           <H1>{header}</H1>
-          {text ? <HeroBody>{text.secondaryText}</HeroBody> : null}
+          {text && <HeroBody>{text.secondaryText}</HeroBody>}
         </HeroText>
-        {imgData ? (
-          <HeroImage alt={imgData.title} fluid={imgData.fluid} />
-        ) : null}
+        {imgData &&
+          <HeroImage alt={imgData.title} fluid={imgData.fluid} />}
       </HeroContent>
     </HeroContainer>
   )
