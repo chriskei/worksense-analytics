@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
-import { PageHeader } from '../components/page-header/page-header.js'
+import { SectionHeader } from '../components/section-header/section-header'
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
@@ -31,7 +31,7 @@ const OurTeamPage = (props) => {
         images.length == descriptions.length &&
         descriptions.length == socialMedia.length && (
           <>
-            <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
+            <SectionHeader title={ourTeam.ourTeamPageHeader}></SectionHeader>
             {images.map((image, index) => {
               return (
                 <ContactCard
