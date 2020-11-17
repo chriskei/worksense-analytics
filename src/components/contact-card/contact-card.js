@@ -13,7 +13,7 @@ const ContactCard = (props) => {
   return (
     <>
       <FlexContainer>
-        <MemberImg alt={picture.title} fluid={picture.fluid} />
+        <MemberImg alt={picture} fluid={picture.fluid} />
         <TextContainer>
           <p>{description}</p>
           <p>{socialMedia}</p>

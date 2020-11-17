@@ -7,27 +7,22 @@ import { ContactCard } from '../components/contact-card/contact-card'
 import { PageHeader } from '../components/page-header/page-header.js'
 
 const OurTeamPage = (props) => {
-  const ourTeam = get(props, 'data.contentfulOurTeamPage.contactCard')
-  const images = ourTeam.memberPicture
-  const descriptions = ourTeam.memberDescription
-  const socialMedia = ourTeam.socialMediaLinks
-  const names = ourTeam.name
-  const positions = ourTeam.companyPosition
-  const emails = ourTeam.email
+  const ourTeam = get(props, 'data.contentfulOurTeamPage')
+  const contactCard = get(props, 'data.contentfulOurTeamPage.contactCard')
 
   return (
     <Layout bg={colors.tan}>
       <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
-      {images.map((image, index) => {
+      {contactCard.map((card, index) => {
         return (
           <ContactCard
             key={index}
-            picture={image}
-            description={descriptions[index]}
-            socialMedia={socialMedia[index]}
-            name={names[index]}
-            position={positions[index]}
-            email={emails[index]}
+            picture={card.memberPicture}
+            description={card.memberDescription.memberDescription}
+            socialMedia={card.socialMediaLinks}
+            name={card.name}
+            position={card.companyPosition}
+            email={card.email}
           />
         )
       })}
@@ -46,6 +41,7 @@ export const pageQuery = graphql`
     }
     contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
       contactCard {
+        id
         name
         companyPosition
         memberPicture {
