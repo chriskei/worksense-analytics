@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import {
   Navigation,
   Logo,
+  LogoImg,
   NavLink,
   NavLinkContainer,
   NavButtonContainer
@@ -34,7 +35,7 @@ const NavBar = (props) => {
         <nav role="navigation">
           <Navigation bg={bg}>
             <Logo to="/">
-              <Img
+              <LogoImg
                 alt={data.contentfulLogo.title}
                 fixed={data.contentfulLogo.logoImage.fixed}
               />

@@ -10,6 +10,7 @@ import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
 import { StatisticsContainer } from '../pages-styles/index.styles.js'
+import { LandingWaveBlue, LandingWaveGreen } from '../assets/waves.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -35,6 +36,14 @@ class RootIndex extends React.Component {
             header={heroData.header}
             text={heroData.secondaryText}
             imgData={heroData.image}
+            FirstWave={LandingWaveBlue}
+            SecondWave={LandingWaveGreen}
+            bg={`linear-gradient(
+              90deg,
+              rgba(7, 163, 178, 1) 0%,
+              rgba(217, 236, 199, 1) 100%
+            );`}
+            height={'60vw'}
           ></Hero>
           <MissionStatement
             header={textNodes[2].text.text}

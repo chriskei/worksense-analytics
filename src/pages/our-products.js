@@ -4,12 +4,16 @@ import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { HeroImage } from '../components/hero-image/hero-image'
 import { colors } from '../assets/colors.js'
-import { PageHeader } from '../components/page-header/page-header'
+import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
+import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
+import { ProductsWaveTop, ProductsWaveBottom, ProductsWaveBackground } from '../assets/waves'
+import { Hero } from '../components/hero/hero'
+import { ProductSpecsContainer, ButtonContainer } from '../pages-styles/our-products.styles'
 
 const OurProductsPage = (props) => {
-  const productPageHero = get(props, 'data.contentfulHeroImage')
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
+  const productPageHeader = ourProducts.pageHeader
   const headers = ourProducts.productSpecsHeaders
   const images = ourProducts.productSpecsImages
   const descriptions = [
@@ -18,11 +22,21 @@ const OurProductsPage = (props) => {
     ourProducts.productSpecDescription3.productSpecDescription3,
     ourProducts.productSpecDescription4.productSpecDescription4
   ]
-
+  
   return (
-    <Layout bg={colors.tan}>
-      <HeroImage imgData={productPageHero} />
-      <PageHeader title={ourProducts.productSpecsSectionHeader} />
+    <Layout bg={
+      'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
+    }>
+      <Hero header={productPageHeader}
+          BackgroundWave={ProductsWaveBackground}
+          FirstWave={ProductsWaveTop} 
+          SecondWave={ProductsWaveBottom}
+          firstWavePosn={'-48vw'}
+          secondWavePosn={'-72.2vw'}
+          bg={`${colors.tan}`}
+          height={'45vw'}/>
+      <SectionHeader title={ourProducts.productSpecsSectionHeader} color={`${colors.darkGreen}`}/>
+      <ProductSpecsContainer>
       {headers.map((header, index) => {
         return (
           <ProductSpecs
@@ -34,7 +48,9 @@ const OurProductsPage = (props) => {
           />
         )
       })}
-      <h1>{ourProducts.productWalkthroughHeader}</h1>
+      </ProductSpecsContainer>
+      <SectionHeader title={ourProducts.productWalkthroughHeader} color={`${colors.darkGreen}`}/>
+      <ButtonContainer><RequestDemoButton /></ButtonContainer>
     </Layout>
   )
 }
@@ -63,13 +79,7 @@ export const pageQuery = graphql`
       }
     }
     contentfulOurProductsPage {
-      heroImage {
-        id
-        title
-        fluid {
-          src
-        }
-      }
+      pageHeader
       productSpecsSectionHeader
       productSpecsHeaders
       productSpecsImages {

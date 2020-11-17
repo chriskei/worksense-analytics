@@ -1,8 +1,8 @@
 import React from 'react'
-import { LandingWaveBlue, LandingWaveGreen } from '../../assets/waves'
 import {
   HeroContainer,
   Waves,
+  WaveContainer,
   HeroContent,
   HeroText,
   HeroImage
@@ -10,20 +10,25 @@ import {
 import { H1, HeroBody } from '../../assets/fonts.js'
 
 const Hero = (props) => {
-  const { header, text, imgData } = props
+  const { header, text, imgData, BackgroundWave, FirstWave, SecondWave, firstWavePosn, secondWavePosn, bg, height } = props
 
   return (
-    <HeroContainer>
+    <HeroContainer bg={bg} height={height}>
       <Waves>
-        <LandingWaveBlue></LandingWaveBlue>
-        <LandingWaveGreen></LandingWaveGreen>
+        {BackgroundWave ? <BackgroundWave /> : null}
+        <WaveContainer posn={firstWavePosn}>
+          <FirstWave /> 
+        </WaveContainer>
+        <WaveContainer posn={secondWavePosn}>
+          <SecondWave />
+        </WaveContainer>
       </Waves>
       <HeroContent>
         <HeroText>
           <H1>{header}</H1>
-          <HeroBody>{text.secondaryText}</HeroBody>
+          {text ? <HeroBody>{text.secondaryText}</HeroBody> : null}
         </HeroText>
-        <HeroImage alt={imgData.title} fluid={imgData.fluid} />
+        {imgData ? <HeroImage alt={imgData.title} fluid={imgData.fluid} /> : null}
       </HeroContent>
     </HeroContainer>
   )

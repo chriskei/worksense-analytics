@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { colors } from '../../assets/colors'
 
 const FeatureContainer = styled.div`
   display: flex;
@@ -10,11 +11,16 @@ const FeatureContainer = styled.div`
 
 const FeatureText = styled.div`
   flex: 1 1 50%;
+  margin: 0 5em 0 0;
+`
+
+const HeaderContainer = styled.div`
+  color: ${colors.blue}
 `
 
 const ProductImage = styled(Img)`
   flex: 1 1 50%;
-  margin: 0 50px 0 50px;
+  margin: 0 5em 0 0;
 `
 
-export { FeatureContainer, FeatureText, ProductImage }
+export { FeatureContainer, FeatureText, HeaderContainer, ProductImage }
