@@ -13,7 +13,9 @@ const ProductSpecs = (props) => {
   return (
     <FeatureContainer reversed={reversed}>
       <FeatureText>
-        <HeaderContainer><H3>{header}</H3></HeaderContainer>
+        <HeaderContainer>
+          <H3>{header}</H3>
+        </HeaderContainer>
         <P>{description}</P>
       </FeatureText>
       <ProductImage alt={imgData.title} fluid={imgData.fluid} />

@@ -7,9 +7,16 @@ import { colors } from '../assets/colors.js'
 import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
 import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
-import { ProductsWaveTop, ProductsWaveBottom, ProductsWaveBackground } from '../assets/waves'
+import {
+  ProductsWaveTop,
+  ProductsWaveBottom,
+  ProductsWaveBackground
+} from '../assets/waves'
 import { Hero } from '../components/hero/hero'
-import { ProductSpecsContainer, ButtonContainer } from '../pages-styles/our-products.styles'
+import {
+  ProductSpecsContainer,
+  ButtonContainer
+} from '../pages-styles/our-products.styles'
 
 const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
@@ -22,35 +29,47 @@ const OurProductsPage = (props) => {
     ourProducts.productSpecDescription3.productSpecDescription3,
     ourProducts.productSpecDescription4.productSpecDescription4
   ]
-  
+
   return (
-    <Layout bg={
-      'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
-    }>
-      <Hero header={productPageHeader}
-          BackgroundWave={ProductsWaveBackground}
-          FirstWave={ProductsWaveTop} 
-          SecondWave={ProductsWaveBottom}
-          firstWavePosn={'-48vw'}
-          secondWavePosn={'-72.2vw'}
-          bg={`${colors.tan}`}
-          height={'45vw'}/>
-      <SectionHeader title={ourProducts.productSpecsSectionHeader} color={`${colors.darkGreen}`}/>
+    <Layout
+      bg={
+        'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
+      }
+    >
+      <Hero
+        header={productPageHeader}
+        BackgroundWave={ProductsWaveBackground}
+        FirstWave={ProductsWaveTop}
+        SecondWave={ProductsWaveBottom}
+        firstWavePosn={'-48vw'}
+        secondWavePosn={'-72.2vw'}
+        bg={`${colors.tan}`}
+        height={'45vw'}
+      />
+      <SectionHeader
+        title={ourProducts.productSpecsSectionHeader}
+        color={`${colors.darkGreen}`}
+      />
       <ProductSpecsContainer>
-      {headers.map((header, index) => {
-        return (
-          <ProductSpecs
-            key={index}
-            header={header}
-            description={descriptions[index]}
-            imgData={images[index]}
-            reversed={index % 2 == 0}
-          />
-        )
-      })}
+        {headers.map((header, index) => {
+          return (
+            <ProductSpecs
+              key={index}
+              header={header}
+              description={descriptions[index]}
+              imgData={images[index]}
+              reversed={index % 2 == 0}
+            />
+          )
+        })}
       </ProductSpecsContainer>
-      <SectionHeader title={ourProducts.productWalkthroughHeader} color={`${colors.darkGreen}`}/>
-      <ButtonContainer><RequestDemoButton /></ButtonContainer>
+      <SectionHeader
+        title={ourProducts.productWalkthroughHeader}
+        color={`${colors.darkGreen}`}
+      />
+      <ButtonContainer>
+        <RequestDemoButton />
+      </ButtonContainer>
     </Layout>
   )
 }

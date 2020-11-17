@@ -51,4 +51,11 @@ const NavButtonContainer = styled.div`
   z-index: 1;
 `
 
-export { Navigation, NavLink, Logo, LogoImg, NavLinkContainer, NavButtonContainer }
+export {
+  Navigation,
+  NavLink,
+  Logo,
+  LogoImg,
+  NavLinkContainer,
+  NavButtonContainer
+}

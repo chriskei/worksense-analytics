@@ -10,14 +10,25 @@ import {
 import { H1, HeroBody } from '../../assets/fonts.js'
 
 const Hero = (props) => {
-  const { header, text, imgData, BackgroundWave, FirstWave, SecondWave, firstWavePosn, secondWavePosn, bg, height } = props
+  const {
+    header,
+    text,
+    imgData,
+    BackgroundWave,
+    FirstWave,
+    SecondWave,
+    firstWavePosn,
+    secondWavePosn,
+    bg,
+    height
+  } = props
 
   return (
     <HeroContainer bg={bg} height={height}>
       <Waves>
         {BackgroundWave ? <BackgroundWave /> : null}
         <WaveContainer posn={firstWavePosn}>
-          <FirstWave /> 
+          <FirstWave />
         </WaveContainer>
         <WaveContainer posn={secondWavePosn}>
           <SecondWave />
@@ -28,7 +39,9 @@ const Hero = (props) => {
           <H1>{header}</H1>
           {text ? <HeroBody>{text.secondaryText}</HeroBody> : null}
         </HeroText>
-        {imgData ? <HeroImage alt={imgData.title} fluid={imgData.fluid} /> : null}
+        {imgData ? (
+          <HeroImage alt={imgData.title} fluid={imgData.fluid} />
+        ) : null}
       </HeroContent>
     </HeroContainer>
   )

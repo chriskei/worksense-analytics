@@ -15,7 +15,7 @@ const FeatureText = styled.div`
 `
 
 const HeaderContainer = styled.div`
-  color: ${colors.blue}
+  color: ${colors.blue};
 `
 
 const ProductImage = styled(Img)`
