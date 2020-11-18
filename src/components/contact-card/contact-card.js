@@ -7,7 +7,7 @@ import {
   MemberImg,
   Overlay,
   TextOverlay,
-  InfoContainer, 
+  InfoContainer,
   RightContainer,
   LeftContainer
 } from '../contact-card/contact-card.styles'
@@ -24,12 +24,16 @@ const ContactCard = (props) => {
       </FlexContainer>
       <InfoContainer>
         <LeftContainer>
-        <P>{name}</P>
-        <P>{position}</P>
+          <P>{name}</P>
+          <P>{position}</P>
         </LeftContainer>
         <RightContainer>
-        <a href={socialMedia} target="_blank"><LinkedIn></LinkedIn></a>
-        <a href={email} target="_blank"><Email></Email></a>
+          <a href={socialMedia} target="_blank">
+            <LinkedIn></LinkedIn>
+          </a>
+          <a href={email} target="_blank">
+            <Email></Email>
+          </a>
         </RightContainer>
       </InfoContainer>
     </ContactCardContainer>

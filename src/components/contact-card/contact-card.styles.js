@@ -36,13 +36,13 @@ const Overlay = styled.div`
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: rgba(255, 255, 255, 0);
 
-&:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, .55);
-}
+  &:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.55);
+  }
 `
 
 const InfoContainer = styled.div`
@@ -69,5 +69,5 @@ export {
   Overlay,
   LeftContainer,
   RightContainer,
-  InfoContainer,
+  InfoContainer
 }

@@ -53,29 +53,29 @@ const LandingWaveGreen = () => {
 
 const OurTeamTopWave = () => {
   return (
-    <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="1440" 
-    height="840" 
-    viewBox="0 0 1440 840" 
-    fill="none"
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1440"
+      height="840"
+      viewBox="0 0 1440 840"
+      fill="none"
     >
-      <path 
-      d="M1440.56 0L0.556726 -0.000162625L0.556705 321.231C35.4221 363.243 137.553 450.532 267.152 463.595C429.151 479.923 541.007 435.021 730.557 394.201C920.106 353.38 1065.58 549.317 1150.56 688.106C1218.54 799.137 1372.22 834.972 1440.56 839.01L1440.56 0Z" 
-      fill="url(#paint0_linear)"
+      <path
+        d="M1440.56 0L0.556726 -0.000162625L0.556705 321.231C35.4221 363.243 137.553 450.532 267.152 463.595C429.151 479.923 541.007 435.021 730.557 394.201C920.106 353.38 1065.58 549.317 1150.56 688.106C1218.54 799.137 1372.22 834.972 1440.56 839.01L1440.56 0Z"
+        fill="url(#paint0_linear)"
       />
       <defs>
-        <linearGradient 
-        id="paint0_linear" 
-        x1="1313.56" 
-        y1="-331.961" 
-        x2="1111.23" 
-        y2="616.77" 
-        gradientUnits="userSpaceOnUse"
+        <linearGradient
+          id="paint0_linear"
+          x1="1313.56"
+          y1="-331.961"
+          x2="1111.23"
+          y2="616.77"
+          gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#083D44" stopOpacity="0.71"/>
-          <stop offset="0.395833" stopColor="#07A3B2"/>
-          <stop offset="1" stopColor="#D9ECC7"/>
+          <stop stopColor="#083D44" stopOpacity="0.71" />
+          <stop offset="0.395833" stopColor="#07A3B2" />
+          <stop offset="1" stopColor="#D9ECC7" />
         </linearGradient>
       </defs>
     </svg>
