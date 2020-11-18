@@ -4,7 +4,10 @@ import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
-import { PageHeader } from '../components/page-header/page-header.js'
+import { H1, HeroBody } from '../assets/fonts.js'
+import { HeadingContainer, WavesContainer, AllContactCardsContainer } from '../pages-styles/our-team.styles'
+import { OurTeamTopWave } from '../assets/waves.js'
+
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
@@ -12,7 +15,14 @@ const OurTeamPage = (props) => {
 
   return (
     <Layout bg={colors.tan}>
-      <PageHeader title={ourTeam.ourTeamPageHeader}></PageHeader>
+      <WavesContainer>
+        <OurTeamTopWave></OurTeamTopWave>
+      </WavesContainer>
+      <HeadingContainer>
+      <H1>{ourTeam.ourTeamPageHeader}</H1>
+      <HeroBody>{ourTeam.ourTeamPageSubheader}</HeroBody>
+      </HeadingContainer>
+      <AllContactCardsContainer>
       {contactCard.map((card, index) => {
         return (
           <ContactCard
@@ -26,6 +36,7 @@ const OurTeamPage = (props) => {
           />
         )
       })}
+      </AllContactCardsContainer>
     </Layout>
   )
 }
@@ -34,12 +45,9 @@ export default OurTeamPage
 
 export const pageQuery = graphql`
   query TeamQuery {
-    contentfulText(contentful_id: { eq: "ZYJ2HB6gy3qSFZV7JX3lY" }) {
-      text {
-        text
-      }
-    }
-    contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
+    contentfulOurTeamPage(contentful_id: {eq: "3a6fX9j2TR2P0N0E96fACj"}) {
+      ourTeamPageHeader
+      ourTeamPageSubheader
       contactCard {
         id
         name
