@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  HeroContainer,
   Waves,
   WaveContainer,
   HeroContent,
@@ -18,13 +17,11 @@ const Hero = (props) => {
     FirstWave,
     SecondWave,
     firstWavePosn,
-    secondWavePosn,
-    bg,
-    height
+    secondWavePosn
   } = props
 
   return (
-    <HeroContainer bg={bg} height={height}>
+    <>
       <Waves>
         {BackgroundWave && <BackgroundWave />}
         <WaveContainer posn={firstWavePosn}>
@@ -41,7 +38,7 @@ const Hero = (props) => {
         </HeroText>
         {imgData && <HeroImage alt={imgData.title} fluid={imgData.fluid} />}
       </HeroContent>
-    </HeroContainer>
+    </>
   )
 }
 

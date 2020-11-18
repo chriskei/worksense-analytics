@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-const HeroContainer = styled.div`
-  background: ${(props) => props.bg};
-  height: ${(props) => props.height};
-`
-
 const Waves = styled.div`
   position: absolute;
   top: 0px;
@@ -33,4 +28,4 @@ const HeroImage = styled(Img)`
   margin: 10em 5em 0 5em;
 `
 
-export { HeroContainer, Waves, WaveContainer, HeroContent, HeroText, HeroImage }
+export { Waves, WaveContainer, HeroContent, HeroText, HeroImage }

@@ -12,7 +12,7 @@ import {
   ProductsWaveBackground
 } from '../assets/waves'
 import { Hero } from '../components/hero/hero'
-import {
+import { HeroContainer,
   ProductSpecsContainer,
   ButtonContainer
 } from '../pages-styles/our-products.styles'
@@ -30,11 +30,8 @@ const OurProductsPage = (props) => {
   ]
 
   return (
-    <Layout
-      bg={
-        'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
-      }
-    >
+    <Layout>
+    <HeroContainer>
       <Hero
         header={productPageHeader}
         BackgroundWave={ProductsWaveBackground}
@@ -42,9 +39,8 @@ const OurProductsPage = (props) => {
         SecondWave={ProductsWaveBottom}
         firstWavePosn={'-48vw'}
         secondWavePosn={'-72.2vw'}
-        bg={`${colors.tan}`}
-        height={'45vw'}
       />
+      </HeroContainer>
       <SectionHeader
         title={ourProducts.productSpecsSectionHeader}
         color={`${colors.darkGreen}`}
