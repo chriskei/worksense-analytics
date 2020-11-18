@@ -12,7 +12,8 @@ import {
   ProductsWaveBackground
 } from '../assets/waves'
 import { Hero } from '../components/hero/hero'
-import { HeroContainer,
+import {
+  HeroContainer,
   ProductSpecsContainer,
   ButtonContainer
 } from '../pages-styles/our-products.styles'
@@ -31,15 +32,15 @@ const OurProductsPage = (props) => {
 
   return (
     <Layout>
-    <HeroContainer>
-      <Hero
-        header={productPageHeader}
-        BackgroundWave={ProductsWaveBackground}
-        FirstWave={ProductsWaveTop}
-        SecondWave={ProductsWaveBottom}
-        firstWavePosn={'-48vw'}
-        secondWavePosn={'-72.2vw'}
-      />
+      <HeroContainer>
+        <Hero
+          header={productPageHeader}
+          BackgroundWave={ProductsWaveBackground}
+          FirstWave={ProductsWaveTop}
+          SecondWave={ProductsWaveBottom}
+          firstWavePosn={'-48vw'}
+          secondWavePosn={'-72.2vw'}
+        />
       </HeroContainer>
       <SectionHeader
         title={ourProducts.productSpecsSectionHeader}

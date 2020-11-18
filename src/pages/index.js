@@ -9,7 +9,10 @@ import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
-import { HeroContainer, StatisticsContainer } from '../pages-styles/index.styles.js'
+import {
+  HeroContainer,
+  StatisticsContainer
+} from '../pages-styles/index.styles.js'
 import { LandingWaveBlue, LandingWaveGreen } from '../assets/waves.js'
 
 class RootIndex extends React.Component {
@@ -39,7 +42,7 @@ class RootIndex extends React.Component {
               imgData={heroData.image}
               FirstWave={LandingWaveBlue}
               SecondWave={LandingWaveGreen}
-               />
+            />
           </HeroContainer>
           <MissionStatement
             header={textNodes[2].text.text}
