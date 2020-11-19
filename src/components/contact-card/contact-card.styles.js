@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
+const fonts = {
+  manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
+    Arial, sans-serif`,
+  poppins: `'Poppins', sans-serif`
+}
+
+const fontSizes = {
+  name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
+  position: `calc(10px + (16 - 10) * ((100vw - 375px) / (1920 - 375)))`
+}
+
 const ContactCardContainer = styled.div`
   margin: auto;
   height: 40rem;
@@ -50,6 +61,8 @@ const Overlay = styled.div`
 const InfoContainer = styled.div`
   width: auto;
   height: auto;
+  display: flex;
+  justify-content: space-between;
 `
 
 const Icon = styled.a`
@@ -57,14 +70,27 @@ const Icon = styled.a`
 `
 
 const LeftContainer = styled.div`
-  float: left;
+`
+
+const MemberName = styled.h2`
+  font-family: ${fonts.manrope};
+  font-size: ${fontSizes.name};
+  color: ${(props) => props.color};
+  margin: auto;
+  padding-top: 1rem;
+`
+
+const MemberPosition = styled.p`
+  font-family: ${fonts.poppins};
+  font-size: ${fontSizes.p};
+  color: ${(props) => props.color};
+  margin: auto;
 `
 
 const RightContainer = styled.div`
-  float: right;
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-right: 0;
 `
 
 export {
@@ -76,5 +102,7 @@ export {
   InfoContainer,
   Icon,
   LeftContainer,
+  MemberName,
+  MemberPosition,
   RightContainer
 }

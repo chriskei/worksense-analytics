@@ -1,16 +1,17 @@
 import React from 'react'
-import { Subheader, MemberName, MemberPosition } from '../../assets/fonts.js'
 import { Email, LinkedIn } from '../../assets/icons'
 import {
   ContactCardContainer,
   FlexContainer,
   MemberImg,
-  Overlay,
   TextOverlay,
+  Overlay,
   InfoContainer,
   Icon,
-  RightContainer,
-  LeftContainer
+  LeftContainer,
+  MemberName,
+  MemberPosition,
+  RightContainer
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
