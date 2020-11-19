@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 
 const ContactCardContainer = styled.div`
   margin: auto;
-  height: 42rem;
+  height: 40rem;
   width: 30rem;
   z-index: 1;
 `
