@@ -20,14 +20,19 @@ const ProductsBottomContainer = styled.div`
   top: -72.2vw;
 `
 
+const OurTeamBackgroundContainer = styled.div`
+  position: relative;
+  top: 10vw;
+`
+
 const OurTeamTopContainer = styled.div`
   position: relative;
-  top: -52vw;
+  top: -75vw;
 `
 
 const OurTeamBottomContainer = styled.div`
   position: relative;
-  top: -70vw;
+  top: -130vw;
 `
 
 export {
@@ -35,6 +40,7 @@ export {
   LandingGreenContainer,
   ProductsTopContainer,
   ProductsBottomContainer,
+  OurTeamBackgroundContainer,
   OurTeamTopContainer,
   OurTeamBottomContainer
 }

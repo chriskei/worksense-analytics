@@ -6,6 +6,7 @@ import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { Hero } from '../components/hero/hero'
 import {
+  HeadingContainer,
   WavesContainer,
   AllContactCardsContainer
 } from '../pages-styles/our-team.styles'
@@ -14,6 +15,7 @@ import {
   OurTeamWaveTop,
   OurTeamWaveBottom
 } from '../assets/waves.js'
+import { H1, Subheader } from '../assets/fonts.js'
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
@@ -22,9 +24,11 @@ const OurTeamPage = (props) => {
   return (
     <Layout>
       <WavesContainer>
+        <HeadingContainer>
+          <H1>{ourTeam.ourTeamPageHeader}</H1>
+          <Subheader>{ourTeam.ourTeamPageSubheader}</Subheader>
+        </HeadingContainer>
         <Hero
-          header={ourTeam.ourTeamPageHeader}
-          text={ourTeam.ourTeamPageSubheader}
           backgroundWave={<OurTeamWaveBackground />}
           firstWave={<OurTeamWaveTop />}
           secondWave={<OurTeamWaveBottom />}

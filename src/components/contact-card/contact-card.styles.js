@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { colors } from '../../assets/colors'
 
 const ContactCardContainer = styled.div`
   margin: auto;
   height: 42rem;
-  width: 32.5rem;
+  width: 30rem;
+  z-index: 1;
 `
+
 const FlexContainer = styled.div`
   display: flex;
   position: relative;
@@ -17,6 +18,7 @@ const MemberImg = styled(Img)`
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 5px;
 `
 
 const TextOverlay = styled.p`

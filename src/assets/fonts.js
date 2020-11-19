@@ -12,13 +12,17 @@ const fontSizes = {
   h2: `calc(28px + (60 - 28) * ((100vw - 375px) / (1920 - 375)))`,
   h3: `calc(22px + (54 - 22) * ((100vw - 375px) / (1920 - 375)))`,
   heroBody: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
-  p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`
+  name: `calc(16px + (42 - 16) * ((100vw - 375px) / (1920 - 375)))`,
+  subheader: `calc(15px + (26 - 15) * ((100vw - 375px) / (1920 - 375)))`,
+  p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`,
+  position: `calc(10px + (16 - 10) * ((100vw - 375px) / (1920 - 375)))`
 }
 
 const H1 = styled.h1`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h1};
   color: ${colors.tan};
+  margin: auto;
 `
 
 const H2 = styled.h2`
@@ -39,10 +43,32 @@ const HeroBody = styled.p`
   color: ${colors.darkGreen};
 `
 
+const MemberName = styled.h2`
+  font-family: ${fonts.manrope};
+  font-size: ${fontSizes.name};
+  color: ${(props) => props.color};
+  margin: auto;
+  padding-top: 1rem;
+`
+
+const Subheader = styled.p`
+  font-family: ${fonts.poppins};
+  font-size: ${fontSizes.subheader};
+  color: ${colors.darkGreen};
+  margin: auto;
+`
+
 const P = styled.p`
   font-family: ${fonts.poppins};
   font-size: ${fontSizes.p};
   color: ${colors.darkGreen};
 `
 
-export { H1, H2, H3, HeroBody, P }
+const MemberPosition = styled.p`
+  font-family: ${fonts.poppins};
+  font-size: ${fontSizes.p};
+  color: ${(props) => props.color};
+  margin: auto;
+`
+
+export { H1, H2, H3, HeroBody, MemberName, Subheader, P, MemberPosition }

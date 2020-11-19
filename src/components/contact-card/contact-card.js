@@ -1,5 +1,5 @@
 import React from 'react'
-import { P } from '../../assets/fonts.js'
+import { Subheader, MemberName, MemberPosition } from '../../assets/fonts.js'
 import { Email, LinkedIn } from '../../assets/icons'
 import {
   ContactCardContainer,
@@ -25,10 +25,10 @@ const ContactCard = (props) => {
       </FlexContainer>
       <InfoContainer>
         <LeftContainer>
-          <P>{name}</P>
-          <P>{position}</P>
+          <MemberName>{name}</MemberName>
+          <MemberPosition>{position}</MemberPosition>
         </LeftContainer>
-        <RightContainer>
+        <RightContainer> 
           <Icon href={socialMedia} target="_blank">
             <LinkedIn></LinkedIn>
           </Icon>
