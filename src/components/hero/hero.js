@@ -1,21 +1,9 @@
 import React from 'react'
-import {
-  Waves,
-  HeroContent,
-  HeroText,
-  HeroImage
-} from './hero.styles.js'
+import { Waves, HeroContent, HeroText, HeroImage } from './hero.styles.js'
 import { H1, HeroBody } from '../../assets/fonts.js'
 
 const Hero = (props) => {
-  const {
-    header,
-    text,
-    imgData,
-    backgroundWave,
-    firstWave,
-    secondWave
-  } = props
+  const { header, text, imgData, backgroundWave, firstWave, secondWave } = props
 
   return (
     <>

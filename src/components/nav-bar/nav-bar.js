@@ -31,21 +31,21 @@ const NavBar = (props) => {
         }
       `}
       render={(data) => (
-          <Navigation bg={bg} role="navigation">
-            <Logo to="/">
-              <LogoImg
-                alt={data.contentfulLogo.title}
-                fixed={data.contentfulLogo.logoImage.fixed}
-              />
-            </Logo>
-            <NavLinkContainer>
-              <NavLink to="/our-products/">Our Products</NavLink>
-              <NavLink to="/our-team/">Our Team</NavLink>
-              <NavButtonContainer>
-                <RequestDemoButton />
-              </NavButtonContainer>
-            </NavLinkContainer>
-          </Navigation>
+        <Navigation bg={bg} role="navigation">
+          <Logo to="/">
+            <LogoImg
+              alt={data.contentfulLogo.title}
+              fixed={data.contentfulLogo.logoImage.fixed}
+            />
+          </Logo>
+          <NavLinkContainer>
+            <NavLink to="/our-products/">Our Products</NavLink>
+            <NavLink to="/our-team/">Our Team</NavLink>
+            <NavButtonContainer>
+              <RequestDemoButton />
+            </NavButtonContainer>
+          </NavLinkContainer>
+        </Navigation>
       )}
     />
   )

@@ -9,7 +9,11 @@ import {
 const LandingWaveBlue = () => {
   return (
     <LandingBlueContainer>
-      <svg viewBox="0 0 1440 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 1440 442"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M345.312 274.146C279.917 264.338 214.521 205.117 149.125 136.088C99.0833 82.6997 49.0417 24.6516 -1 0.0878906V442H149.125H345.312H541.5H737.688H933.875H1130.06H1326.25H1440.07V127C1402.13 172.202 1364.19 221.667 1326.25 244.536C1260.85 284.695 1195.46 243.981 1130.06 264.338C1064.67 284.695 999.271 362.422 933.875 333.367C868.479 303.202 803.083 166.254 737.688 126.095C672.292 86.6758 606.896 145.896 541.5 195.309C476.104 243.981 410.708 284.695 345.312 274.146Z"
           fill="url(#paint0_linear)"
@@ -35,7 +39,11 @@ const LandingWaveBlue = () => {
 const LandingWaveGreen = () => {
   return (
     <LandingGreenContainer>
-      <svg viewBox="0 0 1440 692" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 1440 692"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -64,7 +72,11 @@ const LandingWaveGreen = () => {
 const ProductsWaveTop = () => {
   return (
     <ProductsTopContainer>
-      <svg viewBox="0 0 1438 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 1438 505"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M358.367 378.81C252.527 304.071 146.686 241.552 40.8459 257.75C27.3973 259.663 13.9486 262.802 0.5 267.041V0H40.8459H358.367H675.888H993.409H1310.93H1438.5V279.211C1395.98 282.792 1353.45 285.37 1310.93 272.811C1205.09 241.552 1099.25 122.197 993.409 166.813C887.569 213.134 781.729 423.426 675.888 485.092C570.048 545.622 464.207 454.685 358.367 378.81Z"
           fill="url(#paint3_linear)"
@@ -91,7 +103,11 @@ const ProductsWaveTop = () => {
 const ProductsWaveBottom = () => {
   return (
     <ProductsBottomContainer>
-      <svg viewBox="0 0 1440 524" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 1440 524"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           fillRule="evenodd"
           clipRule="evenodd"

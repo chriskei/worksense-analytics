@@ -21,8 +21,8 @@ const ProductsBottomContainer = styled.div`
 `
 
 export {
-    LandingBlueContainer,
-    LandingGreenContainer,
-    ProductsTopContainer,
-    ProductsBottomContainer
-  }  
+  LandingBlueContainer,
+  LandingGreenContainer,
+  ProductsTopContainer,
+  ProductsBottomContainer
+}

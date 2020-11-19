@@ -6,7 +6,7 @@ const SectionHeader = (props) => {
   const { title, color } = props
 
   return (
-    <Header >
+    <Header>
       <H2 color={color}>{title}</H2>
     </Header>
   )
