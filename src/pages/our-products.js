@@ -2,14 +2,25 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
-import { HeroImage } from '../components/hero-image/hero-image'
 import { colors } from '../assets/colors.js'
-import { PageHeader } from '../components/page-header/page-header'
+import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
+import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
+import {
+  ProductsWaveTop,
+  ProductsWaveBottom,
+  ProductsWaveBackground
+} from '../assets/waves'
+import { Hero } from '../components/hero/hero'
+import {
+  HeroContainer,
+  ProductSpecsContainer,
+  ButtonContainer
+} from '../pages-styles/our-products.styles'
 
 const OurProductsPage = (props) => {
-  const productPageHero = get(props, 'data.contentfulHeroImage')
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
+  const productPageHeader = ourProducts.pageHeader
   const headers = ourProducts.productSpecsHeaders
   const images = ourProducts.productSpecsImages
   const descriptions = [
@@ -20,21 +31,39 @@ const OurProductsPage = (props) => {
   ]
 
   return (
-    <Layout bg={colors.tan}>
-      <HeroImage imgData={productPageHero} />
-      <PageHeader title={ourProducts.productSpecsSectionHeader} />
-      {headers.map((header, index) => {
-        return (
-          <ProductSpecs
-            key={index}
-            header={header}
-            description={descriptions[index]}
-            imgData={images[index]}
-            reversed={index % 2 == 0}
-          />
-        )
-      })}
-      <h1>{ourProducts.productWalkthroughHeader}</h1>
+    <Layout>
+      <HeroContainer>
+        <Hero
+          header={productPageHeader}
+          backgroundWave={<ProductsWaveBackground />}
+          firstWave={<ProductsWaveTop />}
+          secondWave={<ProductsWaveBottom />}
+        />
+      </HeroContainer>
+      <SectionHeader
+        title={ourProducts.productSpecsSectionHeader}
+        color={`${colors.darkGreen}`}
+      />
+      <ProductSpecsContainer>
+        {headers.map((header, index) => {
+          return (
+            <ProductSpecs
+              key={index}
+              header={header}
+              description={descriptions[index]}
+              imgData={images[index]}
+              reversed={index % 2 == 0}
+            />
+          )
+        })}
+      </ProductSpecsContainer>
+      <SectionHeader
+        title={ourProducts.productWalkthroughHeader}
+        color={`${colors.darkGreen}`}
+      />
+      <ButtonContainer>
+        <RequestDemoButton />
+      </ButtonContainer>
     </Layout>
   )
 }
@@ -63,13 +92,7 @@ export const pageQuery = graphql`
       }
     }
     contentfulOurProductsPage {
-      heroImage {
-        id
-        title
-        fluid {
-          src
-        }
-      }
+      pageHeader
       productSpecsSectionHeader
       productSpecsHeaders
       productSpecsImages {

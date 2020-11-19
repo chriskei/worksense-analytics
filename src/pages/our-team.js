@@ -4,31 +4,28 @@ import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
-import { H1, HeroBody } from '../assets/fonts.js'
+import { Hero } from '../components/hero/hero'
 import {
-  HeadingContainer,
   WavesContainer,
   AllContactCardsContainer
 } from '../pages-styles/our-team.styles'
-import { OurTeamTopWave } from '../assets/waves.js'
+import { OurTeamWaveBackground, OurTeamWaveTop, OurTeamWaveBottom } from '../assets/waves.js'
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
   const contactCard = get(props, 'data.contentfulOurTeamPage.contactCard')
 
   return (
-    <Layout
-      bg={
-        'linear-gradient(159.9deg, rgba(8, 61, 68, 0.71) -26.6%, #07A3B2 7.66%, #D9ECC7 59.94%)'
-      }
-    >
+    <Layout>
       <WavesContainer>
-        <OurTeamTopWave></OurTeamTopWave>
+        <Hero
+          header={ourTeam.ourTeamPageHeader}
+          text={ourTeam.ourTeamPageSubheader}
+          backgroundWave={<OurTeamWaveBackground />}
+          firstWave={<OurTeamWaveTop />}
+          secondWave = {<OurTeamWaveBottom />}
+        />
       </WavesContainer>
-      <HeadingContainer>
-        <H1>{ourTeam.ourTeamPageHeader}</H1>
-        <HeroBody>{ourTeam.ourTeamPageSubheader}</HeroBody>
-      </HeadingContainer>
       <AllContactCardsContainer>
         {contactCard.map((card, index) => {
           return (

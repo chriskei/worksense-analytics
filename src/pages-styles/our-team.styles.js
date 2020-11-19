@@ -1,15 +1,10 @@
 import styled from 'styled-components'
 
-const HeadingContainer = styled.div`
-  margin-left: 12rem;
-  width: 75%;
-  position: relative;
-`
 
 const WavesContainer = styled.div`
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
+  > * {
+    height: 30vw;
+  }
 `
 
 const AllContactCardsContainer = styled.div`
@@ -21,4 +16,4 @@ const AllContactCardsContainer = styled.div`
   flex-wrap: wrap;
 `
 
-export { HeadingContainer, WavesContainer, AllContactCardsContainer }
+export { WavesContainer, AllContactCardsContainer }

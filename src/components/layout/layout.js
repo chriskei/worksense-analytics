@@ -2,6 +2,7 @@ import React from 'react'
 import Container from './container'
 import { NavBar } from '../nav-bar/nav-bar.js'
 import styles from './fonts.css'
+import { colors } from '../../assets/colors'
 import { Footer } from '../footer/footer.js'
 
 class Layout extends React.Component {
@@ -15,7 +16,7 @@ class Layout extends React.Component {
 
     return (
       <Container>
-        <NavBar bg={bg} />
+        <NavBar bg={bg ? bg : `${colors.tan}`} />
         {children}
         <Footer />
       </Container>
