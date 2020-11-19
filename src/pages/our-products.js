@@ -35,11 +35,9 @@ const OurProductsPage = (props) => {
       <HeroContainer>
         <Hero
           header={productPageHeader}
-          BackgroundWave={ProductsWaveBackground}
-          FirstWave={ProductsWaveTop}
-          SecondWave={ProductsWaveBottom}
-          firstWavePosn={'-48vw'}
-          secondWavePosn={'-72.2vw'}
+          backgroundWave={<ProductsWaveBackground />}
+          firstWave={<ProductsWaveTop />}
+          secondWave={<ProductsWaveBottom />}
         />
       </HeroContainer>
       <SectionHeader

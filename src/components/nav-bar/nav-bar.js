@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import {
   Navigation,
   Logo,
@@ -32,8 +31,7 @@ const NavBar = (props) => {
         }
       `}
       render={(data) => (
-        <nav role="navigation">
-          <Navigation bg={bg}>
+          <Navigation bg={bg} role="navigation">
             <Logo to="/">
               <LogoImg
                 alt={data.contentfulLogo.title}
@@ -48,7 +46,6 @@ const NavBar = (props) => {
               </NavButtonContainer>
             </NavLinkContainer>
           </Navigation>
-        </nav>
       )}
     />
   )

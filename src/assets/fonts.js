@@ -24,11 +24,13 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h2};
+  color: ${(props) => props.color};
 `
 
 const H3 = styled.h2`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h3};
+  color: ${(props) => props.color};
 `
 
 const HeroBody = styled.p`

@@ -7,11 +7,6 @@ const Waves = styled.div`
   width: 100%;
 `
 
-const WaveContainer = styled.div`
-  position: relative;
-  top: ${(props) => props.posn};
-`
-
 const HeroContent = styled.div`
   display: flex;
 `
@@ -28,4 +23,4 @@ const HeroImage = styled(Img)`
   margin: 10em 5em 0 5em;
 `
 
-export { Waves, WaveContainer, HeroContent, HeroText, HeroImage }
+export { Waves, HeroContent, HeroText, HeroImage }

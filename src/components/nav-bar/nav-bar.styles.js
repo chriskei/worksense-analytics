@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
 
-const Navigation = styled.div`
+const Navigation = styled.nav`
   list-style: none;
   padding: 0;
   margin: 0;
