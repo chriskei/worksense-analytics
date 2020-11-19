@@ -8,6 +8,8 @@ const HeadingContainer = styled.div`
 
 const WavesContainer = styled.div`
   position: absolute;
+  overflow: hidden;
+  width: 100%;
 `
 
 const AllContactCardsContainer = styled.div`
