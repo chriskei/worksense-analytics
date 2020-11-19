@@ -13,7 +13,7 @@ const HeroContent = styled.div`
 
 const HeroText = styled.div`
   z-index: 1;
-  margin: 2em 5em 2em 14em;
+  margin: 2em 8em 2em 14em;
   padding: 3em 0 0 0;
 `
 
