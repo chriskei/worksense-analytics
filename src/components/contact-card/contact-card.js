@@ -28,7 +28,7 @@ const ContactCard = (props) => {
           <MemberName>{name}</MemberName>
           <MemberPosition>{position}</MemberPosition>
         </LeftContainer>
-        <RightContainer> 
+        <RightContainer>
           <Icon href={socialMedia} target="_blank">
             <LinkedIn></LinkedIn>
           </Icon>

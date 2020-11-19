@@ -206,7 +206,7 @@ const OurTeamWaveTop = () => {
         />
         <defs>
           <linearGradient
-            id="paint3_linear"  
+            id="paint3_linear"
             x1="127.422"
             y1="-252.699"
             x2="247.709"
