@@ -11,8 +11,7 @@ const fontSizes = {
   h1: `calc(40px + (90 - 40) * ((100vw - 375px) / (1920 - 375)))`,
   h2: `calc(28px + (60 - 28) * ((100vw - 375px) / (1920 - 375)))`,
   h3: `calc(22px + (54 - 22) * ((100vw - 375px) / (1920 - 375)))`,
-  heroBody: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
-  subheader: `calc(15px + (26 - 15) * ((100vw - 375px) / (1920 - 375)))`,
+  heroBody: `calc(15px + (26 - 15) * ((100vw - 375px) / (1920 - 375)))`,
   p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`
 }
 
@@ -39,12 +38,6 @@ const HeroBody = styled.p`
   font-family: ${fonts.poppins};
   font-size: ${fontSizes.heroBody};
   color: ${colors.darkGreen};
-`
-
-const Subheader = styled.p`
-  font-family: ${fonts.poppins};
-  font-size: ${fontSizes.subheader};
-  color: ${colors.darkGreen};
   margin: auto;
 `
 
@@ -54,4 +47,4 @@ const P = styled.p`
   color: ${colors.darkGreen};
 `
 
-export { H1, H2, H3, HeroBody, Subheader, P }
+export { H1, H2, H3, HeroBody, P }

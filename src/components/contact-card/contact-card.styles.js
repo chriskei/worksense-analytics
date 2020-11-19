@@ -9,7 +9,7 @@ const fonts = {
 
 const fontSizes = {
   name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
-  position: `calc(10px + (16 - 10) * ((100vw - 375px) / (1920 - 375)))`
+  position: `calc(13px + (22 - 13) * ((100vw - 375px) / (1920 - 375)))`
 }
 
 const ContactCardContainer = styled.div`
@@ -81,7 +81,7 @@ const MemberName = styled.h2`
 
 const MemberPosition = styled.p`
   font-family: ${fonts.poppins};
-  font-size: ${fontSizes.p};
+  font-size: ${fontSizes.position};
   color: ${(props) => props.color};
   margin: auto;
 `

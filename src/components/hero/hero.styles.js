@@ -8,19 +8,20 @@ const Waves = styled.div`
 `
 
 const HeroContent = styled.div`
-  display: flex;
+  display: inline-flex;
 `
 
 const HeroText = styled.div`
   z-index: 1;
-  flex: 1 1 60%;
-  margin: 0 0 0 5em;
-  padding: 5em 5em 0 0;
+  margin: 2em 5em 2em 14em;
+  padding: 3em 0 0 0;
 `
 
 const HeroImage = styled(Img)`
-  flex: 1 1 30%;
-  margin: 10em 5em 0 5em;
+  width: 100%;
+  display: inline-flex;
+  margin: 10em 10em 0 0;
+  position: relative;
 `
 
 export { Waves, HeroContent, HeroText, HeroImage }
