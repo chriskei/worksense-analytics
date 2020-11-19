@@ -1,29 +1,44 @@
 import React from 'react'
+import { Email, LinkedIn } from '../../assets/icons'
 import {
+  ContactCardContainer,
   FlexContainer,
   MemberImg,
-  TextContainer,
+  TextOverlay,
+  Overlay,
   InfoContainer,
-  Name,
-  Position
+  Icon,
+  LeftContainer,
+  MemberName,
+  MemberPosition,
+  RightContainer
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
-  const { name, position, picture, description, socialMedia } = props
+  const { name, position, picture, description, socialMedia, email } = props
   return (
-    <>
+    <ContactCardContainer>
       <FlexContainer>
-        <MemberImg alt={picture.title} fluid={picture.fluid} />
-        <TextContainer>
-          <p>{description}</p>
-          <p>{socialMedia}</p>
-        </TextContainer>
+        <MemberImg alt={picture} fluid={picture.fluid} />
+        <Overlay>
+          <TextOverlay>{description}</TextOverlay>
+        </Overlay>
       </FlexContainer>
       <InfoContainer>
-        <Name>{name}</Name>
-        <Position>{position}</Position>
+        <LeftContainer>
+          <MemberName>{name}</MemberName>
+          <MemberPosition>{position}</MemberPosition>
+        </LeftContainer>
+        <RightContainer>
+          <Icon href={socialMedia} target="_blank">
+            <LinkedIn></LinkedIn>
+          </Icon>
+          <Icon href={email} target="_blank">
+            <Email></Email>
+          </Icon>
+        </RightContainer>
       </InfoContainer>
-    </>
+    </ContactCardContainer>
   )
 }
 

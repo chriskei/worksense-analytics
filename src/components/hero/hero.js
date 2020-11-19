@@ -15,7 +15,7 @@ const Hero = (props) => {
       <HeroContent>
         <HeroText>
           <H1>{header}</H1>
-          {text && <HeroBody>{text.secondaryText}</HeroBody>}
+          {text && <HeroBody>{text}</HeroBody>}
         </HeroText>
         {imgData && <HeroImage alt={imgData.title} fluid={imgData.fluid} />}
       </HeroContent>

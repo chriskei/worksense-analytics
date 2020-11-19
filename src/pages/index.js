@@ -38,7 +38,7 @@ class RootIndex extends React.Component {
           <HeroContainer>
             <Hero
               header={heroData.header}
-              text={heroData.secondaryText}
+              text={heroData.secondaryText.secondaryText}
               imgData={heroData.image}
               firstWave={<LandingWaveBlue />}
               secondWave={<LandingWaveGreen />}

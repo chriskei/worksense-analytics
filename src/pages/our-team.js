@@ -2,50 +2,48 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
-import { colors } from '../assets/colors.js'
 import { ContactCard } from '../components/contact-card/contact-card'
-import { SectionHeader } from '../components/section-header/section-header'
+import { Hero } from '../components/hero/hero'
+import {
+  WavesContainer,
+  AllContactCardsContainer
+} from '../pages-styles/our-team.styles'
+import {
+  OurTeamWaveBackground,
+  OurTeamWaveTop,
+  OurTeamWaveBottom
+} from '../assets/waves.js'
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
-  const images = ourTeam.teamMemberPhotos
-  const descriptions = [
-    ourTeam.member1Description.member1Description,
-    ourTeam.member2Description.member2Description,
-    ourTeam.member3Description.member3Description,
-    ourTeam.member4Description.member4Description
-  ]
-  const socialMedia = ourTeam.socialMedia
-  const names = ourTeam.name
-  const positions = ourTeam.position
+  const contactCard = get(props, 'data.contentfulOurTeamPage.contactCard')
 
   return (
-    <Layout bg={colors.tan}>
-      {images.length > 0 &&
-        positions.length > 0 &&
-        images.length > 0 &&
-        descriptions.length > 0 &&
-        socialMedia.length > 0 &&
-        names.length == positions.length &&
-        positions.length == images.length &&
-        images.length == descriptions.length &&
-        descriptions.length == socialMedia.length && (
-          <>
-            <SectionHeader title={ourTeam.ourTeamPageHeader} />
-            {images.map((image, index) => {
-              return (
-                <ContactCard
-                  key={index}
-                  picture={image}
-                  description={descriptions[index]}
-                  socialMedia={socialMedia[index]}
-                  name={names[index]}
-                  position={positions[index]}
-                />
-              )
-            })}
-          </>
-        )}
+    <Layout>
+      <WavesContainer>
+        <Hero
+          header={ourTeam.ourTeamPageHeader}
+          text={ourTeam.ourTeamPageSubheader}
+          backgroundWave={<OurTeamWaveBackground />}
+          firstWave={<OurTeamWaveTop />}
+          secondWave={<OurTeamWaveBottom />}
+        />
+      </WavesContainer>
+      <AllContactCardsContainer>
+        {contactCard.map((card, index) => {
+          return (
+            <ContactCard
+              key={index}
+              picture={card.memberPicture}
+              description={card.memberDescription.memberDescription}
+              socialMedia={card.socialMediaLinks}
+              name={card.name}
+              position={card.companyPosition}
+              email={card.email}
+            />
+          )
+        })}
+      </AllContactCardsContainer>
     </Layout>
   )
 }
@@ -54,34 +52,25 @@ export default OurTeamPage
 
 export const pageQuery = graphql`
   query TeamQuery {
-    contentfulText(contentful_id: { eq: "ZYJ2HB6gy3qSFZV7JX3lY" }) {
-      text {
-        text
-      }
-    }
     contentfulOurTeamPage(contentful_id: { eq: "3a6fX9j2TR2P0N0E96fACj" }) {
       ourTeamPageHeader
-      teamMemberPhotos {
-        fluid {
-          aspectRatio
-          src
+      ourTeamPageSubheader
+      contactCard {
+        id
+        name
+        companyPosition
+        memberPicture {
+          fluid {
+            src
+            aspectRatio
+          }
         }
+        memberDescription {
+          memberDescription
+        }
+        socialMediaLinks
+        email
       }
-      member1Description {
-        member1Description
-      }
-      member2Description {
-        member2Description
-      }
-      member3Description {
-        member3Description
-      }
-      member4Description {
-        member4Description
-      }
-      socialMedia
-      name
-      position
     }
   }
 `

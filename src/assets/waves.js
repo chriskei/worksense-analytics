@@ -3,7 +3,10 @@ import {
   LandingBlueContainer,
   LandingGreenContainer,
   ProductsTopContainer,
-  ProductsBottomContainer
+  ProductsBottomContainer,
+  OurTeamBackgroundContainer,
+  OurTeamTopContainer,
+  OurTeamBottomContainer
 } from './waves.styles'
 
 const LandingWaveBlue = () => {
@@ -157,10 +160,107 @@ const ProductsWaveBackground = () => {
   )
 }
 
+const OurTeamWaveBackground = () => {
+  return (
+    <OurTeamBackgroundContainer>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1439 1180"
+        fill="none"
+      >
+        <path
+          d="M0 0.802734H1440V477.058C1205.81 516.305 1121 772 824 660C442.5 516.135 380.5 857 380.5 857C309.5 1153 0 1179.5 0 1179.5V0.802734Z"
+          fill="url(#paint0_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="127.001"
+            y1="-465.559"
+            x2="510.09"
+            y2="813.125"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#083D44" stopOpacity="0.71" />
+            <stop offset="0.395833" stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </OurTeamBackgroundContainer>
+  )
+}
+
+const OurTeamWaveTop = () => {
+  return (
+    <OurTeamTopContainer>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 642"
+        fill="none"
+      >
+        <path
+          d="M0.556641 0.802734L1439.02 0.802572L1439.49 246.11L1439.49 498.751C1296.35 514.923 1095.09 484.583 1030.6 362.041C951.005 210.801 712.221 230.146 684.509 230.146C489.012 230.146 375.138 420.287 290.247 526.273C222.334 611.061 68.8232 638.427 0.556684 641.511L0.556641 0.802734Z"
+          fill="url(#paint3_linear)"
+          fill-opacity="0.2"
+        />
+        <defs>
+          <linearGradient
+            id="paint3_linear"
+            x1="127.422"
+            y1="-252.699"
+            x2="247.709"
+            y2="485.136"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#083D44" stopOpacity="0.71" />
+            <stop offset="0.395833" stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </OurTeamTopContainer>
+  )
+}
+
+const OurTeamWaveBottom = () => {
+  return (
+    <OurTeamBottomContainer>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 840"
+        fill="none"
+      >
+        <path
+          d="M1440.56 0L0.556726 -0.000162625L0.556705 321.231C35.4221 363.243 137.553 450.532 267.152 463.595C429.151 479.923 541.007 435.021 730.557 394.201C920.106 353.38 1065.58 549.317 1150.56 688.106C1218.54 799.137 1372.22 834.972 1440.56 839.01L1440.56 0Z"
+          fill="url(#paint4_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint4_linear"
+            x1="1313.56"
+            y1="-331.961"
+            x2="1111.23"
+            y2="616.77"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#083D44" stopOpacity="0.71" />
+            <stop offset="0.395833" stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </OurTeamBottomContainer>
+  )
+}
+
 export {
   LandingWaveBlue,
   LandingWaveGreen,
   ProductsWaveTop,
   ProductsWaveBottom,
-  ProductsWaveBackground
+  ProductsWaveBackground,
+  OurTeamWaveBackground,
+  OurTeamWaveTop,
+  OurTeamWaveBottom
 }
