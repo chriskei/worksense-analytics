@@ -3,7 +3,7 @@ import { Header } from './section-header.styles'
 import { H2 } from '../../assets/fonts'
 
 const SectionHeader = (props) => {
-  const { title, color} = props
+  const { title, color } = props
 
   return (
     <Header>

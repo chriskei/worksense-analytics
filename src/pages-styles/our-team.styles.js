@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 const WavesContainer = styled.div`
   > * {
     height: 30vw;

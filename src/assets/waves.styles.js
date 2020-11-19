@@ -20,7 +20,7 @@ const ProductsBottomContainer = styled.div`
   top: -72.2vw;
 `
 
-const OurTeamTopContainer = styled.div `
+const OurTeamTopContainer = styled.div`
   position: relative;
   top: -52vw;
 `

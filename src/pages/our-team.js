@@ -9,7 +9,11 @@ import {
   WavesContainer,
   AllContactCardsContainer
 } from '../pages-styles/our-team.styles'
-import { OurTeamWaveBackground, OurTeamWaveTop, OurTeamWaveBottom } from '../assets/waves.js'
+import {
+  OurTeamWaveBackground,
+  OurTeamWaveTop,
+  OurTeamWaveBottom
+} from '../assets/waves.js'
 
 const OurTeamPage = (props) => {
   const ourTeam = get(props, 'data.contentfulOurTeamPage')
@@ -23,7 +27,7 @@ const OurTeamPage = (props) => {
           text={ourTeam.ourTeamPageSubheader}
           backgroundWave={<OurTeamWaveBackground />}
           firstWave={<OurTeamWaveTop />}
-          secondWave = {<OurTeamWaveBottom />}
+          secondWave={<OurTeamWaveBottom />}
         />
       </WavesContainer>
       <AllContactCardsContainer>
