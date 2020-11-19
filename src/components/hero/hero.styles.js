@@ -1,19 +1,9 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-const HeroContainer = styled.div`
-  background: rgb(7, 163, 178);
-  background: linear-gradient(
-    90deg,
-    rgba(7, 163, 178, 1) 0%,
-    rgba(217, 236, 199, 1) 100%
-  );
-  height: 125vh;
-`
-
 const Waves = styled.div`
   position: absolute;
-  top: 75px;
+  top: 0px;
   width: 100%;
 `
 
@@ -33,4 +23,4 @@ const HeroImage = styled(Img)`
   margin: 10em 5em 0 5em;
 `
 
-export { HeroContainer, Waves, HeroContent, HeroText, HeroImage }
+export { Waves, HeroContent, HeroText, HeroImage }

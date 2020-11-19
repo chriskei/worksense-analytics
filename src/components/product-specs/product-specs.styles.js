@@ -10,11 +10,12 @@ const FeatureContainer = styled.div`
 
 const FeatureText = styled.div`
   flex: 1 1 50%;
+  margin: 0 5em 0 0;
 `
 
 const ProductImage = styled(Img)`
   flex: 1 1 50%;
-  margin: 0 50px 0 50px;
+  margin: 0 5em 0 0;
 `
 
 export { FeatureContainer, FeatureText, ProductImage }
