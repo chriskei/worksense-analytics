@@ -13,7 +13,7 @@ const fontSizes = {
   h3: `calc(22px + (54 - 22) * ((100vw - 375px) / (1920 - 375)))`,
   heroBody: `calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)))`,
   subheader: `calc(15px + (26 - 15) * ((100vw - 375px) / (1920 - 375)))`,
-  p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`,
+  p: `calc(14px + (24 - 14) * ((100vw - 375px) / (1920 - 375)))`
 }
 
 const H1 = styled.h1`

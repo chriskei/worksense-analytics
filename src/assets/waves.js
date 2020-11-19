@@ -163,30 +163,30 @@ const ProductsWaveBackground = () => {
 const OurTeamWaveBackground = () => {
   return (
     <OurTeamBackgroundContainer>
-      <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 1439 1180" 
-      fill="none"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1439 1180"
+        fill="none"
       >
-      <path 
-      d="M0 0.802734H1440V477.058C1205.81 516.305 1121 772 824 660C442.5 516.135 380.5 857 380.5 857C309.5 1153 0 1179.5 0 1179.5V0.802734Z" 
-      fill="url(#paint0_linear)"
-      />
-      <defs>
-      <linearGradient 
-      id="paint0_linear" 
-      x1="127.001" 
-      y1="-465.559" 
-      x2="510.09" 
-      y2="813.125" 
-      gradientUnits="userSpaceOnUse"
-      >
-      <stop stopColor="#083D44" stopOpacity="0.71"/>
-      <stop offset="0.395833" stopColor="#07A3B2"/>
-      <stop offset="1" stopColor="#D9ECC7"/>
-      </linearGradient>
-    </defs>
-    </svg>
+        <path
+          d="M0 0.802734H1440V477.058C1205.81 516.305 1121 772 824 660C442.5 516.135 380.5 857 380.5 857C309.5 1153 0 1179.5 0 1179.5V0.802734Z"
+          fill="url(#paint0_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="127.001"
+            y1="-465.559"
+            x2="510.09"
+            y2="813.125"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#083D44" stopOpacity="0.71" />
+            <stop offset="0.395833" stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </linearGradient>
+        </defs>
+      </svg>
     </OurTeamBackgroundContainer>
   )
 }

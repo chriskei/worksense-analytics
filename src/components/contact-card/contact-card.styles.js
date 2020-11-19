@@ -69,8 +69,7 @@ const Icon = styled.a`
   margin-left: 1rem;
 `
 
-const LeftContainer = styled.div`
-`
+const LeftContainer = styled.div``
 
 const MemberName = styled.h2`
   font-family: ${fonts.manrope};
