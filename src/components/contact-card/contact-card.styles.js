@@ -50,6 +50,10 @@ const InfoContainer = styled.div`
   height: auto;
 `
 
+const Icon = styled.a`
+  margin-left: 1rem;
+`
+
 const LeftContainer = styled.div`
   float: left;
 `
@@ -67,7 +71,8 @@ export {
   MemberImg,
   TextOverlay,
   Overlay,
+  InfoContainer,
+  Icon,
   LeftContainer,
-  RightContainer,
-  InfoContainer
+  RightContainer
 }

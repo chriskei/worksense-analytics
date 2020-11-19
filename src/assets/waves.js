@@ -226,11 +226,11 @@ const OurTeamWaveBottom = () => {
       >
         <path
           d="M-0.511719 0.802734H1439.49V477.058C1126.5 529.511 839 687.024 839 687.024C447 577.975 390.488 871.07 390.488 871.07C198.488 1161.33 -0.511719 1179.5 -0.511719 1179.5V0.802734Z"
-          fill="url(#paint0_linear)"
+          fill="url(#paint2_linear)"
         />
         <defs>
           <linearGradient
-            id="paint0_linear"
+            id="paint2_linear"
             x1="126.489"
             y1="-465.559"
             x2="509.578"

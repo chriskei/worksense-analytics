@@ -8,6 +8,7 @@ import {
   Overlay,
   TextOverlay,
   InfoContainer,
+  Icon,
   RightContainer,
   LeftContainer
 } from '../contact-card/contact-card.styles'
@@ -28,12 +29,12 @@ const ContactCard = (props) => {
           <P>{position}</P>
         </LeftContainer>
         <RightContainer>
-          <a href={socialMedia} target="_blank">
+          <Icon href={socialMedia} target="_blank">
             <LinkedIn></LinkedIn>
-          </a>
-          <a href={email} target="_blank">
+          </Icon>
+          <Icon href={email} target="_blank">
             <Email></Email>
-          </a>
+          </Icon>
         </RightContainer>
       </InfoContainer>
     </ContactCardContainer>
