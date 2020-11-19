@@ -17,9 +17,10 @@ const OurTeamPage = (props) => {
   const contactCard = get(props, 'data.contentfulOurTeamPage.contactCard')
 
   return (
-    <Layout bg={
-      'linear-gradient(159.9deg, rgba(8, 61, 68, 0.71) -26.6%, #07A3B2 7.66%, #D9ECC7 59.94%)'
-    }
+    <Layout
+      bg={
+        'linear-gradient(159.9deg, rgba(8, 61, 68, 0.71) -26.6%, #07A3B2 7.66%, #D9ECC7 59.94%)'
+      }
     >
       <WavesContainer>
         <OurTeamTopWave></OurTeamTopWave>
