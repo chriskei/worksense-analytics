@@ -13,7 +13,7 @@ import {
   HeroContainer,
   StatisticsContainer
 } from '../pages-styles/index.styles.js'
-import { LandingWaveBlue, LandingWaveGreen } from '../assets/waves.js'
+import { LandingWaveTop, LandingWaveGreen } from '../assets/waves.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -40,7 +40,7 @@ class RootIndex extends React.Component {
               header={heroData.header}
               text={heroData.secondaryText.secondaryText}
               imgData={heroData.image}
-              firstWave={<LandingWaveBlue />}
+              backgroundWave={<LandingWaveTop />}
               secondWave={<LandingWaveGreen />}
             />
           </HeroContainer>

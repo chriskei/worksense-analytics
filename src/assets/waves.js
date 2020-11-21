@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  LandingBlueContainer,
+  LandingTopContainer,
   LandingGreenContainer,
   ProductsTopContainer,
   ProductsBottomContainer,
@@ -9,62 +9,32 @@ import {
   OurTeamBottomContainer
 } from './waves.styles'
 
-const LandingWaveBlue = () => {
+const LandingWaveTop = () => {
   return (
-    <LandingBlueContainer>
-      <svg
-        viewBox="0 0 1440 442"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M345.312 274.146C279.917 264.338 214.521 205.117 149.125 136.088C99.0833 82.6997 49.0417 24.6516 -1 0.0878906V442H149.125H345.312H541.5H737.688H933.875H1130.06H1326.25H1440.07V127C1402.13 172.202 1364.19 221.667 1326.25 244.536C1260.85 284.695 1195.46 243.981 1130.06 264.338C1064.67 284.695 999.271 362.422 933.875 333.367C868.479 303.202 803.083 166.254 737.688 126.095C672.292 86.6758 606.896 145.896 541.5 195.309C476.104 243.981 410.708 284.695 345.312 274.146Z"
-          fill="url(#paint0_linear)"
-        />
+    <LandingTopContainer>
+      <svg viewBox="0 0 1440 1796" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M0.369579 932.824H2.17391e-05L0 575.801C34.8654 529.109 136.996 432.093 266.595 417.576C389.884 403.765 484.13 429.369 605.684 462.392C643.849 472.761 684.707 483.861 730 494.702C919.549 540.07 1065.02 322.302 1150 168.05C1217.99 44.648 1371.66 4.82056 1440 0.332031V831.698H1440.47V1446.26C1431.9 1473.19 1394.75 1420.34 1377.24 1390.55C1314.01 1246.88 905.857 1119.63 675.18 1493.18C490.638 1792.02 148.168 1813.55 0.000451883 1786.96L0.000481394 1302.29L0.369579 932.824Z" fill="url(#paint0_linear)"/>
         <defs>
-          <linearGradient
-            id="paint0_linear"
-            x1="719.534"
-            y1="0.0878906"
-            x2="719.534"
-            y2="442"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.151042" stopColor="#07a3b2" />
-            <stop offset="1" stopColor="#07a3b2" stopOpacity="0" />
+          <linearGradient id="paint0_linear" x1="127.043" y1="-709.875" x2="928.233" y2="1046.75" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#083D44" stopOpacity="0.71"/>
+            <stop offset="0.395833" stopColor="#07A3B2"/>
+            <stop offset="1" stopColor="#D9ECC7"/>
           </linearGradient>
         </defs>
       </svg>
-    </LandingBlueContainer>
+    </LandingTopContainer>
   )
 }
 
 const LandingWaveGreen = () => {
   return (
     <LandingGreenContainer>
-      <svg
-        viewBox="0 0 1440 692"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M16.6667 20.7778L-24 0V374H-8V692H1440V374V41.5556L1399.33 69.216C1358.67 97.3958 1277.33 151.938 1196 193.883C1114.67 235.049 1033.33 263.618 952 276.994C870.667 290.889 789.333 290.889 708 249.333C673.158 231.532 638.317 206.104 603.475 180.677C556.984 146.747 510.492 112.817 464 97.0062C414.22 79.7589 364.441 83.7698 314.661 87.7807C283.107 90.3231 251.554 92.8654 220 89.9938C138.667 83.1111 57.3333 41.5556 16.6667 20.7778Z"
-          fill="url(#paint1_linear)"
-          fillOpacity="0.5"
-        />
+      <svg viewBox="0 0 1440 1042" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-7.04489e-05 1041.33L-2.42629e-05 358.857L3.40531e-05 9.4574C147.684 -15.2271 514.281 -4.76081 799.203 234.581C1155.36 533.758 1439.53 178.3 1439.53 178.3L1439.53 358.858L1440 620.156L1440 889.266C1296.76 906.492 1095.35 874.175 1030.81 743.644C951.154 582.545 712.192 603.151 684.46 603.151C488.818 603.151 374.859 805.688 289.905 918.582C221.942 1008.9 68.3171 1038.05 -7.04489e-05 1041.33Z" fill="url(#paint1_linear)" fillOpacity="0.2"/>
         <defs>
-          <linearGradient
-            id="paint1_linear"
-            x1="708"
-            y1="0"
-            x2="708"
-            y2="613"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#D9ECC7" />
-            <stop offset="1" stopColor="#D9ECC7" stopOpacity="0" />
+          <linearGradient id="paint1_linear" x1="126.96" y1="88.8307" x2="262.871" y2="872.068" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#D9ECC7"/>
+            <stop offset="1" stopColor="#D9ECC7" stopOpacity="0.35"/>
           </linearGradient>
         </defs>
       </svg>
@@ -255,7 +225,7 @@ const OurTeamWaveBottom = () => {
 }
 
 export {
-  LandingWaveBlue,
+  LandingWaveTop,
   LandingWaveGreen,
   ProductsWaveTop,
   ProductsWaveBottom,
