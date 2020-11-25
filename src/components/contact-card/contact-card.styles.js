@@ -30,6 +30,7 @@ const MemberImg = styled(Img)`
   width: 100%;
   height: auto;
   border-radius: 5px;
+  box-shadow: 3px 3px 12px grey;
 `
 
 const TextOverlay = styled.p`
