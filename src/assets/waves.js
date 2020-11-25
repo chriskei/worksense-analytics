@@ -6,7 +6,9 @@ import {
   ProductsBottomContainer,
   OurTeamBackgroundContainer,
   OurTeamTopContainer,
-  OurTeamBottomContainer
+  OurTeamBottomContainer,
+  WaveContainer,
+  CenteredWave
 } from './waves.styles'
 
 const LandingWaveBlue = () => {
@@ -254,6 +256,190 @@ const OurTeamWaveBottom = () => {
   )
 }
 
+const DemoWaveBackground = () => {
+  return (
+    <WaveContainer>
+      <CenteredWave
+        height="1058"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          width="1920"
+          height="1058"
+          transform="matrix(-1 0 0 1 1920 0)"
+          fill="url(#paint0_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="2421.27"
+            y1="-914.017"
+            x2="371.761"
+            y2="1118.19"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#30C0CE" />
+            <stop offset="1" stopColor="#0BA8B7" stopOpacity="0.45" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const DemoWaveTop = () => {
+  return (
+    <WaveContainer top="-1920px">
+      <CenteredWave
+        height="1169"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.00011401 -5.24223e-05L0.000304617 1168.5C71.4415 1116.35 361.783 1036.15 1077.81 1089.35C1299.26 1094.56 1734.93 1093.61 1920 987.999L1920 879.498L1920 431.009L1920 163.498C1770.35 147.998 1493.12 181.171 1403.28 309.554C1292.41 468.001 959.785 447.734 921.183 447.734C648.859 447.734 490.235 248.533 371.984 137.496C277.383 48.6674 95.0939 3.23091 0.00011401 -5.24223e-05Z"
+          fill="url(#paint1_linear)"
+          fillOpacity="0.2"
+        />
+        <defs>
+          <linearGradient
+            id="paint1_linear"
+            x1="145.175"
+            y1="953.59"
+            x2="241.031"
+            y2="171.803"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#F7F3E9" />
+            <stop
+              offset="0.432292"
+              stopColor="#84D6DE"
+              stopOpacity="0.898947"
+            />
+            <stop offset="0.625" stopColor="#93DCE3" />
+            <stop offset="1" stopColor="#B5F4FA" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const DemoWaveBottom = () => {
+  return (
+    <WaveContainer top="-720px">
+      <CenteredWave
+        height="1077"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M577.53 260.21C213.418 503.861 40.7968 558.86 0 555.903V1076.32C8.9243 1021.13 205.004 919.606 917.928 955.089C1630.85 990.572 1883.03 887.079 1920 830.898V0C1587.25 476.066 1032.67 -44.354 577.53 260.21Z"
+          fill="url(#paint0_radial)"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(2095.4 1023.76) rotate(-173.459) scale(1567 1018.92)"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="0.850921" stopColor="#23C4D3" />
+          </radialGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const ContactWaveBackground = () => {
+  return (
+    <WaveContainer>
+      <CenteredWave
+        height="1074"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 65.7983V1074H1920V37.5102C1741.5 106.514 1348.33 373.837 892.517 173.51C487.62 -4.43812 37.2697 -54.6877 0 65.7983Z"
+          fill="url(#paint2_linear)"
+          fillOpacity="0.7"
+        />
+        <defs>
+          <linearGradient
+            id="paint2_linear"
+            x1="1920"
+            y1="64.5609"
+            x2="586.874"
+            y2="1162.94"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#4AD3D0" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const ContactWaveTop = () => {
+  return (
+    <WaveContainer top="-1784px">
+      <CenteredWave height="926" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1184.68 478.629C1417.53 347.715 1771.91 424.081 1920 478.629L1920 926H0V0.291528C51.0638 -3.90443 197.106 35.5374 372.766 226.872C592.34 466.041 893.616 642.271 1184.68 478.629Z"
+          fill="url(#paint3_linear)"
+          fillOpacity="0.15"
+        />
+        <defs>
+          <linearGradient
+            id="paint3_linear"
+            x1="993.191"
+            y1="0"
+            x2="993.191"
+            y2="1095.43"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#4AD3D0" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const ContactWaveBottom = () => {
+  return (
+    <WaveContainer top="-850px">
+      <CenteredWave height="844" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1920.68 843.188L0.68457 843.187L0.68458 732.558C134.684 435.747 608.684 472.849 608.684 472.849C1131.35 582.642 1399.35 310.721 1399.35 310.721C1655.35 18.484 1920.68 0.1875 1920.68 0.1875L1920.68 843.188Z"
+          fill="url(#paint3_linear)"
+          fillOpacity="0.15"
+        />
+        <defs>
+          <linearGradient
+            id="paint3_linear"
+            x1="2420.48"
+            y1="1657.46"
+            x2="1354.09"
+            y2="318.175"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#1A9FAC" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
 export {
   LandingWaveBlue,
   LandingWaveGreen,
@@ -262,5 +448,11 @@ export {
   ProductsWaveBackground,
   OurTeamWaveBackground,
   OurTeamWaveTop,
-  OurTeamWaveBottom
+  OurTeamWaveBottom,
+  DemoWaveBackground,
+  DemoWaveTop,
+  DemoWaveBottom,
+  ContactWaveBackground,
+  ContactWaveTop,
+  ContactWaveBottom
 }

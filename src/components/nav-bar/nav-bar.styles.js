@@ -36,10 +36,15 @@ const Logo = styled(Link)`
 `
 
 const NavLinkContainer = styled.div`
-  display: inline-flex;
-  float: right;
-  margin: 2rem 3rem 0rem 0rem;
-  z-index: 1;
+  @media (min-width: 375px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    display: inline-flex;
+    float: right;
+    margin: 2rem 3rem 0rem 0rem;
+    z-index: 1;
+  }
 `
 
 const NavButtonContainer = styled.div`

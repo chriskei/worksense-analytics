@@ -15,7 +15,8 @@ import { Hero } from '../components/hero/hero'
 import {
   HeroContainer,
   ProductSpecsContainer,
-  ButtonContainer
+  ButtonContainer,
+  SectionHeaderContainer
 } from '../pages-styles/our-products.styles'
 
 const OurProductsPage = (props) => {
@@ -40,10 +41,12 @@ const OurProductsPage = (props) => {
           secondWave={<ProductsWaveBottom />}
         />
       </HeroContainer>
-      <SectionHeader
-        title={ourProducts.productSpecsSectionHeader}
-        color={`${colors.darkGreen}`}
-      />
+      <SectionHeaderContainer>
+        <SectionHeader
+          title={ourProducts.productSpecsSectionHeader}
+          color={`${colors.darkGreen}`}
+        />
+      </SectionHeaderContainer>
       <ProductSpecsContainer>
         {headers.map((header, index) => {
           return (
@@ -57,10 +60,12 @@ const OurProductsPage = (props) => {
           )
         })}
       </ProductSpecsContainer>
-      <SectionHeader
-        title={ourProducts.productWalkthroughHeader}
-        color={`${colors.darkGreen}`}
-      />
+      <SectionHeaderContainer>
+        <SectionHeader
+          title={ourProducts.productWalkthroughHeader}
+          color={`${colors.darkGreen}`}
+        />
+      </SectionHeaderContainer>
       <ButtonContainer>
         <RequestDemoButton />
       </ButtonContainer>
