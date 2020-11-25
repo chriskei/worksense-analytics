@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { RightArrow, DownArrow } from '../../assets/icons'
+import { P } from '../../assets/fonts'
+import { colors } from '../../assets/colors'
 import {
   CollapseContainer,
   HeaderContainer,
@@ -15,11 +17,11 @@ const CollapseText = (props) => {
     <CollapseContainer>
       <HeaderContainer onClick={() => setOpen(!open)}>
         <ArrowContainer>{open ? <DownArrow /> : <RightArrow />}</ArrowContainer>
-        <h3>{header}</h3>
+        <P color={open ? colors.blue : colors.darkGreen}>{header}</P>
       </HeaderContainer>
       {open && (
         <BodyContainer>
-          <h4>{body}</h4>
+          <P>{body}</P>
         </BodyContainer>
       )}
     </CollapseContainer>

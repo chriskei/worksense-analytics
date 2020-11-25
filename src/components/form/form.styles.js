@@ -3,24 +3,40 @@ import { colors } from '../../assets/colors'
 
 const FormContainer = styled.form`
   display: flex;
-  flex-direction: row;
-  padding-bottom: 5.5rem;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  @media (min-width: 375px) {
+    width: 20rem;
+  }
+  @media (min-width: 768px) {
+    width: 40rem;
+  }
+  @media (min-width: 1440px) {
+    width: 64.375rem;
+    flex-direction: row;
+  }
 `
 
 const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: 1rem;
-  width: 24.5rem;
+  width: 100%;
+  @media (min-width: 1440px) {
+    margin-right: 2rem;
+    width: 50%;
+  }
 `
 
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
-  margin-right: auto;
-  width: 24.5rem;
+  width: 100%;
+  @media (min-width: 1440px) {
+    margin-left: 2rem;
+    width: 50%;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -29,11 +45,11 @@ const ButtonContainer = styled.div`
 `
 
 const Button = styled.button`
-  font-size: 1em;
   background-color: ${colors.darkGreen};
   color: ${colors.tan};
   border-radius: 10px;
-  padding: 12px 18px 12px 18px;
+  padding: 12px 48px 12px 48px;
+  margin-top: 1rem;
   border: none;
   outline: none;
   cursor: pointer;

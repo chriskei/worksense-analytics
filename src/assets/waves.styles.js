@@ -35,6 +35,26 @@ const OurTeamBottomContainer = styled.div`
   top: -130vw;
 `
 
+const WaveContainer = styled.div`
+  overflow: hidden;
+  position: relative;
+  top: ${(props) => props.top || 0};
+`
+
+const CenteredWave = styled.svg`
+  margin-left: 50%;
+  transform: translateX(-50%);
+  @media (min-width: 375px) {
+    width: 768px;
+  }
+  @media (min-width: 768px) {
+    width: 1440px;
+  }
+  @media (min-width: 1440px) {
+    width: 1920px;
+  }
+`
+
 export {
   LandingTopContainer,
   LandingGreenContainer,
@@ -42,5 +62,7 @@ export {
   ProductsBottomContainer,
   OurTeamBackgroundContainer,
   OurTeamTopContainer,
-  OurTeamBottomContainer
+  OurTeamBottomContainer,
+  WaveContainer,
+  CenteredWave
 }

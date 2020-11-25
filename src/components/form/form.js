@@ -7,9 +7,10 @@ import {
   ButtonContainer,
   Button
 } from './form.styles'
+import { ButtonBody } from '../../assets/fonts'
 
 const Form = (props) => {
-  const { name, submitText } = props
+  const { name } = props
 
   return (
     <FormContainer
@@ -28,7 +29,9 @@ const Form = (props) => {
       <RightContainer>
         <Field small={false} name="message" label="Message" />
         <ButtonContainer>
-          <Button>{submitText}</Button>
+          <Button>
+            <ButtonBody>Submit</ButtonBody>
+          </Button>
         </ButtonContainer>
       </RightContainer>
     </FormContainer>
