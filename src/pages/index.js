@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import { Layout } from '../components/layout/layout.js'
 import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
@@ -49,7 +50,7 @@ class RootIndex extends React.Component {
           imgData={heroData.image}
         />
         <ButtonsContainer>
-          <Button primary text="Request Demo" />
+          <Link to="/request-demo/"><Button primary text="Request Demo" /></Link>
           <Button text="Learn More" />
         </ButtonsContainer>
         <MissionStatement text={textNodes[0].text.text} />
