@@ -19,11 +19,23 @@ const LandingWaveBackground = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width="1920" height="1326" transform="matrix(-1 0 0 1 1920 0)" fill="url(#paint2_linear)"/>
+        <rect
+          width="1920"
+          height="1326"
+          transform="matrix(-1 0 0 1 1920 0)"
+          fill="url(#paint2_linear)"
+        />
         <defs>
-          <linearGradient id="paint2_linear" x1="2445.49" y1="532.848" x2="61.9253" y2="841.834" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#07A3B2"/>
-            <stop offset="1" stopColor="#D9ECC7"/>
+          <linearGradient
+            id="paint2_linear"
+            x1="2445.49"
+            y1="532.848"
+            x2="61.9253"
+            y2="841.834"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
           </linearGradient>
         </defs>
       </CenteredWave>
@@ -103,7 +115,10 @@ const StatsWaveBackground = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M0 977.045V0C133.29 64.6621 441.306 171.649 584.81 211.445C808.487 273.474 1021.6 250.376 1262.09 118.978C1485.77 -3.23311 1761.3 95.8419 1920 73.4153V839.961C1920 839.961 1658.21 1010.99 1270.21 944.067C882.213 877.142 837.227 1247.33 478.594 1066.93C119.961 886.518 0 977.045 0 977.045Z" fill="#083D44"/>
+        <path
+          d="M0 977.045V0C133.29 64.6621 441.306 171.649 584.81 211.445C808.487 273.474 1021.6 250.376 1262.09 118.978C1485.77 -3.23311 1761.3 95.8419 1920 73.4153V839.961C1920 839.961 1658.21 1010.99 1270.21 944.067C882.213 877.142 837.227 1247.33 478.594 1066.93C119.961 886.518 0 977.045 0 977.045Z"
+          fill="#083D44"
+        />
       </CenteredWave>
     </WaveContainer>
   )
@@ -112,16 +127,23 @@ const StatsWaveBackground = () => {
 const StatsWaveTop = () => {
   return (
     <WaveContainer top="-1050px">
-      <CenteredWave
-        height="516"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M136.5 196.5C80.78 157.765 0 21.2303 0 21.2303V516H1920V52.8332C1646.99 -92.9046 1277.95 94.5169 1005 233.137L1004.97 233.153C887.044 297.321 439.175 406.911 136.5 196.5Z" fill="url(#paint4_linear)" fillOpacity="0.05"/>
+      <CenteredWave height="516" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M136.5 196.5C80.78 157.765 0 21.2303 0 21.2303V516H1920V52.8332C1646.99 -92.9046 1277.95 94.5169 1005 233.137L1004.97 233.153C887.044 297.321 439.175 406.911 136.5 196.5Z"
+          fill="url(#paint4_linear)"
+          fillOpacity="0.05"
+        />
         <defs>
-          <linearGradient id="paint4_linear" x1="783.891" y1="4.13858" x2="783.891" y2="516" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#07A3B2"/>
-            <stop offset="1" stopColor="#07A3B2" stopOpacity="0"/>
+          <linearGradient
+            id="paint4_linear"
+            x1="783.891"
+            y1="4.13858"
+            x2="783.891"
+            y2="516"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#07A3B2" stopOpacity="0" />
           </linearGradient>
         </defs>
       </CenteredWave>
@@ -132,18 +154,25 @@ const StatsWaveTop = () => {
 const StatsWaveBottom = () => {
   return (
     <WaveContainer top="-1520px">
-      <CenteredWave
-        height="773"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-      <path d="M556.83 254.37C375.723 98.5384 139.959 87.733 0 109.576V772.853H1919.56V73.5234C1679 -131.808 1376.21 136.483 1159.33 345.786C1065.63 442.672 823.655 483.956 556.83 254.37Z" fill="url(#paint5_linear)" fillOpacity="0.2"/>
-      <defs>
-        <linearGradient id="paint5_linear" x1="973.016" y1="0" x2="973.016" y2="772.853" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#07A3B2"/>
-          <stop offset="1" stopColor="#07A3B2" stopOpacity="0"/>
-        </linearGradient>
-      </defs>
+      <CenteredWave height="773" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M556.83 254.37C375.723 98.5384 139.959 87.733 0 109.576V772.853H1919.56V73.5234C1679 -131.808 1376.21 136.483 1159.33 345.786C1065.63 442.672 823.655 483.956 556.83 254.37Z"
+          fill="url(#paint5_linear)"
+          fillOpacity="0.2"
+        />
+        <defs>
+          <linearGradient
+            id="paint5_linear"
+            x1="973.016"
+            y1="0"
+            x2="973.016"
+            y2="772.853"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#07A3B2" stopOpacity="0" />
+          </linearGradient>
+        </defs>
       </CenteredWave>
     </WaveContainer>
   )

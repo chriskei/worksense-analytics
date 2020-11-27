@@ -16,7 +16,11 @@ import {
   ButtonsContainer,
   StatisticsContainer
 } from '../pages-styles/index.styles.js'
-import { LandingWaveBackground, LandingWaveTop, LandingWaveGreen } from '../assets/waves.js'
+import {
+  LandingWaveBackground,
+  LandingWaveTop,
+  LandingWaveGreen
+} from '../assets/waves.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -33,49 +37,53 @@ class RootIndex extends React.Component {
 
     return (
       <Layout>
-      <LandingWaveContainer>
-        <LandingWaveBackground />
-        <LandingWaveTop />
-        <LandingWaveGreen />
-      </LandingWaveContainer>
-          <Helmet title={siteTitle} />
-            <Hero
-              header={heroData.header}
-              text={heroData.secondaryText.secondaryText}
-              imgData={heroData.image}
-            />
-            <ButtonsContainer>
-              <Button primary text="Request Demo" />
-              <Button text="Learn More" />
-            </ButtonsContainer>
-          <MissionStatement text={textNodes[0].text.text} />
-          <FirstStats images={firstStats.images} header={firstStats.header} description={firstStats.description}/>
-          <StatisticsContainer>
-            {statsHighlights.map((highlight, index) => {
-              return (
-                <Statistic
-                  key={index}
-                  highlight={highlight}
-                  description={statsDescriptions[index]}
-                ></Statistic>
-              )
-            })}
-          </StatisticsContainer>
-          <WorkplaceBiases
-            imgData={workplaceBiasesImage}
-            header={stats.header}
-            body={textNodes[5].text.text}
-          />
-          <ProductSpecs
-            header={textNodes[1].text.text}
-            imgData={productFeature.productPreviewImage[0].fluid}
-            description={productFeature.specDescription.specDescription}
-          />
-          <PressRelease
-            pressHeader={textNodes[0].text.text}
-            pressImg={pressRelease.pressImage.fluid}
-            pressText={pressRelease.pressText.pressText}
-          />
+        <LandingWaveContainer>
+          <LandingWaveBackground />
+          <LandingWaveTop />
+          <LandingWaveGreen />
+        </LandingWaveContainer>
+        <Helmet title={siteTitle} />
+        <Hero
+          header={heroData.header}
+          text={heroData.secondaryText.secondaryText}
+          imgData={heroData.image}
+        />
+        <ButtonsContainer>
+          <Button primary text="Request Demo" />
+          <Button text="Learn More" />
+        </ButtonsContainer>
+        <MissionStatement text={textNodes[0].text.text} />
+        <FirstStats
+          images={firstStats.images}
+          header={firstStats.header}
+          description={firstStats.description}
+        />
+        <StatisticsContainer>
+          {statsHighlights.map((highlight, index) => {
+            return (
+              <Statistic
+                key={index}
+                highlight={highlight}
+                description={statsDescriptions[index]}
+              ></Statistic>
+            )
+          })}
+        </StatisticsContainer>
+        <WorkplaceBiases
+          imgData={workplaceBiasesImage}
+          header={stats.header}
+          body={textNodes[5].text.text}
+        />
+        <ProductSpecs
+          header={textNodes[1].text.text}
+          imgData={productFeature.productPreviewImage[0].fluid}
+          description={productFeature.specDescription.specDescription}
+        />
+        <PressRelease
+          pressHeader={textNodes[0].text.text}
+          pressImg={pressRelease.pressImage.fluid}
+          pressText={pressRelease.pressText.pressText}
+        />
       </Layout>
     )
   }
@@ -134,7 +142,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulStats(contentful_id: {eq: "69XcYs1lBwiqxP1UqZXLgB"}) {
+    contentfulStats(contentful_id: { eq: "69XcYs1lBwiqxP1UqZXLgB" }) {
       id
       images {
         fluid {

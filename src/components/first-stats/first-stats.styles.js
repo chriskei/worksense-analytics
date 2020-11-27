@@ -31,12 +31,12 @@ const StatsContent = styled.div`
 `
 
 const StatsImages = styled.div`
-   display: flex;
-   @media (min-width: 375px) {
+  display: flex;
+  @media (min-width: 375px) {
     min-width: 23.5rem;
     justify-content: center;
     margin-top: -4rem;
-   }
+  }
   @media (min-width: 768px) {
     min-width: 26rem;
     justify-content: flex-start;
@@ -63,57 +63,65 @@ const StatsText = styled.div`
     min-width: 4rem;
     margin: 0;
     & > p {
-        width: auto;
-        margin: 0 0 0 2rem;
+      width: auto;
+      margin: 0 0 0 2rem;
     }
   }
   @media (min-width: 768px) {
     min-width: 10rem;
     margin: 2rem 0 0 -6rem;
     & > p {
-        margin: 0 0 0 auto;
-        width: 26rem;
+      margin: 0 0 0 auto;
+      width: 26rem;
     }
   }
   @media (min-width: 1024px) {
     min-width: 25rem;
     margin: 2rem 0 0 -2rem;
     & > p {
-        width: 28rem;
+      width: 28rem;
     }
   }
   @media (min-width: 1440px) {
     min-width: 35rem;
     margin: 2rem 0 0 0;
     & > p {
-        width: 38rem;
+      width: 38rem;
     }
   }
 `
 
 const StatHeader = styled(H3)`
-    position: relative;
-      @media (min-width: 375px) {
-        min-width: 10rem;
-      }
-      @media (min-width: 768px) {
-        left: -2rem;
-        width: 26rem;
-      }
-      @media (min-width: 1024px) {
-        left: -7rem;
-        width: 35rem;
-      }
-      @media (min-width: 1440px) {
-        left: -5rem;
-        width: 45rem;
-      }
+  position: relative;
+  @media (min-width: 375px) {
+    min-width: 10rem;
+  }
+  @media (min-width: 768px) {
+    left: -2rem;
+    width: 26rem;
+  }
+  @media (min-width: 1024px) {
+    left: -7rem;
+    width: 35rem;
+  }
+  @media (min-width: 1440px) {
+    left: -5rem;
+    width: 45rem;
+  }
 `
 
 const StatsButtonContainer = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin: 2rem 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0 0 0;
 `
 
-export { StatsWaveContainer, StatsContent, StatsImages, StatImg, StatsText, StatHeader, StatsButtonContainer }
+export {
+  StatsWaveContainer,
+  StatsContent,
+  StatsImages,
+  StatImg,
+  StatsText,
+  StatHeader,
+  StatsButtonContainer
+}
