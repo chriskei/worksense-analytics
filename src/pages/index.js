@@ -10,12 +10,13 @@ import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
 import { Button } from '../components/button/button'
+import { FirstStats } from '../components/first-stats/first-stats'
 import {
-  HeroContainer,
+  LandingWaveContainer,
   ButtonsContainer,
   StatisticsContainer
 } from '../pages-styles/index.styles.js'
-import { LandingWaveTop, LandingWaveGreen } from '../assets/waves.js'
+import { LandingWaveBackground, LandingWaveTop, LandingWaveGreen } from '../assets/waves.js'
 
 class RootIndex extends React.Component {
   render() {
@@ -28,33 +29,27 @@ class RootIndex extends React.Component {
     const stats = get(this, 'props.data.contentfulStatistics')
     const statsHighlights = stats.highlightedNumbers
     const statsDescriptions = stats.descriptions
+    const firstStats = get(this, 'props.data.contentfulStats')
+
     return (
-      <Layout
-        bg={
-          'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
-        }
-      >
-        <div>
+      <Layout>
+      <LandingWaveContainer>
+        <LandingWaveBackground />
+        <LandingWaveTop />
+        <LandingWaveGreen />
+      </LandingWaveContainer>
           <Helmet title={siteTitle} />
-          <HeroContainer>
             <Hero
               header={heroData.header}
               text={heroData.secondaryText.secondaryText}
               imgData={heroData.image}
-              backgroundWave={<LandingWaveTop />}
-              secondWave={<LandingWaveGreen />}
             />
             <ButtonsContainer>
               <Button primary text="Request Demo" />
               <Button text="Learn More" />
             </ButtonsContainer>
-          </HeroContainer>
           <MissionStatement text={textNodes[0].text.text} />
-          <WorkplaceBiases
-            imgData={workplaceBiasesImage}
-            header={stats.header}
-            body={textNodes[5].text.text}
-          />
+          <FirstStats images={firstStats.images} header={firstStats.header} description={firstStats.description}/>
           <StatisticsContainer>
             {statsHighlights.map((highlight, index) => {
               return (
@@ -66,6 +61,11 @@ class RootIndex extends React.Component {
               )
             })}
           </StatisticsContainer>
+          <WorkplaceBiases
+            imgData={workplaceBiasesImage}
+            header={stats.header}
+            body={textNodes[5].text.text}
+          />
           <ProductSpecs
             header={textNodes[1].text.text}
             imgData={productFeature.productPreviewImage[0].fluid}
@@ -76,7 +76,6 @@ class RootIndex extends React.Component {
             pressImg={pressRelease.pressImage.fluid}
             pressText={pressRelease.pressText.pressText}
           />
-        </div>
       </Layout>
     )
   }
@@ -134,6 +133,18 @@ export const pageQuery = graphql`
           text
         }
       }
+    }
+    contentfulStats(contentful_id: {eq: "69XcYs1lBwiqxP1UqZXLgB"}) {
+      id
+      images {
+        fluid {
+          src
+          sizes
+          aspectRatio
+        }
+      }
+      header
+      description
     }
     contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
       productPreviewImage {

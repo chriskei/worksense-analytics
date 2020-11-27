@@ -4,21 +4,7 @@ import { H2 } from '../../assets/fonts'
 
 const MissionContainer = styled.div`
   position: relative;
-  @media (min-width: 375px) {
-    bottom: 220vw;
-  }
-  @media (min-width: 450px) {
-    bottom: 250vw;
-  }
-  @media (min-width: 768px) {
-    bottom: 150vw;
-  }
-  @media (min-width: 1024px) {
-    bottom: 90vw;
-  }
-  @media (min-width: 1440px) {
-    bottom: 60vw;
-  }
+  padding: 10rem 0 0 0;
 `
 
 const MissionText = styled(H2)`
@@ -32,7 +18,7 @@ const MissionText = styled(H2)`
     top: -8rem;
   }
   @media (min-width: 1024px) {
-    top: -11rem;
+    top: -12rem;
   }
 `
 

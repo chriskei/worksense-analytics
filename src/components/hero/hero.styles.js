@@ -15,19 +15,19 @@ const HeroContent = styled.div`
   }
   @media (min-width: 375px) {
     width: 20rem;
-    height: 20rem;
+    height: 80vw;
   }
   @media (min-width: 768px) {
     width: 40rem;
-    height: 30rem;
+    height: 65vw;
   }
   @media (min-width: 1024px) {
     width: 52rem;
-    height: 35rem;
+    height: 50vw;
   }
   @media (min-width: 1440px) {
     width: 64.375rem;
-    height: 43rem;
+    height: 42vw;
   }
 `
 
@@ -54,9 +54,10 @@ const HeroText = styled.div`
 
 const HeroImage = styled(Img)`
   display: none;
+  overflow: visible !important;
   & > picture {
     & > img {
-      padding: 12rem 0 0 0;
+      padding: 10rem 0 0 0;
       height: auto !important;
     }
   }
@@ -66,11 +67,9 @@ const HeroImage = styled(Img)`
   }
   @media (min-width: 1024px) {
     min-width: 22rem;
-    display: flex;
   }
   @media (min-width: 1440px) {
     min-width: 30rem;
-    display: flex;
   }
 `
 
