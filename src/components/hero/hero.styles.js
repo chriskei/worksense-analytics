@@ -58,7 +58,7 @@ const HeroImage = styled(Img)`
     & > img {
       padding: 12rem 0 0 0;
       height: auto !important;
-   }
+    }
   }
   @media (min-width: 768px) {
     min-width: 16rem;

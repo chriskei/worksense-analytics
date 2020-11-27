@@ -44,14 +44,12 @@ class RootIndex extends React.Component {
               backgroundWave={<LandingWaveTop />}
               secondWave={<LandingWaveGreen />}
             />
-          <ButtonsContainer>
-            <Button primary text="Request Demo" />
-            <Button text="Learn More" />
-          </ButtonsContainer>
+            <ButtonsContainer>
+              <Button primary text="Request Demo" />
+              <Button text="Learn More" />
+            </ButtonsContainer>
           </HeroContainer>
-          <MissionStatement
-            text={textNodes[0].text.text}
-          />
+          <MissionStatement text={textNodes[0].text.text} />
           <WorkplaceBiases
             imgData={workplaceBiasesImage}
             header={stats.header}

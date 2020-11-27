@@ -41,7 +41,7 @@ const NavBar = (props) => {
             <NavLink to="/our-products/">Our Products</NavLink>
             <NavLink to="/our-team/">Our Team</NavLink>
             <NavLink to="/request-demo/">
-              <Button primary text="Request Demo"/>
+              <Button primary text="Request Demo" />
             </NavLink>
           </NavLinkContainer>
         </Navigation>

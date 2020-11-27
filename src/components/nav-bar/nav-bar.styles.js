@@ -50,10 +50,4 @@ const NavLinkContainer = styled.div`
   }
 `
 
-export {
-  Navigation,
-  NavLink,
-  Logo,
-  LogoImg,
-  NavLinkContainer
-}
+export { Navigation, NavLink, Logo, LogoImg, NavLinkContainer }

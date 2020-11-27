@@ -53,7 +53,7 @@ const Footer = () => {
           </LeftContainer>
           <RightContainer>
             <FooterButtonContainer>
-              <Button primary text="Contact Us"/>
+              <Button primary text="Contact Us" />
             </FooterButtonContainer>
           </RightContainer>
         </StyledFooter>

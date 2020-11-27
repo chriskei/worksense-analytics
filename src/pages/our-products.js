@@ -67,7 +67,7 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ButtonContainer>
-        <Button primary text="Request Demo"/>
+        <Button primary text="Request Demo" />
       </ButtonContainer>
     </Layout>
   )
