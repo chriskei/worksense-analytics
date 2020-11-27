@@ -5,7 +5,7 @@ import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
-import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
+import { Button } from '../components/button/button'
 import {
   ProductsWaveTop,
   ProductsWaveBottom,
@@ -67,7 +67,7 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ButtonContainer>
-        <RequestDemoButton />
+        <Button primary text="Request Demo"/>
       </ButtonContainer>
     </Layout>
   )
@@ -77,25 +77,6 @@ export default OurProductsPage
 
 export const pageQuery = graphql`
   query ProductsQuery {
-    contentfulHeroImage(contentful_id: { eq: "1JzD8Q61WL1G42UuF4lrGb" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
-        }
-      }
-      tablet {
-        fluid {
-          src
-        }
-      }
-      mobile {
-        fluid {
-          src
-        }
-      }
-    }
     contentfulOurProductsPage {
       pageHeader
       productSpecsSectionHeader

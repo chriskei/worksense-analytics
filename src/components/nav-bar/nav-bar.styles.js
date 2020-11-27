@@ -22,6 +22,9 @@ const NavLink = styled(Link)`
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
   z-index: 1;
+  & > button {
+    padding: 12px 18px 12px 18px;
+  }
 `
 
 const LogoImg = styled(Img)`
@@ -47,20 +50,10 @@ const NavLinkContainer = styled.div`
   }
 `
 
-const NavButtonContainer = styled.div`
-  display: inline-flex;
-  align-items: center;
-  margin: 0 1em;
-  color: currentColor;
-  text-decoration: none !important;
-  z-index: 1;
-`
-
 export {
   Navigation,
   NavLink,
   Logo,
   LogoImg,
-  NavLinkContainer,
-  NavButtonContainer
+  NavLinkContainer
 }

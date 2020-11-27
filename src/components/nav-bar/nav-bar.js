@@ -5,10 +5,9 @@ import {
   Logo,
   LogoImg,
   NavLink,
-  NavLinkContainer,
-  NavButtonContainer
+  NavLinkContainer
 } from './nav-bar.styles.js'
-import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
+import { Button } from '../button/button'
 
 const NavBar = (props) => {
   const { bg } = props
@@ -41,9 +40,9 @@ const NavBar = (props) => {
           <NavLinkContainer>
             <NavLink to="/our-products/">Our Products</NavLink>
             <NavLink to="/our-team/">Our Team</NavLink>
-            <NavButtonContainer>
-              <RequestDemoButton />
-            </NavButtonContainer>
+            <NavLink to="/request-demo/">
+              <Button primary text="Request Demo"/>
+            </NavLink>
           </NavLinkContainer>
         </Navigation>
       )}

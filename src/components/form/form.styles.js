@@ -41,21 +41,7 @@ const RightContainer = styled.div`
 
 const ButtonContainer = styled.div`
   text-align: right;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 `
 
-const Button = styled.button`
-  background-color: ${colors.darkGreen};
-  color: ${colors.tan};
-  border-radius: 10px;
-  padding: 12px 48px 12px 48px;
-  margin-top: 1rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  & > a {
-    text-decoration: none;
-  }
-`
-
-export { FormContainer, LeftContainer, RightContainer, ButtonContainer, Button }
+export { FormContainer, LeftContainer, RightContainer, ButtonContainer }

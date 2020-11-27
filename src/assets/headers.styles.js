@@ -18,4 +18,22 @@ const FaqHeaderContainer = styled.div`
   }
 `
 
-export { FaqHeaderContainer }
+const MissionHeaderContainer = styled.div`
+  position: relative;
+  margin: auto;
+  @media (min-width: 375px) {
+    width: 20rem;
+  }
+  @media (min-width: 768px) {
+    width: 30rem;
+  }
+  @media (min-width: 1024px) {
+    width: 60rem;
+  }
+  @media (min-width: 1440px) {
+    width: 80rem;
+
+  }
+`
+
+export { FaqHeaderContainer, MissionHeaderContainer }

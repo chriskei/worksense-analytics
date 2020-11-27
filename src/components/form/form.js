@@ -4,10 +4,9 @@ import {
   FormContainer,
   LeftContainer,
   RightContainer,
-  ButtonContainer,
-  Button
+  ButtonContainer
 } from './form.styles'
-import { ButtonBody } from '../../assets/fonts'
+import { Button } from '../button/button'
 
 const Form = (props) => {
   const { name } = props
@@ -29,9 +28,7 @@ const Form = (props) => {
       <RightContainer>
         <Field small={false} name="message" label="Message" />
         <ButtonContainer>
-          <Button>
-            <ButtonBody>Submit</ButtonBody>
-          </Button>
+            <Button primary text="Submit" />
         </ButtonContainer>
       </RightContainer>
     </FormContainer>

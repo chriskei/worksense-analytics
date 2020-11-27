@@ -1,14 +1,16 @@
 import React from 'react'
-import { Div } from './mission-statement.styles'
+import { MissionContainer, MissionText } from './mission-statement.styles'
+import { Mission } from '../../assets/headers'
+import { H2 } from '../../assets/fonts'
 
 const MissionStatement = (props) => {
-  const { header, body } = props
+  const { text } = props
 
   return (
-    <Div>
-      <h1>{header}</h1>
-      <h4>{body}</h4>
-    </Div>
+    <MissionContainer>
+      <Mission />
+      <MissionText>{text}</MissionText>
+    </MissionContainer>
   )
 }
 

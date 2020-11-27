@@ -9,8 +9,10 @@ import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
+import { Button } from '../components/button/button'
 import {
   HeroContainer,
+  ButtonsContainer,
   StatisticsContainer
 } from '../pages-styles/index.styles.js'
 import { LandingWaveTop, LandingWaveGreen } from '../assets/waves.js'
@@ -26,7 +28,6 @@ class RootIndex extends React.Component {
     const stats = get(this, 'props.data.contentfulStatistics')
     const statsHighlights = stats.highlightedNumbers
     const statsDescriptions = stats.descriptions
-
     return (
       <Layout
         bg={
@@ -43,10 +44,13 @@ class RootIndex extends React.Component {
               backgroundWave={<LandingWaveTop />}
               secondWave={<LandingWaveGreen />}
             />
+          <ButtonsContainer>
+            <Button primary text="Request Demo" />
+            <Button text="Learn More" />
+          </ButtonsContainer>
           </HeroContainer>
           <MissionStatement
-            header={textNodes[2].text.text}
-            body={textNodes[3].text.text}
+            text={textNodes[0].text.text}
           />
           <WorkplaceBiases
             imgData={workplaceBiasesImage}
@@ -98,6 +102,8 @@ export const pageQuery = graphql`
         fluid {
           aspectRatio
           src
+          sizes
+          srcSet
         }
       }
     }
