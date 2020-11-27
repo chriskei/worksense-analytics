@@ -50,7 +50,9 @@ class RootIndex extends React.Component {
           imgData={heroData.image}
         />
         <ButtonsContainer>
-          <Link to="/request-demo/"><Button primary text="Request Demo" /></Link>
+          <Link to="/request-demo/">
+            <Button primary text="Request Demo" />
+          </Link>
           <Button text="Learn More" />
         </ButtonsContainer>
         <MissionStatement text={textNodes[0].text.text} />
