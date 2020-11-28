@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../assets/devices'
 
 const LandingWaveContainer = styled.div`
   height: 0;
@@ -16,7 +17,7 @@ const ButtonsContainer = styled.div`
        margin-right: 2rem;
     }
   }
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 20rem;
     padding-top: 9rem;
     & > :first-child {
@@ -26,23 +27,24 @@ const ButtonsContainer = styled.div`
   @media (min-width: 573px) {
     padding-top: 2rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 40rem;
   }
-  @media (min-width: 1024px) {
+  @media ${devices.laptop} {
     width: 52rem;
   }
-  @media (min-width: 1440px) {
-    width: 64.375rem;
+  @media ${devices.desktop} {
+    padding-top: 0;
+    width: 80rem;
   }
 `
 
 const StatisticsContainer = styled.div`
   padding: 2rem;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     display: none;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     display: flex;
   }
 `

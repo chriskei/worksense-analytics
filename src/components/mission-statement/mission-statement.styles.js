@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../assets/colors'
 import { H2 } from '../../assets/fonts'
+import { devices } from '../../assets/devices'
 
 const MissionContainer = styled.div`
   position: relative;
@@ -11,16 +12,16 @@ const MissionText = styled(H2)`
   position: relative;
   text-align: center;
   color: ${colors.darkGreen};
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     top: -18vw;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     top: -15vw;
   }
-  @media (min-width: 1024px) {
+  @media ${devices.laptop} {
     top: -14vw;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     top: -13vw;
   }
 `

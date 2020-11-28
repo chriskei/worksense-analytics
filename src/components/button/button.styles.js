@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../assets/colors'
+import { devices } from '../../assets/devices'
 
 const ButtonContainer = styled.button`
   background-color: ${(props) =>
@@ -11,11 +12,11 @@ const ButtonContainer = styled.button`
   & > a {
     text-decoration: none;
   }
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     padding: ${(props) =>
       props.primary ? '12px 18px 12px 18px' : '10px 18px 10px 18px'};
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     padding: ${(props) =>
       props.primary ? '12px 48px 12px 48px' : '10px 48px 10px 48px'};
   }

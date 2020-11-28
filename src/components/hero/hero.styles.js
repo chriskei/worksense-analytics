@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { devices } from '../../assets/devices'
 
 const Waves = styled.div`
   position: absolute;
@@ -13,20 +14,20 @@ const HeroContent = styled.div`
   > * {
     z-index: 1;
   }
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 20rem;
     height: 80vw;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 40rem;
     height: 65vw;
   }
-  @media (min-width: 1024px) {
+  @media ${devices.laptop} {
     width: 52rem;
     height: 50vw;
   }
-  @media (min-width: 1440px) {
-    width: 64.375rem;
+  @media ${devices.desktop} {
+    width: 80rem;
     height: 42vw;
   }
 `
@@ -35,20 +36,21 @@ const HeroText = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     min-width: 20rem;
     margin: ${(props) => (props.long ? '3rem auto auto auto' : 'auto')};
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     min-width: 26rem;
     padding: ${(props) => (props.long ? '0 0 22rem 0' : '0')};
   }
-  @media (min-width: 1024px) {
+  @media ${devices.laptop} {
     min-width: 34rem;
     padding: ${(props) => (props.long ? '0 0 15rem 0' : '0')};
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     min-width: 41rem;
+    padding: ${(props) => (props.long ? '5rem 0 0 0' : '0')};
   }
 `
 
@@ -61,14 +63,14 @@ const HeroImage = styled(Img)`
       height: auto !important;
     }
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     min-width: 16rem;
     display: flex;
   }
-  @media (min-width: 1024px) {
+  @media ${devices.laptop} {
     min-width: 22rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop}  {
     min-width: 30rem;
   }
 `

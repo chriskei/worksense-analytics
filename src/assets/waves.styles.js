@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from './devices'
 
 const LandingTopContainer = styled.div`
   position: relative;
@@ -44,13 +45,13 @@ const WaveContainer = styled.div`
 const CenteredWave = styled.svg`
   margin-left: 50%;
   transform: translateX(-50%);
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 768px;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 1440px;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     width: 1920px;
   }
 `

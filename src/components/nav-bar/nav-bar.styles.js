@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
+import { devices } from '../../assets/devices'
 
 const Navigation = styled.nav`
   list-style: none;
@@ -39,10 +40,10 @@ const Logo = styled(Link)`
 `
 
 const NavLinkContainer = styled.div`
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     display: none;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     display: inline-flex;
     float: right;
     margin: 2rem 3rem 0rem 0rem;

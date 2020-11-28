@@ -1,18 +1,19 @@
 import styled from 'styled-components'
+import { devices } from '../assets/devices';
 
 const FaqHeaderContainer = styled.div`
   position: relative;
   top: 10rem;
   margin: auto;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 16rem;
     height: 13.5rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 34rem;
     height: 18.5rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     width: 49rem;
     height: 22rem;
   }
