@@ -13,7 +13,7 @@ import {
 
 const LandingWaveBackground = () => {
   return (
-    <WaveContainer top="0px">
+    <WaveContainer>
       <CenteredWave
         height="1326"
         fill="none"

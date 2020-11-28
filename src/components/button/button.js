@@ -6,7 +6,7 @@ const Button = (props) => {
   const { primary, text } = props
 
   return (
-    <ButtonContainer primary={primary && primary}>
+    <ButtonContainer primary={primary}>
       <ButtonBody>{text}</ButtonBody>
     </ButtonContainer>
   )

@@ -37,15 +37,15 @@ const HeroText = styled.div`
   flex-direction: column;
   @media (min-width: 375px) {
     min-width: 20rem;
-    margin: ${(props) => (props.long == 1 ? '3rem auto auto auto' : 'auto')};
+    margin: ${(props) => (props.long ? '3rem auto auto auto' : 'auto')};
   }
   @media (min-width: 768px) {
     min-width: 26rem;
-    padding: ${(props) => (props.long == 1 ? '0 0 22rem 0' : '0')};
+    padding: ${(props) => (props.long ? '0 0 22rem 0' : '0')};
   }
   @media (min-width: 1024px) {
     min-width: 34rem;
-    padding: ${(props) => (props.long == 1 ? '0 0 15rem 0' : '0')};
+    padding: ${(props) => (props.long ? '0 0 15rem 0' : '0')};
   }
   @media (min-width: 1440px) {
     min-width: 41rem;

@@ -12,13 +12,16 @@ const MissionText = styled(H2)`
   text-align: center;
   color: ${colors.darkGreen};
   @media (min-width: 375px) {
-    top: -6rem;
+    top: -18vw;
   }
   @media (min-width: 768px) {
-    top: -8rem;
+    top: -15vw;
   }
   @media (min-width: 1024px) {
-    top: -12rem;
+    top: -14vw;
+  }
+  @media (min-width: 1440px) {
+    top: -13vw;
   }
 `
 

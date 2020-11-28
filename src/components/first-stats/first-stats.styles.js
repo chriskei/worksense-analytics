@@ -5,7 +5,7 @@ import { H3 } from '../../assets/fonts'
 const StatsWaveContainer = styled.div`
   height: 0;
   position: relative;
-  top: 0px;
+  top: 0;
 `
 
 const StatsContent = styled.div`

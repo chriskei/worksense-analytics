@@ -13,7 +13,7 @@ const Hero = (props) => {
         {secondWave && secondWave}
       </Waves>
       <HeroContent>
-        <HeroText long={`${header.length}` > 13 ? 1 : 0}>
+        <HeroText long={header.length > 13}>
           <H1>{header}</H1>
           {text && <HeroBody>{text}</HeroBody>}
         </HeroText>
