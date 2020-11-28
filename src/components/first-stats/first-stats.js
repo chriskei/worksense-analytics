@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import {
   StatsWaveContainer,
   StatsContent,
@@ -36,7 +37,9 @@ const FirstStats = (props) => {
           <StatHeader color={colors.tan}>{header}</StatHeader>
           <P color={colors.tan}>{description}</P>
           <StatsButtonContainer>
+          <Link to="/our-products/">
             <Button text="Learn More" />
+          </Link>
           </StatsButtonContainer>
         </StatsText>
       </StatsContent>

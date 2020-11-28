@@ -53,7 +53,9 @@ class RootIndex extends React.Component {
           <Link to="/request-demo/">
             <Button primary text="Request Demo" />
           </Link>
-          <Button text="Learn More" />
+          <Link to="/our-products/">
+            <Button text="Learn More" />
+          </Link>
         </ButtonsContainer>
         <MissionStatement text={textNodes[0].text.text} />
         <FirstStats

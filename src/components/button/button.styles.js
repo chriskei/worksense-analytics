@@ -13,10 +13,11 @@ const ButtonContainer = styled.button`
   }
   @media (min-width: 375px) {
     padding: ${(props) =>
-      props.primary ? '12px 18px 12px 18px' : '10px 18px 14px 18px'};
+      props.primary ? '12px 18px 12px 18px' : '10px 18px 10px 18px'};
   }
   @media (min-width: 768px) {
-    padding: 12px 48px 12px 48px;
+    padding: ${(props) =>
+      props.primary ? '12px 48px 12px 48px' : '10px 48px 10px 48px'};
   }
 `
 

@@ -11,9 +11,7 @@ const ButtonsContainer = styled.div`
   margin: auto;
   position: relative;
   background: transparent;
-  & > button {
-    z-index: 1;
-  }
+  z-index: 2;
   & > :first-child {
        margin-right: 2rem;
     }
