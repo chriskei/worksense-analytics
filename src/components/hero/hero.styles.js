@@ -70,7 +70,7 @@ const HeroImage = styled(Img)`
   @media ${devices.laptop} {
     min-width: 22rem;
   }
-  @media ${devices.desktop}  {
+  @media ${devices.desktop} {
     min-width: 30rem;
   }
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { devices } from '../assets/devices';
+import { devices } from '../assets/devices'
 
 const FaqHeaderContainer = styled.div`
   position: relative;
