@@ -65,8 +65,8 @@ class RootIndex extends React.Component {
             })}
           </StatisticsContainer>
           <ProductSpecs
-            header={textNodes[1].text.text}
-            imgData={productFeature.productPreviewImage[0].fluid}
+            header={productFeature.title}
+            imgData={productFeature.productImage.fluid}
             description={productFeature.specDescription.specDescription}
           />
           <PressRelease
@@ -109,6 +109,19 @@ export const pageQuery = graphql`
         srcSet
       }
     }
+    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
+      title
+        specDescription {
+          specDescription
+        }
+        productImage {
+          fluid {
+            src
+            aspectRatio
+            sizes
+          }
+        }
+    }
     allContentfulText(
       filter: {
         contentful_id: {
@@ -129,20 +142,6 @@ export const pageQuery = graphql`
         text {
           text
         }
-      }
-    }
-    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
-      productPreviewImage {
-        fluid {
-          sizes
-          aspectRatio
-          src
-          srcSet
-        }
-        contentful_id
-      }
-      specDescription {
-        specDescription
       }
     }
     contentfulPressRelease(contentful_id: { eq: "64Mb2Cm6X6mYMbnun7X01l" }) {

@@ -13,8 +13,8 @@ import {
 } from '../assets/waves'
 import { Hero } from '../components/hero/hero'
 import {
-  HeroContainer,
-  ProductSpecsContainer,
+  ProductsWaveContainer,
+  ProductPageContainer,
   ButtonContainer,
   SectionHeaderContainer
 } from '../pages-styles/our-products.styles'
@@ -22,44 +22,43 @@ import {
 const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
   const productPageHeader = ourProducts.pageHeader
-  const headers = ourProducts.productSpecsHeaders
-  const images = ourProducts.productSpecsImages
-  const descriptions = [
-    ourProducts.productSpecDescription1.productSpecDescription1,
-    ourProducts.productSpecDescription2.productSpecDescription2,
-    ourProducts.productSpecDescription3.productSpecDescription3,
-    ourProducts.productSpecDescription4.productSpecDescription4
-  ]
+  const specs = ourProducts.productSpecsList
+  // const images = ourProducts.productSpecsImages
+  // const descriptions = [
+  //   ourProducts.productSpecDescription1.productSpecDescription1,
+  //   ourProducts.productSpecDescription2.productSpecDescription2,
+  //   ourProducts.productSpecDescription3.productSpecDescription3,
+  //   ourProducts.productSpecDescription4.productSpecDescription4
+  // ]
 
   return (
     <Layout>
-      <HeroContainer>
+      <ProductsWaveContainer>
+        <ProductsWaveBackground />
+        <ProductsWaveTop />
+        <ProductsWaveBottom />
+      </ProductsWaveContainer>
         <Hero
           header={productPageHeader}
-          backgroundWave={<ProductsWaveBackground />}
-          firstWave={<ProductsWaveTop />}
-          secondWave={<ProductsWaveBottom />}
         />
-      </HeroContainer>
+      <ProductPageContainer>
       <SectionHeaderContainer>
         <SectionHeader
           title={ourProducts.productSpecsSectionHeader}
           color={`${colors.darkGreen}`}
         />
       </SectionHeaderContainer>
-      <ProductSpecsContainer>
-        {headers.map((header, index) => {
-          return (
+      {specs.map((spec, index) => {
+        return (
             <ProductSpecs
               key={index}
-              header={header}
-              description={descriptions[index]}
-              imgData={images[index]}
+              header={spec.title}
+              description={spec.specDescription.specDescription}
+              imgData={spec.productImage}
               reversed={index % 2 == 0}
             />
           )
-        })}
-      </ProductSpecsContainer>
+      })}
       <SectionHeaderContainer>
         <SectionHeader
           title={ourProducts.productWalkthroughHeader}
@@ -69,6 +68,7 @@ const OurProductsPage = (props) => {
       <ButtonContainer>
         <RequestDemoButton />
       </ButtonContainer>
+      </ProductPageContainer>
     </Layout>
   )
 }
@@ -77,47 +77,21 @@ export default OurProductsPage
 
 export const pageQuery = graphql`
   query ProductsQuery {
-    contentfulHeroImage(contentful_id: { eq: "1JzD8Q61WL1G42UuF4lrGb" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
-        }
-      }
-      tablet {
-        fluid {
-          src
-        }
-      }
-      mobile {
-        fluid {
-          src
-        }
-      }
-    }
-    contentfulOurProductsPage {
+    contentfulOurProductsPage(contentful_id: {eq: "4H4t78Y35BJK9AomXN8t0S"}) {
       pageHeader
       productSpecsSectionHeader
-      productSpecsHeaders
-      productSpecsImages {
+      productSpecsList {
         title
-        fluid {
-          src
-          aspectRatio
+        specDescription {
+          specDescription
         }
-      }
-      productSpecDescription1 {
-        productSpecDescription1
-      }
-      productSpecDescription2 {
-        productSpecDescription2
-      }
-      productSpecDescription3 {
-        productSpecDescription3
-      }
-      productSpecDescription4 {
-        productSpecDescription4
+        productImage {
+          fluid {
+            src
+            aspectRatio
+            sizes
+          }
+        }
       }
       productWalkthroughHeader
     }
