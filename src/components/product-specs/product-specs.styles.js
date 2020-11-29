@@ -5,14 +5,14 @@ const FeatureContainer = styled.div`
   display: flex;
   align-items: center;
   @media (min-width: 375px) {
-      flex-wrap: wrap;
-      padding: 2rem 0 2rem 0;
-      flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding: 2rem 0 2rem 0;
+    flex-direction: column-reverse;
   }
   @media (min-width: 768px) {
-      flex-wrap: nowrap;
-      padding: 2rem;
-      flex-direction: ${(props) => (props.reversed ? 'row-reverse' : 'row')};
+    flex-wrap: nowrap;
+    padding: 2rem;
+    flex-direction: ${(props) => (props.reversed ? 'row-reverse' : 'row')};
   }
 `
 

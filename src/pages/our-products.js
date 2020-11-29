@@ -38,18 +38,16 @@ const OurProductsPage = (props) => {
         <ProductsWaveTop />
         <ProductsWaveBottom />
       </ProductsWaveContainer>
-        <Hero
-          header={productPageHeader}
-        />
+      <Hero header={productPageHeader} />
       <ProductPageContainer>
-      <SectionHeaderContainer>
-        <SectionHeader
-          title={ourProducts.productSpecsSectionHeader}
-          color={`${colors.darkGreen}`}
-        />
-      </SectionHeaderContainer>
-      {specs.map((spec, index) => {
-        return (
+        <SectionHeaderContainer>
+          <SectionHeader
+            title={ourProducts.productSpecsSectionHeader}
+            color={`${colors.darkGreen}`}
+          />
+        </SectionHeaderContainer>
+        {specs.map((spec, index) => {
+          return (
             <ProductSpecs
               key={index}
               header={spec.title}
@@ -58,16 +56,16 @@ const OurProductsPage = (props) => {
               reversed={index % 2 == 0}
             />
           )
-      })}
-      <SectionHeaderContainer>
-        <SectionHeader
-          title={ourProducts.productWalkthroughHeader}
-          color={`${colors.darkGreen}`}
-        />
-      </SectionHeaderContainer>
-      <ButtonContainer>
-        <RequestDemoButton />
-      </ButtonContainer>
+        })}
+        <SectionHeaderContainer>
+          <SectionHeader
+            title={ourProducts.productWalkthroughHeader}
+            color={`${colors.darkGreen}`}
+          />
+        </SectionHeaderContainer>
+        <ButtonContainer>
+          <RequestDemoButton />
+        </ButtonContainer>
       </ProductPageContainer>
     </Layout>
   )
@@ -77,7 +75,7 @@ export default OurProductsPage
 
 export const pageQuery = graphql`
   query ProductsQuery {
-    contentfulOurProductsPage(contentful_id: {eq: "4H4t78Y35BJK9AomXN8t0S"}) {
+    contentfulOurProductsPage(contentful_id: { eq: "4H4t78Y35BJK9AomXN8t0S" }) {
       pageHeader
       productSpecsSectionHeader
       productSpecsList {

@@ -33,10 +33,10 @@ const ButtonContainer = styled.div`
 
 const SectionHeaderContainer = styled.div`
   @media (min-width: 375px) {
-      margin: 0;
+    margin: 0;
   }
   @media (min-width: 768px) {
-      margin: 0 0 0 2em;
+    margin: 0 0 0 2em;
   }
 `
 
