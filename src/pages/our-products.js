@@ -22,14 +22,7 @@ import {
 const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
   const productPageHeader = ourProducts.pageHeader
-  const headers = ourProducts.productSpecsHeaders
-  const images = ourProducts.productSpecsImages
-  const descriptions = [
-    ourProducts.productSpecDescription1.productSpecDescription1,
-    ourProducts.productSpecDescription2.productSpecDescription2,
-    ourProducts.productSpecDescription3.productSpecDescription3,
-    ourProducts.productSpecDescription4.productSpecDescription4
-  ]
+  const specs = ourProducts.productSpecsList
 
   return (
     <Layout>
@@ -48,13 +41,13 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ProductSpecsContainer>
-        {headers.map((header, index) => {
+      {specs.map((spec, index) => {
           return (
             <ProductSpecs
               key={index}
-              header={header}
-              description={descriptions[index]}
-              imgData={images[index]}
+              header={spec.title}
+              description={spec.specDescription.specDescription}
+              imgData={spec.productImage}
               reversed={index % 2 == 0}
             />
           )
@@ -74,3 +67,26 @@ const OurProductsPage = (props) => {
 }
 
 export default OurProductsPage
+
+export const pageQuery = graphql`
+  query ProductsQuery {
+    contentfulOurProductsPage(contentful_id: { eq: "4H4t78Y35BJK9AomXN8t0S" }) {
+      pageHeader
+      productSpecsSectionHeader
+      productSpecsList {
+        title
+        specDescription {
+          specDescription
+        }
+        productImage {
+          fluid {
+            src
+            aspectRatio
+            sizes
+          }
+        }
+      }
+      productWalkthroughHeader
+    }
+  }
+`
