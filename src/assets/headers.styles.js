@@ -23,6 +23,12 @@ const MissionHeaderContainer = styled.div`
   position: relative;
   margin: auto;
   width: 80vw;
+  @media ${devices.mobile} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: block;
+  }
 `
 
 export { FaqHeaderContainer, MissionHeaderContainer }

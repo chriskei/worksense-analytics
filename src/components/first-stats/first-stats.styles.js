@@ -62,7 +62,7 @@ const StatsText = styled.div`
   z-index: 2;
   @media ${devices.mobile} {
     min-width: 4rem;
-    margin: 0;
+    margin: 2vw 0 0 0;
     & > p {
       width: auto;
       margin: 0 0 0 2rem;

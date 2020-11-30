@@ -28,7 +28,6 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
-    const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
     const stats = get(this, 'props.data.contentfulStatistics')
@@ -78,11 +77,6 @@ class RootIndex extends React.Component {
           imgData={workplaceBiasesImage}
           header={stats.header}
           body={textNodes[5].text.text}
-        />
-        <ProductSpecs
-          header={textNodes[1].text.text}
-          imgData={productFeature.productPreviewImage[0].fluid}
-          description={productFeature.specDescription.specDescription}
         />
         <PressRelease
           pressHeader={textNodes[0].text.text}
@@ -158,20 +152,6 @@ export const pageQuery = graphql`
       }
       header
       description
-    }
-    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
-      productPreviewImage {
-        fluid {
-          sizes
-          aspectRatio
-          src
-          srcSet
-        }
-        contentful_id
-      }
-      specDescription {
-        specDescription
-      }
     }
     contentfulPressRelease(contentful_id: { eq: "64Mb2Cm6X6mYMbnun7X01l" }) {
       pressImage {
