@@ -74,33 +74,3 @@ const OurProductsPage = (props) => {
 }
 
 export default OurProductsPage
-
-export const pageQuery = graphql`
-  query ProductsQuery {
-    contentfulOurProductsPage {
-      pageHeader
-      productSpecsSectionHeader
-      productSpecsHeaders
-      productSpecsImages {
-        title
-        fluid {
-          src
-          aspectRatio
-        }
-      }
-      productSpecDescription1 {
-        productSpecDescription1
-      }
-      productSpecDescription2 {
-        productSpecDescription2
-      }
-      productSpecDescription3 {
-        productSpecDescription3
-      }
-      productSpecDescription4 {
-        productSpecDescription4
-      }
-      productWalkthroughHeader
-    }
-  }
-`
