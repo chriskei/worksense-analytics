@@ -41,7 +41,7 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ProductSpecsContainer>
-      {specs.map((spec, index) => {
+        {specs.map((spec, index) => {
           return (
             <ProductSpecs
               key={index}
