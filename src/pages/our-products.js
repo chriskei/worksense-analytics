@@ -14,22 +14,17 @@ import {
 import { Hero } from '../components/hero/hero'
 import {
   ProductsWaveContainer,
+  ProductHeroContainer,
   ProductPageContainer,
   ButtonContainer,
-  SectionHeaderContainer
+  ProductVideo
 } from '../pages-styles/our-products.styles'
 
 const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
   const productPageHeader = ourProducts.pageHeader
   const specs = ourProducts.productSpecsList
-  // const images = ourProducts.productSpecsImages
-  // const descriptions = [
-  //   ourProducts.productSpecDescription1.productSpecDescription1,
-  //   ourProducts.productSpecDescription2.productSpecDescription2,
-  //   ourProducts.productSpecDescription3.productSpecDescription3,
-  //   ourProducts.productSpecDescription4.productSpecDescription4
-  // ]
+  const walkthrough = ourProducts.productWalkthrough
 
   return (
     <Layout>
@@ -38,14 +33,14 @@ const OurProductsPage = (props) => {
         <ProductsWaveTop />
         <ProductsWaveBottom />
       </ProductsWaveContainer>
-      <Hero header={productPageHeader} />
+      <ProductHeroContainer>
+        <Hero header={productPageHeader} />
+      </ProductHeroContainer>
       <ProductPageContainer>
-        <SectionHeaderContainer>
           <SectionHeader
             title={ourProducts.productSpecsSectionHeader}
             color={`${colors.darkGreen}`}
           />
-        </SectionHeaderContainer>
         {specs.map((spec, index) => {
           return (
             <ProductSpecs
@@ -57,12 +52,13 @@ const OurProductsPage = (props) => {
             />
           )
         })}
-        <SectionHeaderContainer>
           <SectionHeader
             title={ourProducts.productWalkthroughHeader}
             color={`${colors.darkGreen}`}
           />
-        </SectionHeaderContainer>
+        <ProductVideo controls autoPlay muted loop>
+          <source src={walkthrough.file.url} />
+        </ProductVideo>
         <ButtonContainer>
           <Button primary text="Request Demo" />
         </ButtonContainer>
@@ -92,6 +88,11 @@ export const pageQuery = graphql`
         }
       }
       productWalkthroughHeader
+      productWalkthrough {
+        file {
+          url
+        }
+      }
     }
   }
 `

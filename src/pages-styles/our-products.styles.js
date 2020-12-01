@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../assets/devices'
 
 const ProductsWaveContainer = styled.div`
   height: 0;
@@ -6,43 +7,59 @@ const ProductsWaveContainer = styled.div`
   top: 0;
 `
 
+const ProductHeroContainer = styled.div`
+  @media ${devices.mobile} {
+    margin: 5rem 0 0 0;
+  }
+  @media ${devices.tablet} {
+    margin: 12rem 0 0 0;
+  }
+  @media ${devices.laptop} {
+    margin: 10rem 0 0 0;
+  }
+  @media ${devices.desktop} {
+    margin: 5rem 0 0 0;
+  }
+`
+
 const ProductPageContainer = styled.div`
   margin: auto;
-  @media (min-width: 375px) {
-    padding-top: 92vw;
+  @media ${devices.mobile} {
+    padding-top: 12rem;
     width: 20rem;
   }
-  @media (min-width: 768px) {
-    padding-top: 50vw;
+  @media ${devices.tablet} {
+    padding-top: 8rem;
     width: 40rem;
   }
-  @media (min-width: 1024px) {
-    padding-top: 32vw;
+  @media ${devices.laptop} {
     width: 52rem;
   }
-  @media (min-width: 1440px) {
-    padding-top: 15vw;
+  @media ${devices.desktop} {
     width: 80rem;
   }
 `
 
 const ButtonContainer = styled.div`
-  margin: 2em 0 2em 0;
+  margin: 2rem 0 10rem 0;
   text-align: center;
 `
 
-const SectionHeaderContainer = styled.div`
-  @media (min-width: 375px) {
+const ProductVideo = styled.video`
+  outline: none;
+  width: 100%;
+  @media ${devices.tablet} {
     margin: 0;
   }
-  @media (min-width: 768px) {
-    margin: 0 0 0 2em;
+  @media ${devices.laptop} {
+    margin: 2rem 0 2rem 0;
   }
 `
 
 export {
   ProductsWaveContainer,
+  ProductHeroContainer,
   ProductPageContainer,
   ButtonContainer,
-  SectionHeaderContainer
+  ProductVideo
 }
