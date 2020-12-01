@@ -9,7 +9,7 @@ import {
   LeftContainer,
   FooterButtonContainer
 } from '../footer/footer.styles.js'
-import { RequestDemoButton } from '../request-demo-button/request-demo-button.js'
+import { Button } from '../button/button'
 
 const Footer = () => {
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
           </LeftContainer>
           <RightContainer>
             <FooterButtonContainer>
-              <RequestDemoButton />
+              <Button primary text="Contact Us" />
             </FooterButtonContainer>
           </RightContainer>
         </StyledFooter>

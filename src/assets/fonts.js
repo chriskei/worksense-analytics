@@ -8,7 +8,7 @@ const fonts = {
 }
 
 const fontSizes = {
-  h1: `calc(40px + (90 - 40) * ((100vw - 375px) / (1920 - 375)))`,
+  h1: `calc(40px + (86 - 40) * ((100vw - 375px) / (1920 - 375)))`,
   h2: `calc(28px + (60 - 28) * ((100vw - 375px) / (1920 - 375)))`,
   h3: `calc(22px + (54 - 22) * ((100vw - 375px) / (1920 - 375)))`,
   heroBody: `calc(15px + (26 - 15) * ((100vw - 375px) / (1920 - 375)))`,
@@ -18,7 +18,7 @@ const fontSizes = {
 const H1 = styled.h1`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h1};
-  color: ${colors.tan};
+  color: ${(props) => props.color || colors.tan};
   margin: auto 0 auto 0;
   padding-bottom: 1rem;
 `

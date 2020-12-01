@@ -2,16 +2,17 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
 import { H3 } from '../../assets/fonts'
+import { devices } from '../../assets/devices'
 
 const CategoryContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     margin: auto 1rem auto 1rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     margin: auto 3.5rem auto 3.5rem;
   }
 `
@@ -26,11 +27,11 @@ const ImageBox = styled.div`
   background-color: ${(props) => props.color};
   box-shadow: 0px 4px 10px ${colors.darkGray};
   cursor: pointer;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     height: 7rem;
     width: 7rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     height: 17rem;
     width: 17rem;
   }

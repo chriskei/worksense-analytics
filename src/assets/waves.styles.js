@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import { devices } from './devices'
 
-const LandingBlueContainer = styled.div`
+const LandingTopContainer = styled.div`
   position: relative;
   top: 5vw;
 `
 
 const LandingGreenContainer = styled.div`
   position: relative;
-  top: 5vw;
+  top: -75vw;
 `
 
 const ProductsTopContainer = styled.div`
@@ -44,19 +45,20 @@ const WaveContainer = styled.div`
 const CenteredWave = styled.svg`
   margin-left: 50%;
   transform: translateX(-50%);
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 768px;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 1440px;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     width: 1920px;
   }
 `
 
+
 export {
-  LandingBlueContainer,
+  LandingTopContainer,
   LandingGreenContainer,
   ProductsTopContainer,
   ProductsBottomContainer,

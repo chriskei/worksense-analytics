@@ -1,11 +1,11 @@
-import React from 'react'
+/*import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
-import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
+import { Button } from '../components/button/button'
 import {
   ProductsWaveTop,
   ProductsWaveBottom,
@@ -22,14 +22,7 @@ import {
 const OurProductsPage = (props) => {
   const ourProducts = get(props, 'data.contentfulOurProductsPage')
   const productPageHeader = ourProducts.pageHeader
-  const headers = ourProducts.productSpecsHeaders
-  const images = ourProducts.productSpecsImages
-  const descriptions = [
-    ourProducts.productSpecDescription1.productSpecDescription1,
-    ourProducts.productSpecDescription2.productSpecDescription2,
-    ourProducts.productSpecDescription3.productSpecDescription3,
-    ourProducts.productSpecDescription4.productSpecDescription4
-  ]
+  const specs = ourProducts.productSpecsList
 
   return (
     <Layout>
@@ -48,13 +41,13 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ProductSpecsContainer>
-        {headers.map((header, index) => {
+        {specs.map((spec, index) => {
           return (
             <ProductSpecs
               key={index}
-              header={header}
-              description={descriptions[index]}
-              imgData={images[index]}
+              header={spec.title}
+              description={spec.specDescription.specDescription}
+              imgData={spec.productImage}
               reversed={index % 2 == 0}
             />
           )
@@ -67,7 +60,7 @@ const OurProductsPage = (props) => {
         />
       </SectionHeaderContainer>
       <ButtonContainer>
-        <RequestDemoButton />
+        <Button primary text="Request Demo" />
       </ButtonContainer>
     </Layout>
   )
@@ -77,49 +70,24 @@ export default OurProductsPage
 
 export const pageQuery = graphql`
   query ProductsQuery {
-    contentfulHeroImage(contentful_id: { eq: "1JzD8Q61WL1G42UuF4lrGb" }) {
-      id
-      title
-      desktop {
-        fluid {
-          src
-        }
-      }
-      tablet {
-        fluid {
-          src
-        }
-      }
-      mobile {
-        fluid {
-          src
-        }
-      }
-    }
-    contentfulOurProductsPage {
+    contentfulOurProductsPage(contentful_id: { eq: "4H4t78Y35BJK9AomXN8t0S" }) {
       pageHeader
       productSpecsSectionHeader
-      productSpecsHeaders
-      productSpecsImages {
+      productSpecsList {
         title
-        fluid {
-          src
-          aspectRatio
+        specDescription {
+          specDescription
         }
-      }
-      productSpecDescription1 {
-        productSpecDescription1
-      }
-      productSpecDescription2 {
-        productSpecDescription2
-      }
-      productSpecDescription3 {
-        productSpecDescription3
-      }
-      productSpecDescription4 {
-        productSpecDescription4
+        productImage {
+          fluid {
+            src
+            aspectRatio
+            sizes
+          }
+        }
       }
       productWalkthroughHeader
     }
   }
 `
+*/

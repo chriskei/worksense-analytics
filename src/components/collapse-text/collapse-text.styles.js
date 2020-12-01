@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../../assets/devices'
 
 const CollapseContainer = styled.div`
   display: flex;
@@ -15,25 +16,25 @@ const HeaderContainer = styled.div`
 const ArrowContainer = styled.div`
   text-align: center;
   width: 10rem;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     margin-top: 1rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     margin-top: 1.3rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     margin-top: 1.7rem;
   }
 `
 
 const BodyContainer = styled.div`
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     margin-left: 1.75rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     margin-left: 3rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     margin-left: 4rem;
   }
 `
