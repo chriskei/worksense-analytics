@@ -16,7 +16,15 @@ import {
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
-  const { name, position, picture, description, socialMedia, email, twitter } = props
+  const {
+    name,
+    position,
+    picture,
+    description,
+    socialMedia,
+    email,
+    twitter
+  } = props
   return (
     <ContactCardContainer>
       <FlexContainer>
@@ -25,7 +33,11 @@ const ContactCard = (props) => {
           <TextOverlay>
             {description}
             <EmailText>
-              Reach me at <a href={email} target="_blank">{email}</a>.
+              Reach me at{' '}
+              <a href={email} target="_blank">
+                {email}
+              </a>
+              .
             </EmailText>
           </TextOverlay>
         </Overlay>

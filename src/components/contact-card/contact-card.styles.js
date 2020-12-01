@@ -59,7 +59,7 @@ const Overlay = styled.div`
 
   &:hover {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.60); 
+    background-color: rgba(255, 255, 255, 0.6);
   }
 `
 
