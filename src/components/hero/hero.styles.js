@@ -8,20 +8,47 @@ const Waves = styled.div`
 `
 
 const HeroContent = styled.div`
-  display: inline-flex;
+  display: flex;
+  margin: auto;
+  > * {
+    z-index: 1;
+  }
+  @media (min-width: 375px) {
+    width: 20rem;
+    height: 20rem;
+  }
+  @media (min-width: 768px) {
+    width: 40rem;
+    height: 30rem;
+  }
+  @media (min-width: 1440px) {
+    width: 64.375rem;
+    height: 43rem;
+  }
 `
 
 const HeroText = styled.div`
-  z-index: 1;
-  margin: 2em 8em 2em 14em;
-  padding: 3em 0 0 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    min-width: 26rem;
+  }
+  @media (min-width: 1440px) {
+    min-width: 41rem;
+  }
 `
 
 const HeroImage = styled(Img)`
-  width: 100%;
-  display: inline-flex;
-  margin: 10em 10em 0 0;
-  position: relative;
+  display: none;
+  @media (min-width: 768px) {
+    min-width: 16rem;
+    display: flex;
+  }
+  @media (min-width: 1440px) {
+    min-width: 30rem;
+    display: flex;
+  }
 `
 
 export { Waves, HeroContent, HeroText, HeroImage }

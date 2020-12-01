@@ -38,6 +38,10 @@ const TextOverlay = styled.p`
   padding: 3rem;
 `
 
+const EmailText = styled.div`
+  padding-top: 2rem;
+`
+
 const Overlay = styled.div`
   display: flex;
   justify-content: center;
@@ -55,7 +59,7 @@ const Overlay = styled.div`
 
   &:hover {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.60); 
   }
 `
 
@@ -98,6 +102,7 @@ export {
   FlexContainer,
   MemberImg,
   TextOverlay,
+  EmailText,
   Overlay,
   InfoContainer,
   Icon,

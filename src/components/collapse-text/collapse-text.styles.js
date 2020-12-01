@@ -8,17 +8,34 @@ const CollapseContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
 `
 
 const ArrowContainer = styled.div`
   text-align: center;
-  width: 3rem;
+  width: 10rem;
+  @media (min-width: 375px) {
+    margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    margin-top: 1.3rem;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 1.7rem;
+  }
 `
 
 const BodyContainer = styled.div`
-  margin-left: 3rem;
+  @media (min-width: 375px) {
+    margin-left: 1.75rem;
+  }
+  @media (min-width: 768px) {
+    margin-left: 3rem;
+  }
+  @media (min-width: 1440px) {
+    margin-left: 4rem;
+  }
 `
 
 export { CollapseContainer, HeaderContainer, ArrowContainer, BodyContainer }

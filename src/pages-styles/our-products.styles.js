@@ -14,4 +14,13 @@ const ButtonContainer = styled.div`
   margin: 0 0 5em 7em;
 `
 
-export { HeroContainer, ProductSpecsContainer, ButtonContainer }
+const SectionHeaderContainer = styled.div`
+  margin: 0 0 0 7em;
+`
+
+export {
+  HeroContainer,
+  ProductSpecsContainer,
+  ButtonContainer,
+  SectionHeaderContainer
+}

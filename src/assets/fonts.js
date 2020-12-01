@@ -19,7 +19,8 @@ const H1 = styled.h1`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h1};
   color: ${colors.tan};
-  margin: auto;
+  margin: auto 0 auto 0;
+  padding-bottom: 1rem;
 `
 
 const H2 = styled.h2`
@@ -44,7 +45,14 @@ const HeroBody = styled.p`
 const P = styled.p`
   font-family: ${fonts.poppins};
   font-size: ${fontSizes.p};
-  color: ${colors.darkGreen};
+  color: ${(props) => props.color || colors.darkGreen};
 `
 
-export { H1, H2, H3, HeroBody, P }
+const ButtonBody = styled.p`
+  font-family: ${fonts.manrope};
+  font-size: ${fontSizes.p};
+  color: ${colors.tan};
+  margin: auto;
+`
+
+export { H1, H2, H3, HeroBody, P, ButtonBody }

@@ -1,16 +1,25 @@
 import React from 'react'
 import { Layout } from '../components/layout/layout.js'
-import { colors } from '../assets/colors.js'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
 import { Form } from '../components/form/form'
 import { Faq } from '../components/faq/faq'
+import { Hero } from '../components/hero/hero'
+import { SectionHeader } from '../components/section-header/section-header'
 import {
-  ContactHeader,
-  RequestDemoContainer,
-  LeftContainer,
-  RightContainer
+  DemoWaveBackground,
+  DemoWaveBottom,
+  DemoWaveTop,
+  ContactWaveBackground,
+  ContactWaveBottom,
+  ContactWaveTop
+} from '../assets/waves'
+import { FAQS } from '../assets/headers'
+import { colors } from '../assets/colors'
+import {
+  DemoWaveContainer,
+  ContactWavesContainer,
+  SectionHeaderContainer
 } from '../pages-styles/request-demo.styles'
 
 const RequestDemoPage = (props) => {
@@ -19,7 +28,6 @@ const RequestDemoPage = (props) => {
     contactHeader,
     demoBody,
     demoHeader,
-    faqHeader,
     demoImage,
     faqCategories,
     faqImages,
@@ -27,25 +35,29 @@ const RequestDemoPage = (props) => {
   } = data
 
   return (
-    <Layout bg={colors.tan}>
-      <RequestDemoContainer>
-        <LeftContainer>
-          <h1>{demoHeader}</h1>
-          <h4>{demoBody}</h4>
-        </LeftContainer>
-        <RightContainer>
-          <Img fluid={demoImage.fluid} />
-        </RightContainer>
-      </RequestDemoContainer>
-      <Form name="demo" submitText="Request Demo" />
+    <Layout>
+      <DemoWaveContainer>
+        <DemoWaveBackground />
+        <DemoWaveBottom />
+        <DemoWaveTop />
+      </DemoWaveContainer>
+      <Hero header={demoHeader} text={demoBody} imgData={demoImage} />
+      <Form name="demo" />
+      <FAQS />
       <Faq
-        faqHeader={faqHeader}
         faqCategories={faqCategories}
         faqImages={faqImages}
         faqQuestionsAndAnswers={faqQuestionsAndAnswers}
       />
-      <ContactHeader>{contactHeader}</ContactHeader>
-      <Form name="contact" submitText="Submit" />
+      <SectionHeaderContainer>
+        <SectionHeader title={contactHeader} color={colors.tan} />
+      </SectionHeaderContainer>
+      <Form name="contact" />
+      <ContactWavesContainer>
+        <ContactWaveBackground />
+        <ContactWaveBottom />
+        <ContactWaveTop />
+      </ContactWavesContainer>
     </Layout>
   )
 }
@@ -56,7 +68,6 @@ export const pageQuery = graphql`
       contactHeader
       demoBody
       demoHeader
-      faqHeader
       demoImage {
         fluid {
           aspectRatio

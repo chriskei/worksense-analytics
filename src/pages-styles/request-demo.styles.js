@@ -1,35 +1,37 @@
 import styled from 'styled-components'
-import { colors } from '../assets/colors'
 
-const ContactHeader = styled.h1`
-  text-align: center;
-  color: ${colors.darkGreen};
-  margin-top: 5.5rem;
+const DemoWaveContainer = styled.div`
+  height: 0;
+  position: relative;
+  top: -100px;
 `
 
-const RequestDemoContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  color: ${colors.darkGreen};
-  padding-top: 4rem;
-  margin-bottom: 1rem;
+const ContactWavesContainer = styled.div`
+  position: relative;
+  @media (min-width: 375px) {
+    height: 30px;
+    bottom: 1044px;
+  }
+  @media (min-width: 1440px) {
+    height: 100px;
+    bottom: 974px;
+  }
 `
 
-const LeftContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: 1rem;
-  width: 24.5rem;
-  align-self: center;
+const SectionHeaderContainer = styled.div`
+  text-align: left;
+  @media (min-width: 375px) {
+    width: 20rem;
+    margin: 10rem auto auto auto;
+  }
+  @media (min-width: 768px) {
+    width: 40rem;
+    margin: 15rem auto auto auto;
+  }
+  @media (min-width: 1440px) {
+    width: 64.375rem;
+    margin: 25rem auto auto auto;
+  }
 `
 
-const RightContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 1rem;
-  margin-right: auto;
-  width: 24.5rem;
-`
-
-export { ContactHeader, RequestDemoContainer, LeftContainer, RightContainer }
+export { DemoWaveContainer, ContactWavesContainer, SectionHeaderContainer }

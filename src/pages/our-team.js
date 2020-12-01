@@ -40,6 +40,7 @@ const OurTeamPage = (props) => {
               name={card.name}
               position={card.companyPosition}
               email={card.email}
+              twitter={card.twitter}
             />
           )
         })}
@@ -70,6 +71,7 @@ export const pageQuery = graphql`
         }
         socialMediaLinks
         email
+        twitter
       }
     }
   }
