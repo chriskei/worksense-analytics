@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import { Layout } from '../components/layout/layout.js'
 import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
@@ -9,72 +10,79 @@ import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases
 import { ProductSpecs } from '../components/product-specs/product-specs.js'
 import { PressRelease } from '../components/press-release/press-release.js'
 import { Statistic } from '../components/statistic/statistic.js'
+import { Button } from '../components/button/button'
+import { FirstStats } from '../components/first-stats/first-stats'
 import {
-  HeroContainer,
+  LandingWaveContainer,
+  ButtonsContainer,
   StatisticsContainer
 } from '../pages-styles/index.styles.js'
-import { LandingWaveBlue, LandingWaveGreen } from '../assets/waves.js'
+import {
+  LandingWaveBackground,
+  LandingWaveTop,
+  LandingWaveGreen
+} from '../assets/waves.js'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
-    const productFeature = get(this, 'props.data.contentfulProductSpecs')
     const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
     const stats = get(this, 'props.data.contentfulStatistics')
     const statsHighlights = stats.highlightedNumbers
     const statsDescriptions = stats.descriptions
+    const firstStats = get(this, 'props.data.contentfulStats')
 
     return (
-      <Layout
-        bg={
-          'linear-gradient(90deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%)'
-        }
-      >
-        <div>
-          <Helmet title={siteTitle} />
-          <HeroContainer>
-            <Hero
-              header={heroData.header}
-              text={heroData.secondaryText.secondaryText}
-              imgData={heroData.image}
-              firstWave={<LandingWaveBlue />}
-              secondWave={<LandingWaveGreen />}
-            />
-          </HeroContainer>
-          <MissionStatement
-            header={textNodes[2].text.text}
-            body={textNodes[3].text.text}
-          />
-          <WorkplaceBiases
-            imgData={workplaceBiasesImage}
-            header={stats.header}
-            body={textNodes[5].text.text}
-          />
-          <StatisticsContainer>
-            {statsHighlights.map((highlight, index) => {
-              return (
-                <Statistic
-                  key={index}
-                  highlight={highlight}
-                  description={statsDescriptions[index]}
-                ></Statistic>
-              )
-            })}
-          </StatisticsContainer>
-          <ProductSpecs
-            header={textNodes[1].text.text}
-            imgData={productFeature.productPreviewImage[0].fluid}
-            description={productFeature.specDescription.specDescription}
-          />
-          <PressRelease
-            pressHeader={textNodes[0].text.text}
-            pressImg={pressRelease.pressImage.fluid}
-            pressText={pressRelease.pressText.pressText}
-          />
-        </div>
+      <Layout>
+        <LandingWaveContainer>
+          <LandingWaveBackground />
+          <LandingWaveTop />
+          <LandingWaveGreen />
+        </LandingWaveContainer>
+        <Helmet title={siteTitle} />
+        <Hero
+          header={heroData.header}
+          text={heroData.secondaryText.secondaryText}
+          imgData={heroData.image}
+        />
+        <ButtonsContainer>
+          <Link to="/request-demo/">
+            <Button primary text="Request Demo" />
+          </Link>
+          <Link to="/our-products/">
+            <Button text="Learn More" />
+          </Link>
+        </ButtonsContainer>
+        <MissionStatement text={textNodes[0].text.text} />
+        <FirstStats
+          images={firstStats.images}
+          header={firstStats.header}
+          description={firstStats.description}
+        />
+        <StatisticsContainer>
+          {statsHighlights.map((highlight, index) => {
+            return (
+              <Statistic
+                key={index}
+                highlight={highlight}
+                description={statsDescriptions[index]}
+              ></Statistic>
+            )
+          })}
+        </StatisticsContainer>
+        <WorkplaceBiases
+          imgData={workplaceBiasesImage}
+          header={stats.header}
+          body={textNodes[5].text.text}
+        />
+        <PressRelease
+          pressHeader={textNodes[0].text.text}
+          pressImg={pressRelease.pressImage.fluid}
+          pressText={pressRelease.pressText.pressText}
+        />
       </Layout>
     )
   }
@@ -98,6 +106,8 @@ export const pageQuery = graphql`
         fluid {
           aspectRatio
           src
+          sizes
+          srcSet
         }
       }
     }
@@ -131,19 +141,17 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
-      productPreviewImage {
+    contentfulStats(contentful_id: { eq: "69XcYs1lBwiqxP1UqZXLgB" }) {
+      id
+      images {
         fluid {
+          src
           sizes
           aspectRatio
-          src
-          srcSet
         }
-        contentful_id
       }
-      specDescription {
-        specDescription
-      }
+      header
+      description
     }
     contentfulPressRelease(contentful_id: { eq: "64Mb2Cm6X6mYMbnun7X01l" }) {
       pressImage {

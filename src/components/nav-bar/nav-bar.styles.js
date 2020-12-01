@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
+import { devices } from '../../assets/devices'
 
 const Navigation = styled.nav`
   list-style: none;
@@ -22,6 +23,9 @@ const NavLink = styled(Link)`
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
   z-index: 1;
+  & > button {
+    padding: 12px 18px 12px 18px;
+  }
 `
 
 const LogoImg = styled(Img)`
@@ -36,10 +40,10 @@ const Logo = styled(Link)`
 `
 
 const NavLinkContainer = styled.div`
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     display: none;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     display: inline-flex;
     float: right;
     margin: 2rem 3rem 0rem 0rem;
@@ -47,20 +51,4 @@ const NavLinkContainer = styled.div`
   }
 `
 
-const NavButtonContainer = styled.div`
-  display: inline-flex;
-  align-items: center;
-  margin: 0 1em;
-  color: currentColor;
-  text-decoration: none !important;
-  z-index: 1;
-`
-
-export {
-  Navigation,
-  NavLink,
-  Logo,
-  LogoImg,
-  NavLinkContainer,
-  NavButtonContainer
-}
+export { Navigation, NavLink, Logo, LogoImg, NavLinkContainer }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../assets/devices'
 
 const DemoWaveContainer = styled.div`
   height: 0;
@@ -8,11 +9,11 @@ const DemoWaveContainer = styled.div`
 
 const ContactWavesContainer = styled.div`
   position: relative;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     height: 30px;
     bottom: 1044px;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     height: 100px;
     bottom: 974px;
   }
@@ -20,15 +21,15 @@ const ContactWavesContainer = styled.div`
 
 const SectionHeaderContainer = styled.div`
   text-align: left;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 20rem;
     margin: 10rem auto auto auto;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 40rem;
     margin: 15rem auto auto auto;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     width: 64.375rem;
     margin: 25rem auto auto auto;
   }
