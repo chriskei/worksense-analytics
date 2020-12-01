@@ -37,10 +37,10 @@ const OurProductsPage = (props) => {
         <Hero header={productPageHeader} />
       </ProductHeroContainer>
       <ProductPageContainer>
-          <SectionHeader
-            title={ourProducts.productSpecsSectionHeader}
-            color={`${colors.darkGreen}`}
-          />
+        <SectionHeader
+          title={ourProducts.productSpecsSectionHeader}
+          color={`${colors.darkGreen}`}
+        />
         {specs.map((spec, index) => {
           return (
             <ProductSpecs
@@ -52,10 +52,10 @@ const OurProductsPage = (props) => {
             />
           )
         })}
-          <SectionHeader
-            title={ourProducts.productWalkthroughHeader}
-            color={`${colors.darkGreen}`}
-          />
+        <SectionHeader
+          title={ourProducts.productWalkthroughHeader}
+          color={`${colors.darkGreen}`}
+        />
         <ProductVideo controls autoPlay muted loop>
           <source src={walkthrough.file.url} />
         </ProductVideo>
