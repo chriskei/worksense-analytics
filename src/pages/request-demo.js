@@ -62,6 +62,8 @@ const RequestDemoPage = (props) => {
   )
 }
 
+export default RequestDemoPage
+
 export const pageQuery = graphql`
   {
     contentfulRequestDemoPage(contentful_id: { eq: "5NNU54PoXgqZI29cR8v5i" }) {
@@ -96,5 +98,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default RequestDemoPage

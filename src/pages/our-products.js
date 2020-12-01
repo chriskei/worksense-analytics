@@ -5,7 +5,7 @@ import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
 import { SectionHeader } from '../components/section-header/section-header'
 import { ProductSpecs } from '../components/product-specs/product-specs'
-import { RequestDemoButton } from '../components/request-demo-button/request-demo-button'
+import { Button } from '../components/button/button'
 import {
   ProductsWaveTop,
   ProductsWaveBottom,
@@ -64,7 +64,7 @@ const OurProductsPage = (props) => {
           />
         </SectionHeaderContainer>
         <ButtonContainer>
-          <RequestDemoButton />
+          <Button primary text="Request Demo" />
         </ButtonContainer>
       </ProductPageContainer>
     </Layout>

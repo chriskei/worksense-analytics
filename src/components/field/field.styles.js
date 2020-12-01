@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../assets/colors'
 import { P } from '../../assets/fonts'
+import { devices } from '../../assets/devices'
 
 const Label = styled.label`
   display: flex;
@@ -38,13 +39,13 @@ const TextArea = styled.textarea`
   line-height: 1.65;
   color: ${colors.darkGray};
   font-size: 1rem;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     height: 20rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     height: 10rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     height: 19.75rem;
   }
 `
