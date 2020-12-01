@@ -27,8 +27,6 @@ import {
   TalentLifecyclePath
 } from '../assets/waves.js'
 
-
-
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -70,11 +68,13 @@ class RootIndex extends React.Component {
           header={firstStats.header}
           description={firstStats.description}
         />
-        <TalentLifecycleHeaderText>{talentLifecycle.header}</TalentLifecycleHeaderText>
+        <TalentLifecycleHeaderText>
+          {talentLifecycle.header}
+        </TalentLifecycleHeaderText>
         <TalentLifecycleContainer>
-        <TalentLifecyclePathContainer>
-          <TalentLifecyclePath />
-        </TalentLifecyclePathContainer>
+          <TalentLifecyclePathContainer>
+            <TalentLifecyclePath />
+          </TalentLifecyclePathContainer>
           {lifecycleStages.map((stage, index) => {
             return (
               <ProductSpecs
@@ -194,7 +194,7 @@ export const pageQuery = graphql`
       highlightedNumbers
       descriptions
     }
-    contentfulTalentLifecycle(contentful_id: {eq: "3ig7cPwCbDY350SaJ7Bye1"}) {
+    contentfulTalentLifecycle(contentful_id: { eq: "3ig7cPwCbDY350SaJ7Bye1" }) {
       header
       lifecycleStages {
         title

@@ -548,30 +548,31 @@ const TalentLifecyclePath = () => {
   return (
     <WaveContainer top="300px">
       <CenteredWave
-      xmlns="http://www.w3.org/2000/svg" 
-      width="393" 
-      height="1286" 
-      viewBox="0 0 393 1286" 
-      fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width="393"
+        height="1286"
+        viewBox="0 0 393 1286"
+        fill="none"
       >
-      <path 
-      d="M332 512C290.674 524.534 199.629 581.187 166.057 707.527C132.484 833.868 80.0303 877.151 58 883" 
-      stroke="#07A3B2" 
-      strokeWidth="3" 
-      strokeDasharray="8 8"
-      />
-      <path 
-      d="M45.0724 59.1619C47.6746 119.604 81.9604 249.231 198.287 284.199C314.613 319.168 346.907 354.878 348.514 368.361" 
-      stroke="#07A3B2" 
-      strokeWidth="3" 
-      strokeDasharray="8 8"/>
-      <path 
-      d="M2.11109 962C-0.284907 998.914 35.1795 1084.56 196.205 1131.81C357.231 1179.06 393.101 1253.62 390.907 1285" 
-      stroke="#07A3B2" 
-      strokeWidth="3" 
-      strokeDasharray="8 8"
-      />
-    </CenteredWave>
+        <path
+          d="M332 512C290.674 524.534 199.629 581.187 166.057 707.527C132.484 833.868 80.0303 877.151 58 883"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+        <path
+          d="M45.0724 59.1619C47.6746 119.604 81.9604 249.231 198.287 284.199C314.613 319.168 346.907 354.878 348.514 368.361"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+        <path
+          d="M2.11109 962C-0.284907 998.914 35.1795 1084.56 196.205 1131.81C357.231 1179.06 393.101 1253.62 390.907 1285"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+      </CenteredWave>
     </WaveContainer>
   )
 }

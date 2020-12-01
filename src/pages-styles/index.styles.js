@@ -54,7 +54,6 @@ const StatisticsContainer = styled.div`
 const TalentLifecyclePathContainer = styled.div`
   width: 100%;
   position: absolute;
-  
 `
 
 const TalentLifecycleContainer = styled.div`
@@ -71,4 +70,11 @@ const TalentLifecycleHeaderText = styled(H1)`
   width: 70%;
 `
 
-export { LandingWaveContainer, ButtonsContainer, StatisticsContainer, TalentLifecyclePathContainer, TalentLifecycleContainer, TalentLifecycleHeaderText }
+export {
+  LandingWaveContainer,
+  ButtonsContainer,
+  StatisticsContainer,
+  TalentLifecyclePathContainer,
+  TalentLifecycleContainer,
+  TalentLifecycleHeaderText
+}

@@ -56,7 +56,6 @@ const CenteredWave = styled.svg`
   }
 `
 
-
 export {
   LandingTopContainer,
   LandingGreenContainer,
