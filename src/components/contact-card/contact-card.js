@@ -5,6 +5,7 @@ import {
   FlexContainer,
   MemberImg,
   TextOverlay,
+  PositionContainer,
   EmailText,
   Email,
   Overlay,
@@ -33,14 +34,13 @@ const ContactCard = (props) => {
         <MemberImg alt={picture} fluid={picture.fluid} />
         <Overlay>
           <TextOverlay>
-            {positionText}
+            <PositionContainer>{positionText}</PositionContainer>
             {description}
             <EmailText>
-              Reach me at{' '}
+              <>Reach me at{' '}</>
               <Email href={`mailto:${email}`} target="_blank">
                 {email}
               </Email>
-              .
             </EmailText>
           </TextOverlay>
         </Overlay>

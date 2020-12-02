@@ -64,6 +64,7 @@ const TalentLifecycleContainer = styled.div`
 const TalentLifecyclePathContainer = styled.div`
   width: 100%;
   position: absolute;
+  display: flex;
 `
 
 const StagesContainer = styled.div`

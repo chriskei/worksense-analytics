@@ -39,11 +39,13 @@ const TextOverlay = styled.p`
   padding: 3rem;
 `
 
+const PositionContainer = styled.div`
+  padding-bottom: 2rem;
+`
+
 const EmailText = styled.div`
   padding-top: 2rem;
-  & > p {
-    font-weight: bold;
-  }
+  font-family: ${fonts.poppinsBold}; 
 `
 
 const Email = styled.a`
@@ -68,7 +70,7 @@ const Overlay = styled.div`
 
   &:hover {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
   }
 `
 
@@ -111,6 +113,7 @@ export {
   FlexContainer,
   MemberImg,
   TextOverlay,
+  PositionContainer,
   Email,
   EmailText,
   Overlay,

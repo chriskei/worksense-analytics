@@ -7,6 +7,7 @@ import {
   OurTeamBackgroundContainer,
   OurTeamTopContainer,
   OurTeamBottomContainer,
+  LifecyclePathContainer,
   WaveContainer,
   CenteredWave
 } from './waves.styles'
@@ -546,8 +547,8 @@ const ContactWaveBottom = () => {
 
 const TalentLifecyclePath = () => {
   return (
-    <WaveContainer top="300px">
-      <CenteredWave
+    <LifecyclePathContainer>
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="393"
         height="1286"
@@ -572,8 +573,8 @@ const TalentLifecyclePath = () => {
           strokeWidth="3"
           strokeDasharray="8 8"
         />
-      </CenteredWave>
-    </WaveContainer>
+      </svg>
+    </LifecyclePathContainer>
   )
 }
 
