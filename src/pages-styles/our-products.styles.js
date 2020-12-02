@@ -25,8 +25,11 @@ const ProductHeroContainer = styled.div`
 const ProductPageContainer = styled.div`
   margin: auto;
   @media ${devices.mobile} {
-    padding-top: 12rem;
+    padding-top: 25rem;
     width: 20rem;
+  }
+  @media (min-width: 573px) {
+    padding-top: 18rem;
   }
   @media ${devices.tablet} {
     padding-top: 8rem;
