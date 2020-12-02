@@ -36,6 +36,7 @@ const OurTeamPage = (props) => {
               key={index}
               picture={card.memberPicture}
               description={card.memberDescription.memberDescription}
+              positionText={card.positionText}
               socialMedia={card.socialMediaLinks}
               name={card.name}
               position={card.companyPosition}
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
         id
         name
         companyPosition
+        positionText
         memberPicture {
           fluid {
             src

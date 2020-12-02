@@ -51,13 +51,22 @@ const StatisticsContainer = styled.div`
   }
 `
 
+const TalentLifecycleContainer = styled.div`
+  background-color: ${colors.tan};
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  & > * {
+    z-index: 3;
+  }
+`
+
 const TalentLifecyclePathContainer = styled.div`
   width: 100%;
   position: absolute;
 `
 
-const TalentLifecycleContainer = styled.div`
-  z-index: 1;
+const StagesContainer = styled.div`
   position: relative;
   margin-left: 5rem;
 `
@@ -65,16 +74,17 @@ const TalentLifecycleContainer = styled.div`
 const TalentLifecycleHeaderText = styled(H1)`
   color: ${colors.darkGreen};
   position: relative;
-  z-index: 1;
-  margin: 18rem 0 0 5rem;
   width: 70%;
+  padding-top: 4rem;
+  margin: 15rem 0 0 5rem;
 `
 
 export {
   LandingWaveContainer,
   ButtonsContainer,
   StatisticsContainer,
-  TalentLifecyclePathContainer,
   TalentLifecycleContainer,
+  TalentLifecyclePathContainer,
+  StagesContainer,
   TalentLifecycleHeaderText
 }

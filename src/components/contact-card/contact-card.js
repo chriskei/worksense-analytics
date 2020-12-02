@@ -6,6 +6,7 @@ import {
   MemberImg,
   TextOverlay,
   EmailText,
+  Email,
   Overlay,
   InfoContainer,
   Icon,
@@ -19,6 +20,7 @@ const ContactCard = (props) => {
   const {
     name,
     position,
+    positionText,
     picture,
     description,
     socialMedia,
@@ -31,12 +33,13 @@ const ContactCard = (props) => {
         <MemberImg alt={picture} fluid={picture.fluid} />
         <Overlay>
           <TextOverlay>
+            {positionText}
             {description}
             <EmailText>
               Reach me at{' '}
-              <a href={email} target="_blank">
+              <Email href={`mailto:${email}`} target="_blank">
                 {email}
-              </a>
+              </Email>
               .
             </EmailText>
           </TextOverlay>

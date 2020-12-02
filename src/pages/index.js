@@ -16,8 +16,9 @@ import {
   LandingWaveContainer,
   ButtonsContainer,
   StatisticsContainer,
-  TalentLifecycleHeaderText,
   TalentLifecycleContainer,
+  TalentLifecycleHeaderText,
+  StagesContainer,
   TalentLifecyclePathContainer
 } from '../pages-styles/index.styles.js'
 import {
@@ -68,10 +69,11 @@ class RootIndex extends React.Component {
           header={firstStats.header}
           description={firstStats.description}
         />
+        <TalentLifecycleContainer>
         <TalentLifecycleHeaderText>
           {talentLifecycle.header}
         </TalentLifecycleHeaderText>
-        <TalentLifecycleContainer>
+        <StagesContainer>
           <TalentLifecyclePathContainer>
             <TalentLifecyclePath />
           </TalentLifecyclePathContainer>
@@ -86,6 +88,7 @@ class RootIndex extends React.Component {
               />
             )
           })}
+        </StagesContainer>
         </TalentLifecycleContainer>
         <StatisticsContainer>
           {statsHighlights.map((highlight, index) => {

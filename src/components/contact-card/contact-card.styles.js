@@ -4,7 +4,8 @@ import Img from 'gatsby-image'
 const fonts = {
   manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
     Arial, sans-serif`,
-  poppins: `'Poppins', sans-serif`
+  poppins: `'Poppins', sans-serif`,
+  poppinsBold: `'Poppins Bold', sans-serif`
 }
 
 const fontSizes = {
@@ -40,6 +41,14 @@ const TextOverlay = styled.p`
 
 const EmailText = styled.div`
   padding-top: 2rem;
+  & > p {
+    font-weight: bold;
+  }
+`
+
+const Email= styled.a`
+  text-decoration: none;
+  color: black;
 `
 
 const Overlay = styled.div`
@@ -102,6 +111,7 @@ export {
   FlexContainer,
   MemberImg,
   TextOverlay,
+  Email,
   EmailText,
   Overlay,
   InfoContainer,
