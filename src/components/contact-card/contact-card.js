@@ -37,7 +37,7 @@ const ContactCard = (props) => {
             <PositionContainer>{positionText}</PositionContainer>
             {description}
             <EmailText>
-              <>Reach me at{' '}</>
+              <>Reach me at </>
               <Email href={`mailto:${email}`} target="_blank">
                 {email}
               </Email>

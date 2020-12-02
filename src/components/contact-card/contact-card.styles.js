@@ -45,7 +45,7 @@ const PositionContainer = styled.div`
 
 const EmailText = styled.div`
   padding-top: 2rem;
-  font-family: ${fonts.poppinsBold}; 
+  font-family: ${fonts.poppinsBold};
 `
 
 const Email = styled.a`
