@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { devices } from '../../assets/devices'
+
 
 const fonts = {
   manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',

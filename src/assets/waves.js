@@ -361,6 +361,7 @@ const OurTeamWaveBottom = () => {
   )
 }
 
+
 const DemoWaveBackground = () => {
   return (
     <WaveContainer>
