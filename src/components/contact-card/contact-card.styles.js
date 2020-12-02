@@ -46,7 +46,7 @@ const EmailText = styled.div`
   }
 `
 
-const Email= styled.a`
+const Email = styled.a`
   text-decoration: none;
   color: black;
 `

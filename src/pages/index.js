@@ -70,25 +70,25 @@ class RootIndex extends React.Component {
           description={firstStats.description}
         />
         <TalentLifecycleContainer>
-        <TalentLifecycleHeaderText>
-          {talentLifecycle.header}
-        </TalentLifecycleHeaderText>
-        <StagesContainer>
-          <TalentLifecyclePathContainer>
-            <TalentLifecyclePath />
-          </TalentLifecyclePathContainer>
-          {lifecycleStages.map((stage, index) => {
-            return (
-              <ProductSpecs
-                key={index}
-                header={stage.title}
-                description={stage.specDescription.specDescription}
-                imgData={stage.productImage}
-                reversed={index % 2 == 0}
-              />
-            )
-          })}
-        </StagesContainer>
+          <TalentLifecycleHeaderText>
+            {talentLifecycle.header}
+          </TalentLifecycleHeaderText>
+          <StagesContainer>
+            <TalentLifecyclePathContainer>
+              <TalentLifecyclePath />
+            </TalentLifecyclePathContainer>
+            {lifecycleStages.map((stage, index) => {
+              return (
+                <ProductSpecs
+                  key={index}
+                  header={stage.title}
+                  description={stage.specDescription.specDescription}
+                  imgData={stage.productImage}
+                  reversed={index % 2 == 0}
+                />
+              )
+            })}
+          </StagesContainer>
         </TalentLifecycleContainer>
         <StatisticsContainer>
           {statsHighlights.map((highlight, index) => {
