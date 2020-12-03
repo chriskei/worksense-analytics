@@ -147,6 +147,19 @@ export const pageQuery = graphql`
         srcSet
       }
     }
+    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
+      title
+      specDescription {
+        specDescription
+      }
+      productImage {
+        fluid {
+          src
+          aspectRatio
+          sizes
+        }
+      }
+    }
     allContentfulText(
       filter: {
         contentful_id: {

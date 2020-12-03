@@ -12,7 +12,7 @@ const ProductSpecs = (props) => {
 
   return (
     <FeatureContainer reversed={reversed}>
-      <FeatureText>
+      <FeatureText reversed={reversed}>
         <H3 color={`${colors.blue}`}>{header}</H3>
         <P>{description}</P>
       </FeatureText>

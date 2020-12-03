@@ -1,9 +1,16 @@
 import styled from 'styled-components'
 import { devices } from '../assets/devices'
 
-const WavesContainer = styled.div`
+const TeamWavesContainer = styled.div`
+  height: 0;
+  position: relative;
+  top: 0;
+`
+
+const TeamHeroContainer = styled.div`
   & > * {
-    height: 19vw;
+    padding-top: 5rem;
+    height: 15vw;
   }
 `
 
@@ -15,7 +22,7 @@ const AllContactCardsContainer = styled.div`
   flex-wrap: wrap;
   @media ${devices.mobile} {
     width: 15rem;
-    margin-top: 5rem;
+    padding-top: 8rem;
   }
   @media ${devices.tablet} {
     width: 40rem;
@@ -28,4 +35,4 @@ const AllContactCardsContainer = styled.div`
   }
 `
 
-export { WavesContainer, AllContactCardsContainer }
+export { TeamWavesContainer, TeamHeroContainer, AllContactCardsContainer }

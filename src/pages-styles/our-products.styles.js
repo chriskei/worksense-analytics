@@ -1,26 +1,68 @@
 import styled from 'styled-components'
+import { devices } from '../assets/devices'
 
-const HeroContainer = styled.div`
-  > * {
-    height: 45vw;
+const ProductsWaveContainer = styled.div`
+  height: 0;
+  position: relative;
+  top: 0;
+`
+
+const ProductHeroContainer = styled.div`
+  @media ${devices.mobile} {
+    margin: 5rem 0 0 0;
+  }
+  @media ${devices.tablet} {
+    margin: 12rem 0 0 0;
+  }
+  @media ${devices.laptop} {
+    margin: 10rem 0 0 0;
+  }
+  @media ${devices.desktop} {
+    margin: 5rem 0 0 0;
   }
 `
 
-const ProductSpecsContainer = styled.div`
-  margin: 0 5em 0 5em;
+const ProductPageContainer = styled.div`
+  margin: auto;
+  @media ${devices.mobile} {
+    padding-top: 25rem;
+    width: 20rem;
+  }
+  @media (min-width: 573px) {
+    padding-top: 18rem;
+  }
+  @media ${devices.tablet} {
+    padding-top: 8rem;
+    width: 40rem;
+  }
+  @media ${devices.laptop} {
+    width: 52rem;
+  }
+  @media ${devices.desktop} {
+    width: 80rem;
+  }
 `
 
 const ButtonContainer = styled.div`
-  margin: 0 0 5em 7em;
+  margin: 2rem 0 10rem 0;
+  text-align: center;
 `
 
-const SectionHeaderContainer = styled.div`
-  margin: 0 0 0 7em;
+const ProductVideo = styled.video`
+  outline: none;
+  width: 100%;
+  @media ${devices.tablet} {
+    margin: 0;
+  }
+  @media ${devices.laptop} {
+    margin: 2rem 0 2rem 0;
+  }
 `
 
 export {
-  HeroContainer,
-  ProductSpecsContainer,
+  ProductsWaveContainer,
+  ProductHeroContainer,
+  ProductPageContainer,
   ButtonContainer,
-  SectionHeaderContainer
+  ProductVideo
 }

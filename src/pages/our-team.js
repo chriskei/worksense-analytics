@@ -5,7 +5,8 @@ import { Layout } from '../components/layout/layout.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { Hero } from '../components/hero/hero'
 import {
-  WavesContainer,
+  TeamWavesContainer,
+  TeamHeroContainer,
   AllContactCardsContainer
 } from '../pages-styles/our-team.styles'
 import {
@@ -20,15 +21,16 @@ const OurTeamPage = (props) => {
 
   return (
     <Layout>
-      <WavesContainer>
-        <Hero
+      <TeamWavesContainer>
+        <OurTeamWaveBackground />
+        <OurTeamWaveTop />
+        <OurTeamWaveBottom />
+      </TeamWavesContainer>
+      <TeamHeroContainer>
+      <Hero
           header={ourTeam.ourTeamPageHeader}
-          text={ourTeam.ourTeamPageSubheader}
-          backgroundWave={<OurTeamWaveBackground />}
-          firstWave={<OurTeamWaveTop />}
-          secondWave={<OurTeamWaveBottom />}
-        />
-      </WavesContainer>
+          text={ourTeam.ourTeamPageSubheader}/>
+      </TeamHeroContainer>
       <AllContactCardsContainer>
         {contactCard.map((card, index) => {
           return (
