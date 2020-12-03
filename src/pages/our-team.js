@@ -27,9 +27,10 @@ const OurTeamPage = (props) => {
         <OurTeamWaveBottom />
       </TeamWavesContainer>
       <TeamHeroContainer>
-      <Hero
+        <Hero
           header={ourTeam.ourTeamPageHeader}
-          text={ourTeam.ourTeamPageSubheader}/>
+          text={ourTeam.ourTeamPageSubheader}
+        />
       </TeamHeroContainer>
       <AllContactCardsContainer>
         {contactCard.map((card, index) => {

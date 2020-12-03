@@ -20,7 +20,7 @@ const AllContactCardsContainer = styled.div`
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
-  @media ${devices.mobile} {
+  @media ${devices.mobilse} {
     width: 15rem;
     padding-top: 8rem;
   }
