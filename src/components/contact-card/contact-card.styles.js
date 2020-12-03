@@ -12,7 +12,7 @@ const fonts = {
 const fontSizes = {
   name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
   position: `calc(13px + (22 - 13) * ((100vw - 375px) / (1920 - 375)))`,
-  text: `calc(10px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`  
+  text: `calc(10px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`
 }
 
 const ContactCardContainer = styled.div`
@@ -51,8 +51,8 @@ const TextOverlay = styled.div`
   font-size: ${fontSizes.text};
   font-family: ${fonts.poppinsRegular};
   @media ${devices.mobile} {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     line-height: 15px;
   }
   @media ${devices.tablet} {
@@ -89,7 +89,7 @@ const EmailText = styled.div`
   }
 `
 
-const Text = styled.p` 
+const Text = styled.p`
   display: inline;
 `
 
@@ -127,7 +127,6 @@ const InfoContainer = styled.div`
     justify-content: normal;
   }
   @media ${devices.tablet} {
-    
   }
   @media ${devices.desktop} {
     width: auto;
