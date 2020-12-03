@@ -14,6 +14,9 @@ const SocialMediaSvg = styled.svg`
   @media ${devices.mobile} {
     height: 25px;
   }
+  @media ${devices.tablet} {
+    height: 40px;
+  }
   @media ${devices.laptop} {
     width: 50px;
     height: initial;

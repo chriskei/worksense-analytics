@@ -144,6 +144,7 @@ const Icon = styled.a`
 
 const LeftContainer = styled.div`
   position: absolute;
+  max-width: 70%;
 `
 
 const MemberName = styled.h2`
