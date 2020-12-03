@@ -41,16 +41,6 @@ const ButtonsContainer = styled.div`
   }
 `
 
-const StatisticsContainer = styled.div`
-  padding: 2rem;
-  @media ${devices.mobile} {
-    display: none;
-  }
-  @media ${devices.tablet} {
-    display: flex;
-  }
-`
-
 const TalentLifecycleContainer = styled.div`
   background-color: ${colors.tan};
   z-index: 2;
@@ -92,12 +82,37 @@ const TalentLifecycleHeaderText = styled(H1)`
   margin: 15rem 0 0 4rem;
 `
 
+const ProductsContainer = styled.div`
+  height: 0;
+  position: relative;
+  bottom: 475px;
+  @media ${devices.mobile} {
+    margin: auto 2rem auto 2rem;
+  }
+  @media ${devices.tablet} {
+    margin: auto 4rem auto 4rem;
+  }
+  @media ${devices.laptop} {
+    margin: auto 7rem auto 7rem;
+  }
+`
+
+const ProductsButtonContainer = styled.div`
+  @media ${devices.mobile} {
+    margin-top: 1rem;
+  }
+  @media ${devices.laptop} {
+    margin-top: 3rem;
+  }
+`
+
 export {
   LandingWaveContainer,
   ButtonsContainer,
-  StatisticsContainer,
   TalentLifecycleContainer,
   TalentLifecyclePathContainer,
   StagesContainer,
-  TalentLifecycleHeaderText
+  TalentLifecycleHeaderText,
+  ProductsContainer,
+  ProductsButtonContainer
 }

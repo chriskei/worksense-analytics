@@ -51,7 +51,7 @@ const P = styled.p`
 const ButtonBody = styled.p`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.p};
-  color: ${colors.tan};
+  color: ${(props) => props.color || colors.tan};
   margin: auto;
 `
 
