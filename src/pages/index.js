@@ -6,34 +6,44 @@ import { Link } from 'gatsby'
 import { Layout } from '../components/layout/layout.js'
 import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
-import { WorkplaceBiases } from '../components/workplace-biases/workplace-biases'
-import { ProductSpecs } from '../components/product-specs/product-specs.js'
-import { PressRelease } from '../components/press-release/press-release.js'
-import { Statistic } from '../components/statistic/statistic.js'
-import { Button } from '../components/button/button'
-import { FirstStats } from '../components/first-stats/first-stats'
+import { Press } from '../components/press/press'
+import { H1 } from '../assets/fonts'
 import {
   LandingWaveContainer,
   ButtonsContainer,
-  StatisticsContainer
+  ProductsContainer,
+  ProductsButtonContainer
 } from '../pages-styles/index.styles.js'
 import {
   LandingWaveBackground,
   LandingWaveTop,
-  LandingWaveGreen
+  LandingWaveGreen,
+  LandingProductsWave,
+  LandingBiasWave
 } from '../assets/waves.js'
+import { colors } from '../assets/colors'
+import { Button } from '../components/button/button'
+import { FirstStats } from '../components/first-stats/first-stats'
+import { Bias } from '../components/bias/bias'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const workplaceBiasesImage = get(this, 'props.data.contentfulAsset.fluid')
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
-    const pressRelease = get(this, 'props.data.contentfulPressRelease')
     const heroData = get(this, 'props.data.contentfulHero')
-    const stats = get(this, 'props.data.contentfulStatistics')
-    const statsHighlights = stats.highlightedNumbers
-    const statsDescriptions = stats.descriptions
     const firstStats = get(this, 'props.data.contentfulStats')
+    const { biasHeader, biasImage, largeBody, smallBody, learnMoreUrl } = get(
+      this,
+      'props.data.contentfulBias'
+    )
+    const {
+      pressHeader,
+      articleImages,
+      articleExcerpts,
+      articleTitles,
+      articleUrLs
+    } = get(this, 'props.data.contentfulPress')
+    const { header, button } = get(this, 'props.data.contentfulSmallProducts')
 
     return (
       <Layout>
@@ -62,26 +72,29 @@ class RootIndex extends React.Component {
           header={firstStats.header}
           description={firstStats.description}
         />
-        <StatisticsContainer>
-          {statsHighlights.map((highlight, index) => {
-            return (
-              <Statistic
-                key={index}
-                highlight={highlight}
-                description={statsDescriptions[index]}
-              ></Statistic>
-            )
-          })}
-        </StatisticsContainer>
-        <WorkplaceBiases
-          imgData={workplaceBiasesImage}
-          header={stats.header}
-          body={textNodes[5].text.text}
+        <LandingBiasWave />
+        <Bias
+          biasHeader={biasHeader}
+          biasImage={biasImage}
+          largeBody={largeBody}
+          smallBody={smallBody}
+          learnMoreUrl={learnMoreUrl}
         />
-        <PressRelease
-          pressHeader={textNodes[0].text.text}
-          pressImg={pressRelease.pressImage.fluid}
-          pressText={pressRelease.pressText.pressText}
+        <LandingProductsWave />
+        <ProductsContainer>
+          <H1 color={colors.darkGreen}>{header}</H1>
+          <ProductsButtonContainer>
+            <Link to="/our-products/">
+              <Button text={button} primary />
+            </Link>
+          </ProductsButtonContainer>
+        </ProductsContainer>
+        <Press
+          pressHeader={pressHeader}
+          articleImages={articleImages}
+          articleExcerpts={articleExcerpts}
+          articleTitles={articleTitles}
+          articleUrls={articleUrLs}
         />
       </Layout>
     )
@@ -166,21 +179,35 @@ export const pageQuery = graphql`
       header
       description
     }
-    contentfulPressRelease(contentful_id: { eq: "64Mb2Cm6X6mYMbnun7X01l" }) {
-      pressImage {
+    contentfulBias {
+      biasHeader
+      biasImage {
         fluid {
-          aspectRatio
+          sizes
           src
+          aspectRatio
         }
       }
-      pressText {
-        pressText
-      }
+      largeBody
+      smallBody
+      learnMoreUrl
     }
-    contentfulStatistics(contentful_id: { eq: "15TTjYQhffGRdtJgwFpHy2" }) {
+    contentfulPress(contentful_id: { eq: "78QNMvTwaklGvUvTzJBZvg" }) {
+      articleExcerpts
+      articleImages {
+        fluid {
+          sizes
+          src
+          aspectRatio
+        }
+      }
+      articleTitles
+      articleUrLs
+      pressHeader
+    }
+    contentfulSmallProducts(contentful_id: { eq: "5P0oBlBPiPvXrtrF2sHBlG" }) {
+      button
       header
-      highlightedNumbers
-      descriptions
     }
   }
 `

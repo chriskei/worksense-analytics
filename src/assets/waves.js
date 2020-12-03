@@ -178,6 +178,87 @@ const StatsWaveBottom = () => {
   )
 }
 
+const LandingBiasWave = () => {
+  return (
+    <WaveContainer top="500px">
+      <CenteredWave
+        height="1928"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1920 115.28C1760 40.8882 1600 -23.8 1440 8.54411C1280 40.8882 1120 173.345 960 222.169C800 271.917 640 238.033 480 230.332C320 222.631 160 238.033 80 246.812L0 254.975V353.548H80C160 353.548 320 353.548 480 353.548C640 353.548 800 353.548 960 353.548C1120 353.548 1280 353.548 1440 353.548C1600 353.548 1760 353.548 1920 353.548V115.28Z"
+          fill="#083D44"
+        />
+        <rect y="328" width="1920" height="1450" fill="#083D44" />
+        <path
+          d="M529.265 380.809C346.502 279.792 141.239 266.377 0.00100551 280.537L0 716.915H1920V280.537L1860.01 244.84C1617.24 111.735 1356.14 304.39 1137.27 440.07C1042.71 502.876 798.528 529.638 529.265 380.809Z"
+          fill="url(#paint6_linear)"
+          fillOpacity="0.2"
+        />
+        <path
+          d="M432.244 267.622C249.481 186.163 141.238 109.539 0 120.957V518.031H1920V166.142L1852.44 120.957C1609.68 13.6223 1356.14 185.377 1137.27 294.787C1042.71 345.433 701.508 387.635 432.244 267.622Z"
+          fill="url(#paint7_linear)"
+          fillOpacity="0.05"
+        />
+        <defs>
+          <linearGradient
+            id="paint6_linear"
+            x1="949.254"
+            y1="215.915"
+            x2="949.254"
+            y2="716.914"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#07A3B2" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint7_linear"
+            x1="960"
+            y1="114.032"
+            x2="960"
+            y2="518.032"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#07A3B2" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
+const LandingProductsWave = () => {
+  return (
+    <WaveContainer>
+      <CenteredWave height="906" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M0.500249 512.624H3.4136e-05L0 285C58.7048 261 199.046 209.126 374.004 201.168C505.081 195.207 601.495 213.074 712.804 233.703C787.21 247.492 868.272 262.514 970.793 272.477C1197.58 294.517 1318.14 223.14 1475.21 130.148C1495.37 118.214 1516.13 105.925 1537.79 93.4307C1689.98 5.65195 1815.88 2.56301 1907.26 0.321279C1911.58 0.215248 1915.83 0.111112 1919.99 0L1919.99 457.5H1920V789.3C1920 789.3 1833.33 751.433 1665.94 715.053C1519.07 683.13 1263.84 703.619 919.516 821.637C604.082 929.753 198.509 913.572 0.00521695 899.019L0.00524454 715.053L0.500249 512.624Z"
+          fill="url(#paint0_radial)"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(2631.52 1112.72) rotate(-150.459) scale(2092.22 1346.15)"
+          >
+            <stop stopColor="#F7F3E9" />
+            <stop offset="0.0001" stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </radialGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
 const ProductsWaveTop = () => {
   return (
     <WaveContainer top="-1000px">
@@ -542,6 +623,8 @@ export {
   LandingWaveBackground,
   LandingWaveTop,
   LandingWaveGreen,
+  LandingBiasWave,
+  LandingProductsWave,
   StatsWaveBackground,
   StatsWaveTop,
   StatsWaveBottom,

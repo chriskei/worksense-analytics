@@ -38,11 +38,11 @@ const ImageBox = styled.div`
 `
 
 const ImageItem = styled(Img)`
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     max-height: 7rem;
     max-width: 7rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     max-height: 17rem;
     max-width: 17rem;
   }
@@ -50,23 +50,23 @@ const ImageItem = styled(Img)`
 
 const ExpandedContainer = styled.div`
   margin: auto;
-  @media (min-width: 375px) {
+  @media ${devices.mobile} {
     width: 20rem;
   }
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     width: 40rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     width: 64.375rem;
   }
 `
 
 const SelectedCategory = styled(H3)`
   margin: 4rem 0 1rem 0.25rem;
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     margin-left: 0.75rem;
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktop} {
     margin-left: 1.25rem;
   }
 `

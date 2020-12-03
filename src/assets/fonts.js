@@ -18,7 +18,7 @@ const fontSizes = {
 const H1 = styled.h1`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h1};
-  color: ${colors.tan};
+  color: ${(props) => props.color || colors.tan};
   margin: auto 0 auto 0;
   padding-bottom: 1rem;
 `
@@ -51,7 +51,7 @@ const P = styled.p`
 const ButtonBody = styled.p`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.p};
-  color: ${colors.tan};
+  color: ${(props) => props.color || colors.tan};
   margin: auto;
 `
 

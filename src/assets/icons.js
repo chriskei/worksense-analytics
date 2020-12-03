@@ -1,4 +1,5 @@
 import React from 'react'
+import { QuoteSvg } from './icons.styles'
 
 const RightArrow = () => {
   return (
@@ -70,4 +71,78 @@ const LinkedIn = () => {
   )
 }
 
-export { RightArrow, DownArrow, Email, LinkedIn }
+const ChevronRight = () => {
+  return (
+    <svg
+      width="9"
+      height="15"
+      viewBox="0 0 9 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.10156 1.21094L7.39058 7.50006L1.10156 13.7891"
+        stroke="#083D44"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+const Quote = (props) => {
+  const { small } = props
+
+  return (
+    <QuoteSvg
+      height="33"
+      viewBox="0 0 36 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.57143 32.9883H10.2857L15.4286 20.1883V0.988281H0V20.1883H7.71429L2.57143 32.9883ZM23.1429 32.9883H30.8571L36 20.1883V0.988281H20.5714V20.1883H28.2857L23.1429 32.9883Z"
+        fill="#083D44"
+      />
+    </QuoteSvg>
+  )
+}
+
+const GreenCarouselDot = () => {
+  return (
+    <svg
+      width="25"
+      height="26"
+      viewBox="0 0 25 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12.5" cy="13.168" r="12.5" fill="#083D44" />
+    </svg>
+  )
+}
+
+const GrayCarouselDot = () => {
+  return (
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12.9285" cy="13.168" r="12.5" fill="#C4C4C4" />
+    </svg>
+  )
+}
+
+export {
+  RightArrow,
+  DownArrow,
+  Email,
+  LinkedIn,
+  ChevronRight,
+  Quote,
+  GreenCarouselDot,
+  GrayCarouselDot
+}

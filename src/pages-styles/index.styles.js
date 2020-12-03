@@ -39,14 +39,33 @@ const ButtonsContainer = styled.div`
   }
 `
 
-const StatisticsContainer = styled.div`
-  padding: 2rem;
+const ProductsContainer = styled.div`
+  height: 0;
+  position: relative;
+  bottom: 475px;
   @media ${devices.mobile} {
-    display: none;
+    margin: auto 2rem auto 2rem;
   }
   @media ${devices.tablet} {
-    display: flex;
+    margin: auto 4rem auto 4rem;
+  }
+  @media ${devices.laptop} {
+    margin: auto 7rem auto 7rem;
   }
 `
 
-export { LandingWaveContainer, ButtonsContainer, StatisticsContainer }
+const ProductsButtonContainer = styled.div`
+  @media ${devices.mobile} {
+    margin-top: 1rem;
+  }
+  @media ${devices.laptop} {
+    margin-top: 3rem;
+  }
+`
+
+export {
+  LandingWaveContainer,
+  ButtonsContainer,
+  ProductsContainer,
+  ProductsButtonContainer
+}
