@@ -135,7 +135,7 @@ const InfoContainer = styled.div`
 
 const Icon = styled.a`
   @media ${devices.mobile} {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
   @media ${devices.desktop} {
     margin-left: 1rem;

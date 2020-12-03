@@ -13,7 +13,7 @@ const QuoteSvg = styled.svg`
 const SocialMediaSvg = styled.svg`
   @media ${devices.mobile} {
     height: 25px;
-  }   
+  }
   @media ${devices.laptop} {
     width: 50px;
     height: initial;
