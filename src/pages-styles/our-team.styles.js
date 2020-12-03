@@ -20,7 +20,7 @@ const AllContactCardsContainer = styled.div`
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
-  @media ${devices.mobilse} {
+  @media ${devices.mobile} {
     width: 15rem;
     padding-top: 8rem;
   }
@@ -32,6 +32,7 @@ const AllContactCardsContainer = styled.div`
   @media ${devices.desktop} {
     width: 64.375rem;
     margin: auto;
+    padding-bottom: 3rem;
   }
 `
 

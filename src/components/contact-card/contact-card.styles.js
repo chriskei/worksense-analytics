@@ -1,23 +1,35 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { devices } from '../../assets/devices'
 
 const fonts = {
   manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
     Arial, sans-serif`,
-  poppins: `'Poppins', sans-serif`,
+  poppinsRegular: `'Poppins Regular', sans-serif`,
   poppinsBold: `'Poppins Bold', sans-serif`
 }
 
 const fontSizes = {
   name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
-  position: `calc(13px + (22 - 13) * ((100vw - 375px) / (1920 - 375)))`
+  position: `calc(13px + (22 - 13) * ((100vw - 375px) / (1920 - 375)))`,
+  text: `calc(10px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`  
 }
 
 const ContactCardContainer = styled.div`
   margin: auto;
-  height: 40rem;
-  width: 30rem;
   z-index: 1;
+  @media ${devices.mobile} {
+    height: 23rem;
+    width: 30rem;
+  }
+  @media ${devices.tablet} {
+    height: 40rem;
+    width: 30rem;
+  }
+  @media ${devices.desktop} {
+    height: 40rem;
+    width: 30rem;
+  }
 `
 
 const FlexContainer = styled.div`
@@ -34,18 +46,51 @@ const MemberImg = styled(Img)`
   box-shadow: 3px 3px 12px grey;
 `
 
-const TextOverlay = styled.p`
+const TextOverlay = styled.div`
   position: absolute;
-  padding: 3rem;
+  font-size: ${fontSizes.text};
+  font-family: ${fonts.poppinsRegular};
+  @media ${devices.mobile} {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    line-height: 15px;
+  }
+  @media ${devices.tablet} {
+    padding: 3rem;
+  }
+  @media ${devices.desktop} {
+    padding: 3rem;
+    line-height: 25px;
+  }
 `
 
 const PositionContainer = styled.div`
-  padding-bottom: 2rem;
+  @media ${devices.mobile} {
+    padding-bottom: 1rem;
+  }
+  @media ${devices.tablet} {
+    padding-bottom: 2rem;
+  }
+  @media ${devices.desktop} {
+    padding-bottom: 2rem;
+  }
 `
 
 const EmailText = styled.div`
-  padding-top: 2rem;
   font-family: ${fonts.poppinsBold};
+  @media ${devices.mobile} {
+    padding-top: 1rem;
+  }
+  @media ${devices.tablet} {
+    padding-top: 2rem;
+  }
+  @media ${devices.desktop} {
+    padding-top: 2rem;
+  }
+`
+
+const Text = styled.p` 
+  display: inline;
 `
 
 const Email = styled.a`
@@ -75,17 +120,28 @@ const Overlay = styled.div`
 `
 
 const InfoContainer = styled.div`
-  width: auto;
-  height: auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  @media ${devices.mobile} {
+    justify-content: normal;
+  }
+  @media ${devices.tablet} {
+    
+  }
+  @media ${devices.desktop} {
+    width: auto;
+    height: auto;
+  }
 `
 
 const Icon = styled.a`
   margin-left: 1rem;
 `
 
-const LeftContainer = styled.div``
+const LeftContainer = styled.div`
+  position: absolute;
+`
 
 const MemberName = styled.h2`
   font-family: ${fonts.manrope};
@@ -96,7 +152,7 @@ const MemberName = styled.h2`
 `
 
 const MemberPosition = styled.p`
-  font-family: ${fonts.poppins};
+  font-family: ${fonts.poppinsRegular};
   font-size: ${fontSizes.position};
   color: ${(props) => props.color};
   margin: auto;
@@ -105,7 +161,10 @@ const MemberPosition = styled.p`
 const RightContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 0;
+  margin: 0;
+  right: 0;
+  padding-top: 1rem;
+  position: absolute;
 `
 
 export {
@@ -115,6 +174,7 @@ export {
   TextOverlay,
   PositionContainer,
   Email,
+  Text,
   EmailText,
   Overlay,
   InfoContainer,

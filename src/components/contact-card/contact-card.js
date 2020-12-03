@@ -7,6 +7,7 @@ import {
   TextOverlay,
   PositionContainer,
   EmailText,
+  Text,
   Email,
   Overlay,
   InfoContainer,
@@ -37,7 +38,7 @@ const ContactCard = (props) => {
             <PositionContainer>{positionText}</PositionContainer>
             {description}
             <EmailText>
-              <>Reach me at </>
+              <Text>Reach me at </Text>
               <Email href={`mailto:${email}`} target="_blank">
                 {email}
               </Email>
@@ -52,10 +53,10 @@ const ContactCard = (props) => {
         </LeftContainer>
         <RightContainer>
           <Icon href={socialMedia} target="_blank">
-            <LinkedIn></LinkedIn>
+            <LinkedIn />
           </Icon>
           <Icon href={twitter} target="_blank">
-            <Twitter></Twitter>
+            <Twitter />
           </Icon>
         </RightContainer>
       </InfoContainer>

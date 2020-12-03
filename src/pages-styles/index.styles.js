@@ -69,7 +69,19 @@ const TalentLifecyclePathContainer = styled.div`
 
 const StagesContainer = styled.div`
   position: relative;
-  margin-left: 5rem;
+  margin: auto;
+  @media ${devices.mobile} {
+    width: 20rem;
+  }
+  @media ${devices.tablet} {
+    width: 40rem;
+  }
+  @media ${devices.laptop} {
+    width: 52rem;
+  }
+  @media ${devices.desktop} {
+    width: 80rem;
+  }
 `
 
 const TalentLifecycleHeaderText = styled(H1)`
@@ -77,7 +89,7 @@ const TalentLifecycleHeaderText = styled(H1)`
   position: relative;
   width: 70%;
   padding-top: 4rem;
-  margin: 15rem 0 0 5rem;
+  margin: 15rem 0 0 4rem;
 `
 
 export {
