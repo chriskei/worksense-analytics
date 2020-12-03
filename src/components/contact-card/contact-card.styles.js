@@ -103,6 +103,7 @@ const Overlay = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
+  border-radius: 5px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -126,8 +127,6 @@ const InfoContainer = styled.div`
   @media ${devices.mobile} {
     justify-content: normal;
   }
-  @media ${devices.tablet} {
-  }
   @media ${devices.desktop} {
     width: auto;
     height: auto;
@@ -135,7 +134,12 @@ const InfoContainer = styled.div`
 `
 
 const Icon = styled.a`
-  margin-left: 1rem;
+  @media ${devices.mobile} {
+    margin-left: .5rem;
+  }
+  @media ${devices.desktop} {
+    margin-left: 1rem;
+  }
 `
 
 const LeftContainer = styled.div`

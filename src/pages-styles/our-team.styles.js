@@ -27,11 +27,12 @@ const AllContactCardsContainer = styled.div`
   @media ${devices.tablet} {
     width: 40rem;
     margin: auto;
-    padding-top: 3rem;
+    padding-top: 6rem;
   }
   @media ${devices.desktop} {
     width: 64.375rem;
     margin: auto;
+    padding-top: 3rem;
     padding-bottom: 3rem;
   }
 `

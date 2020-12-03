@@ -10,4 +10,14 @@ const QuoteSvg = styled.svg`
   }
 `
 
-export { QuoteSvg }
+const SocialMediaSvg = styled.svg`
+  @media ${devices.mobile} {
+    height: 25px;
+  }   
+  @media ${devices.laptop} {
+    width: 50px;
+    height: initial;
+  }
+`
+
+export { QuoteSvg, SocialMediaSvg }
