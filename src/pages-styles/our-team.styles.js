@@ -22,7 +22,7 @@ const AllContactCardsContainer = styled.div`
   flex-wrap: wrap;
   @media ${devices.mobile} {
     width: 15rem;
-    padding-top: 8rem;
+    padding-top: 10rem;
   }
   @media ${devices.tablet} {
     width: 40rem;
