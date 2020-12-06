@@ -8,9 +8,15 @@ import { Hero } from '../components/hero/hero.js'
 import { MissionStatement } from '../components/mission-statement/mission-statement'
 import { Press } from '../components/press/press'
 import { H1 } from '../assets/fonts'
+import { ProductSpecs } from '../components/product-specs/product-specs'
 import {
   LandingWaveContainer,
   ButtonsContainer,
+  StatisticsContainer,
+  TalentLifecycleContainer,
+  TalentLifecycleHeaderText,
+  StagesContainer,
+  TalentLifecyclePathContainer,
   ProductsContainer,
   ProductsButtonContainer
 } from '../pages-styles/index.styles.js'
@@ -18,6 +24,7 @@ import {
   LandingWaveBackground,
   LandingWaveTop,
   LandingWaveGreen,
+  TalentLifecyclePath,
   LandingProductsWave,
   LandingBiasWave
 } from '../assets/waves.js'
@@ -32,6 +39,8 @@ class RootIndex extends React.Component {
     const textNodes = get(this, 'props.data.allContentfulText.nodes')
     const heroData = get(this, 'props.data.contentfulHero')
     const firstStats = get(this, 'props.data.contentfulStats')
+    const talentLifecycle = get(this, 'props.data.contentfulTalentLifecycle')
+    const lifecycleStages = talentLifecycle.lifecycleStages
     const { biasHeader, biasImage, largeBody, smallBody, learnMoreUrl } = get(
       this,
       'props.data.contentfulBias'
@@ -72,6 +81,27 @@ class RootIndex extends React.Component {
           header={firstStats.header}
           description={firstStats.description}
         />
+        <TalentLifecycleContainer>
+          <TalentLifecycleHeaderText>
+            {talentLifecycle.header}
+          </TalentLifecycleHeaderText>
+          <StagesContainer>
+            <TalentLifecyclePathContainer>
+              <TalentLifecyclePath />
+            </TalentLifecyclePathContainer>
+            {lifecycleStages.map((stage, index) => {
+              return (
+                <ProductSpecs
+                  key={index}
+                  header={stage.title}
+                  description={stage.specDescription.specDescription}
+                  imgData={stage.productImage}
+                  reversed={index % 2 == 0}
+                />
+              )
+            })}
+          </StagesContainer>
+        </TalentLifecycleContainer>
         <LandingBiasWave />
         <Bias
           biasHeader={biasHeader}
@@ -208,6 +238,21 @@ export const pageQuery = graphql`
     contentfulSmallProducts(contentful_id: { eq: "5P0oBlBPiPvXrtrF2sHBlG" }) {
       button
       header
+    }
+    contentfulTalentLifecycle(contentful_id: { eq: "3ig7cPwCbDY350SaJ7Bye1" }) {
+      header
+      lifecycleStages {
+        title
+        specDescription {
+          specDescription
+        }
+        productImage {
+          fluid {
+            aspectRatio
+            src
+          }
+        }
+      }
     }
   }
 `

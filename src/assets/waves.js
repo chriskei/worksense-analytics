@@ -7,6 +7,7 @@ import {
   OurTeamBackgroundContainer,
   OurTeamTopContainer,
   OurTeamBottomContainer,
+  LifecyclePathContainer,
   WaveContainer,
   CenteredWave
 } from './waves.styles'
@@ -343,23 +344,23 @@ const ProductsWaveBackground = () => {
 
 const OurTeamWaveBackground = () => {
   return (
-    <OurTeamBackgroundContainer>
-      <svg
+    <WaveContainer top="-200px">
+      <CenteredWave
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1439 1180"
+        height="1338"
         fill="none"
       >
         <path
-          d="M0 0.802734H1440V477.058C1205.81 516.305 1121 772 824 660C442.5 516.135 380.5 857 380.5 857C309.5 1153 0 1179.5 0 1179.5V0.802734Z"
+          d="M0 0.25H1920V540.67C1502.68 600.189 1119.35 778.925 1119.35 778.925C596.682 655.183 521.333 987.766 521.333 987.766C265.333 1317.13 0 1337.75 0 1337.75V0.25Z"
           fill="url(#paint0_linear)"
         />
         <defs>
           <linearGradient
             id="paint0_linear"
-            x1="127.001"
-            y1="-465.559"
-            x2="510.09"
-            y2="813.125"
+            x1="169.335"
+            y1="-528.943"
+            x2="547.882"
+            y2="955.731"
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#083D44" stopOpacity="0.71" />
@@ -367,31 +368,27 @@ const OurTeamWaveBackground = () => {
             <stop offset="1" stopColor="#D9ECC7" />
           </linearGradient>
         </defs>
-      </svg>
-    </OurTeamBackgroundContainer>
+      </CenteredWave>
+    </WaveContainer>
   )
 }
 
 const OurTeamWaveTop = () => {
   return (
-    <OurTeamTopContainer>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 642"
-        fill="none"
-      >
+    <WaveContainer top="-1400px">
+      <CenteredWave xmlns="http://www.w3.org/2000/svg" height="818" fill="none">
         <path
-          d="M0.556641 0.802734L1439.02 0.802572L1439.49 246.11L1439.49 498.751C1296.35 514.923 1095.09 484.583 1030.6 362.041C951.005 210.801 712.221 230.146 684.509 230.146C489.012 230.146 375.138 420.287 290.247 526.273C222.334 611.061 68.8232 638.427 0.556684 641.511L0.556641 0.802734Z"
-          fill="url(#paint3_linear)"
-          fill-opacity="0.2"
+          d="M0.709961 0L1920.08 -0.000216763L1920.71 313.187L1920.71 635.737C1729.72 656.384 1461.17 617.649 1375.12 461.197C1268.92 268.107 950.3 292.805 913.323 292.805C652.467 292.805 500.522 535.562 387.25 670.875C296.633 779.125 91.7996 814.063 0.710016 818L0.709961 0Z"
+          fill="url(#paint4_linear)"
+          fillOpacity="0.2"
         />
         <defs>
           <linearGradient
-            id="paint3_linear"
-            x1="127.422"
-            y1="-252.699"
-            x2="247.709"
-            y2="485.136"
+            id="paint4_linear"
+            x1="169.99"
+            y1="-323.649"
+            x2="317.253"
+            y2="620.42"
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#083D44" stopOpacity="0.71" />
@@ -399,39 +396,35 @@ const OurTeamWaveTop = () => {
             <stop offset="1" stopColor="#D9ECC7" />
           </linearGradient>
         </defs>
-      </svg>
-    </OurTeamTopContainer>
+      </CenteredWave>
+    </WaveContainer>
   )
 }
 
 const OurTeamWaveBottom = () => {
   return (
-    <OurTeamBottomContainer>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 840"
-        fill="none"
-      >
+    <WaveContainer top="-2300px">
+      <CenteredWave xmlns="http://www.w3.org/2000/svg" height="840" fill="none">
         <path
-          d="M1440.56 0L0.556726 -0.000162625L0.556705 321.231C35.4221 363.243 137.553 450.532 267.152 463.595C429.151 479.923 541.007 435.021 730.557 394.201C920.106 353.38 1065.58 549.317 1150.56 688.106C1218.54 799.137 1372.22 834.972 1440.56 839.01L1440.56 0Z"
-          fill="url(#paint4_linear)"
+          d="M1920.17 0.350586L0.169212 0.350369L0.169191 321.582C46.6562 363.594 182.83 450.883 355.629 463.945C571.628 480.274 720.77 435.371 973.502 394.551C1226.24 353.731 1420.19 549.668 1533.5 688.456C1624.15 799.487 1829.05 835.322 1920.17 839.361L1920.17 0.350586Z"
+          fill="url(#paint3_linear)"
         />
         <defs>
           <linearGradient
-            id="paint4_linear"
-            x1="1313.56"
-            y1="-331.961"
-            x2="1111.23"
-            y2="616.77"
+            id="paint3_linear"
+            x1="1750.83"
+            y1="-331.611"
+            x2="1596.15"
+            y2="635.526"
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#083D44" stopOpacity="0.71" />
             <stop offset="0.395833" stopColor="#07A3B2" />
-            <stop offset="1" stopColor="#D9ECC7" />
+            <stop offset="1" stop-color="#D9ECC7" />
           </linearGradient>
         </defs>
-      </svg>
-    </OurTeamBottomContainer>
+      </CenteredWave>
+    </WaveContainer>
   )
 }
 
@@ -619,6 +612,39 @@ const ContactWaveBottom = () => {
   )
 }
 
+const TalentLifecyclePath = () => {
+  return (
+    <LifecyclePathContainer>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="393"
+        height="1286"
+        viewBox="0 0 393 1286"
+        fill="none"
+      >
+        <path
+          d="M332 512C290.674 524.534 199.629 581.187 166.057 707.527C132.484 833.868 80.0303 877.151 58 883"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+        <path
+          d="M45.0724 59.1619C47.6746 119.604 81.9604 249.231 198.287 284.199C314.613 319.168 346.907 354.878 348.514 368.361"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+        <path
+          d="M2.11109 962C-0.284907 998.914 35.1795 1084.56 196.205 1131.81C357.231 1179.06 393.101 1253.62 390.907 1285"
+          stroke="#07A3B2"
+          strokeWidth="3"
+          strokeDasharray="8 8"
+        />
+      </svg>
+    </LifecyclePathContainer>
+  )
+}
+
 export {
   LandingWaveBackground,
   LandingWaveTop,
@@ -639,5 +665,6 @@ export {
   DemoWaveBottom,
   ContactWaveBackground,
   ContactWaveTop,
-  ContactWaveBottom
+  ContactWaveBottom,
+  TalentLifecyclePath
 }

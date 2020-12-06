@@ -1,10 +1,14 @@
 import React from 'react'
-import { Email, LinkedIn } from '../../assets/icons'
+import { Twitter, LinkedIn } from '../../assets/icons'
 import {
   ContactCardContainer,
   FlexContainer,
   MemberImg,
   TextOverlay,
+  PositionContainer,
+  EmailText,
+  Text,
+  Email,
   Overlay,
   InfoContainer,
   Icon,
@@ -15,13 +19,31 @@ import {
 } from '../contact-card/contact-card.styles'
 
 const ContactCard = (props) => {
-  const { name, position, picture, description, socialMedia, email } = props
+  const {
+    name,
+    position,
+    positionText,
+    picture,
+    description,
+    socialMedia,
+    email,
+    twitter
+  } = props
   return (
     <ContactCardContainer>
       <FlexContainer>
         <MemberImg alt={picture} fluid={picture.fluid} />
         <Overlay>
-          <TextOverlay>{description}</TextOverlay>
+          <TextOverlay>
+            <PositionContainer>{positionText}</PositionContainer>
+            {description}
+            <EmailText>
+              <Text>Reach me at </Text>
+              <Email href={`mailto:${email}`} target="_blank">
+                {email}
+              </Email>
+            </EmailText>
+          </TextOverlay>
         </Overlay>
       </FlexContainer>
       <InfoContainer>
@@ -31,10 +53,10 @@ const ContactCard = (props) => {
         </LeftContainer>
         <RightContainer>
           <Icon href={socialMedia} target="_blank">
-            <LinkedIn></LinkedIn>
+            <LinkedIn />
           </Icon>
-          <Icon href={email} target="_blank">
-            <Email></Email>
+          <Icon href={twitter} target="_blank">
+            <Twitter />
           </Icon>
         </RightContainer>
       </InfoContainer>
