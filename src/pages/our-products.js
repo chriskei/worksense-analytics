@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import get from 'lodash/get'
 import { Layout } from '../components/layout/layout.js'
 import { colors } from '../assets/colors.js'
@@ -60,7 +61,9 @@ const OurProductsPage = (props) => {
           <source src={walkthrough.file.url} />
         </ProductVideo>
         <ButtonContainer>
-          <Button primary text="Request Demo" />
+          <Link to="/request-demo/">
+            <Button primary text="Request Demo" />
+          </Link>
         </ButtonContainer>
       </ProductPageContainer>
     </Layout>

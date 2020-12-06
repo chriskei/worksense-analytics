@@ -10,6 +10,7 @@ import {
   FooterButtonContainer
 } from '../footer/footer.styles.js'
 import { Button } from '../button/button'
+import { FooterWaveBottom } from '../../assets/waves.js'
 
 const Footer = () => {
   return (
@@ -32,6 +33,7 @@ const Footer = () => {
       `}
       render={(data) => (
         <StyledFooter role="footer">
+          <FooterWaveBottom />
           <LeftContainer>
             <FooterLink to="/">
               <Img
