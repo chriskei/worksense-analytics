@@ -623,11 +623,22 @@ const FooterWaveBottom = () => {
   return (
     <WaveContainer>
       <CenteredWave height="562" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1559.61 223.728C1836.64 230.174 1916.63 446.559 1922 562H0V114.5C0 114.5 98.5 45.6957 205.5 20.9999C449.776 -35.3797 633.508 30.4246 789.201 143.184C944.894 255.943 1213.33 215.672 1559.61 223.728Z" fill="url(#paint9_linear)" fillOpacity="0.45"/>
+        <path
+          d="M1559.61 223.728C1836.64 230.174 1916.63 446.559 1922 562H0V114.5C0 114.5 98.5 45.6957 205.5 20.9999C449.776 -35.3797 633.508 30.4246 789.201 143.184C944.894 255.943 1213.33 215.672 1559.61 223.728Z"
+          fill="url(#paint9_linear)"
+          fillOpacity="0.45"
+        />
         <defs>
-          <linearGradient id="paint9_linear" x1="-2634.7" y1="-2407.44" x2="2763.58" y2="1370.82" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#07A3B2"/>
-            <stop offset="1" stopColor="#D9ECC7"/>
+          <linearGradient
+            id="paint9_linear"
+            x1="-2634.7"
+            y1="-2407.44"
+            x2="2763.58"
+            y2="1370.82"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
           </linearGradient>
         </defs>
       </CenteredWave>

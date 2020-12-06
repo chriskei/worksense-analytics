@@ -7,8 +7,12 @@ const StyledFooter = styled.footer`
   display: inline-flex;
   width: 100%;
   font-family: 'Manrope', sans-serif;
-  background: rgb(7,163,178);
-  background: linear-gradient(58deg, rgba(7,163,178,1) 0%, rgba(217,236,199,1) 100%);
+  background: rgb(7, 163, 178);
+  background: linear-gradient(
+    58deg,
+    rgba(7, 163, 178, 1) 0%,
+    rgba(217, 236, 199, 1) 100%
+  );
 `
 const LeftContainer = styled.div`
   float: left;
