@@ -5,7 +5,8 @@ import { Layout } from '../components/layout/layout.js'
 import { ContactCard } from '../components/contact-card/contact-card'
 import { Hero } from '../components/hero/hero'
 import {
-  WavesContainer,
+  TeamWavesContainer,
+  TeamHeroContainer,
   AllContactCardsContainer
 } from '../pages-styles/our-team.styles'
 import {
@@ -20,15 +21,17 @@ const OurTeamPage = (props) => {
 
   return (
     <Layout>
-      <WavesContainer>
+      <TeamWavesContainer>
+        <OurTeamWaveBackground />
+        <OurTeamWaveTop />
+        <OurTeamWaveBottom />
+      </TeamWavesContainer>
+      <TeamHeroContainer>
         <Hero
           header={ourTeam.ourTeamPageHeader}
           text={ourTeam.ourTeamPageSubheader}
-          backgroundWave={<OurTeamWaveBackground />}
-          firstWave={<OurTeamWaveTop />}
-          secondWave={<OurTeamWaveBottom />}
         />
-      </WavesContainer>
+      </TeamHeroContainer>
       <AllContactCardsContainer>
         {contactCard.map((card, index) => {
           return (
@@ -36,10 +39,12 @@ const OurTeamPage = (props) => {
               key={index}
               picture={card.memberPicture}
               description={card.memberDescription.memberDescription}
+              positionText={card.positionText}
               socialMedia={card.socialMediaLinks}
               name={card.name}
               position={card.companyPosition}
               email={card.email}
+              twitter={card.twitter}
             />
           )
         })}
@@ -59,6 +64,7 @@ export const pageQuery = graphql`
         id
         name
         companyPosition
+        positionText
         memberPicture {
           fluid {
             src
@@ -70,6 +76,7 @@ export const pageQuery = graphql`
         }
         socialMediaLinks
         email
+        twitter
       }
     }
   }

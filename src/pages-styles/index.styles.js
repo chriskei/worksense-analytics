@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../assets/devices'
+import { H1 } from '../assets/fonts'
+import { colors } from '../assets/colors.js'
 
 const LandingWaveContainer = styled.div`
   height: 0;
@@ -39,6 +41,47 @@ const ButtonsContainer = styled.div`
   }
 `
 
+const TalentLifecycleContainer = styled.div`
+  background-color: ${colors.tan};
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  & > * {
+    z-index: 3;
+  }
+`
+
+const TalentLifecyclePathContainer = styled.div`
+  width: 100%;
+  position: absolute;
+  display: flex;
+`
+
+const StagesContainer = styled.div`
+  position: relative;
+  margin: auto;
+  @media ${devices.mobile} {
+    width: 20rem;
+  }
+  @media ${devices.tablet} {
+    width: 40rem;
+  }
+  @media ${devices.laptop} {
+    width: 52rem;
+  }
+  @media ${devices.desktop} {
+    width: 80rem;
+  }
+`
+
+const TalentLifecycleHeaderText = styled(H1)`
+  color: ${colors.darkGreen};
+  position: relative;
+  width: 70%;
+  padding-top: 4rem;
+  margin: 15rem 0 0 4rem;
+`
+
 const ProductsContainer = styled.div`
   height: 0;
   position: relative;
@@ -66,6 +109,10 @@ const ProductsButtonContainer = styled.div`
 export {
   LandingWaveContainer,
   ButtonsContainer,
+  TalentLifecycleContainer,
+  TalentLifecyclePathContainer,
+  StagesContainer,
+  TalentLifecycleHeaderText,
   ProductsContainer,
   ProductsButtonContainer
 }

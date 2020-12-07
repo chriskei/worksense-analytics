@@ -36,6 +36,14 @@ const OurTeamBottomContainer = styled.div`
   top: -130vw;
 `
 
+const LifecyclePathContainer = styled.div`
+  overflow: hidden;
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  top: 300px;
+`
+
 const WaveContainer = styled.div`
   overflow: hidden;
   position: relative;
@@ -64,6 +72,7 @@ export {
   OurTeamBackgroundContainer,
   OurTeamTopContainer,
   OurTeamBottomContainer,
+  LifecyclePathContainer,
   WaveContainer,
   CenteredWave
 }

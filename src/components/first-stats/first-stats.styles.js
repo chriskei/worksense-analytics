@@ -7,10 +7,14 @@ const StatsWaveContainer = styled.div`
   height: 0;
   position: relative;
   top: 0;
+  z-index: 3;
 `
 
 const StatsContent = styled.div`
   display: flex;
+  & > * {
+    z-index: 4;
+  }
   @media ${devices.mobile} {
     flex-wrap: wrap;
     width: 15rem;
@@ -59,7 +63,6 @@ const StatImg = styled(Img)`
 `
 
 const StatsText = styled.div`
-  z-index: 2;
   @media ${devices.mobile} {
     min-width: 4rem;
     margin: 2vw 0 0 0;
