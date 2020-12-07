@@ -62,19 +62,27 @@ const Footer = () => {
                     </FooterLink>
                   </li>
                   <li>
-                  <FooterLink to="/request-demo/">
-                    <P>Request Demo</P>
-                  </FooterLink>
+                    <FooterLink to="/request-demo/">
+                      <P>Request Demo</P>
+                    </FooterLink>
                   </li>
                 </LeftList>
                 <RightList>
                   <li>
-                    <FooterExternalLink href="https://twitter.com/work_sense" target='_blank' rel='noopener'>
+                    <FooterExternalLink
+                      href="https://twitter.com/work_sense"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       <P>Twitter</P>
                     </FooterExternalLink>
                   </li>
                   <li>
-                    <FooterExternalLink href="https://www.linkedin.com/company/worksenseanalytics/" target='_blank' rel='noopener'>
+                    <FooterExternalLink
+                      href="https://www.linkedin.com/company/worksenseanalytics/"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       <P>LinkedIn</P>
                     </FooterExternalLink>
                   </li>
