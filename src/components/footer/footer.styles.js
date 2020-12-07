@@ -1,59 +1,144 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { colors } from '../../assets/colors'
+import { H2, P } from '../../assets/fonts'
+import { devices } from '../../assets/devices'
 
 const StyledFooter = styled.footer`
   min-height: 23vh;
-  display: inline-flex;
   width: 100%;
-  font-family: 'Manrope', sans-serif;
   background: rgb(7, 163, 178);
   background: linear-gradient(
     58deg,
     rgba(7, 163, 178, 1) 0%,
     rgba(217, 236, 199, 1) 100%
   );
+  overflow: hidden;
 `
+
+const FooterWaveContainer = styled.div`
+  height: 0;
+  position: relative;
+  top: 0;
+`
+
+const FooterContainer = styled.div`
+  display: flex;
+  height: 700px;
+  @media ${devices.mobile} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media ${devices.tablet} {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+`
+
 const LeftContainer = styled.div`
-  float: left;
-  display: inline-flex;
-  min-width: 50%;
-  justify-content: center;
-  align-items: center;
+  & * {
+    z-index: 1;
+  }
+  @media ${devices.mobile} {
+    padding: 5rem 0 0 0;
+    width: 75%;
+    margin: auto;
+  }
+  @media ${devices.tablet} {
+    min-width: 50%;
+    width: auto;
+    padding: 12rem 0 0 8rem;
+    margin: 0;
+  }
+  @media ${devices.laptop} {
+    padding: 12rem 0 0 10rem;
+  }
+  @media ${devices.desktop} {
+    padding: 12rem 0 0 15rem;
+  }
+`
+
+const Lists = styled.div`
+  @media ${devices.mobile} {
+    display: flex;
+  }
+  @media ${devices.tablet} {
+    display: inline-flex;
+  }
 `
 
 const FooterLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  font-size: 1.25em;
+  width: 80%;
   color: ${colors.darkGreen};
+  & > p {
+    margin: 0.25rem 0 0.25rem 0;
+  }
+  & > ${H2} {
+    @media ${devices.mobile} {
+      margin: 0 0 1rem 0;
+    }
+    @media ${devices.tablet} {
+      margin: 0 0 2rem 0;
+    }
+  }
 `
 
-const List = styled.ul`
+const LeftList = styled.ul`
+  padding: 0;
   list-style-type: none;
 `
 
-const RightContainer = styled.div`
-  float: right;
-  display: inline-flex;
-  min-width: 50%;
-  justify-content: center;
+const RightList = styled.ul`
+  list-style-type: none;
 `
 
-const FooterButtonContainer = styled.div`
-  display: inline-flex;
-  align-items: center;
-  color: currentColor;
-  text-decoration: none !important;
-  font-size: 1.25em;
+const FooterExternalLink = styled.a`
+  text-decoration: none;
+  & > p {
+    margin: 0.25rem 0 0.4rem 0;
+  }
+`
+
+const RightContainer = styled.div`
+  & * {
+    z-index: 1;
+    position: relative;
+  }
+  @media ${devices.mobile} {
+    padding: 0;
+    margin: 0 auto auto auto;
+    min-width: 75%;
+  }
+  @media ${devices.tablet} {
+    min-width: 50%;
+    padding: 12rem 0 0 0;
+    margin: 0;
+  }
+`
+
+const ScoutTag = styled(P)`
+  position: relative;
+  @media ${devices.mobile} {
+    top: 70px;
+  }
+  @media ${devices.tablet} {
+    top: 130px;
+  }
 `
 
 export {
   StyledFooter,
+  FooterContainer,
+  FooterWaveContainer,
   RightContainer,
   FooterLink,
-  List,
+  FooterExternalLink,
+  Lists,
+  LeftList,
+  RightList,
   LeftContainer,
-  FooterButtonContainer
+  ScoutTag
 }
