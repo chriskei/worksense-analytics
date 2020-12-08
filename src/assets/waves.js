@@ -616,12 +616,19 @@ const FooterWaveBackground = () => {
   return (
     <WaveContainer>
       <CenteredWave height="721" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="1920" height="721" fill="url(#paint11_linear)"/>
+        <rect width="1920" height="721" fill="url(#paint11_linear)" />
         <defs>
-        <linearGradient id="paint11_linear" x1="3444.08" y1="-2503.48" x2="-1409.81" y2="-273.931" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#07A3B2"/>
-        <stop offset="1" stopColor="#D9ECC7"/>
-        </linearGradient>
+          <linearGradient
+            id="paint11_linear"
+            x1="3444.08"
+            y1="-2503.48"
+            x2="-1409.81"
+            y2="-273.931"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#07A3B2" />
+            <stop offset="1" stopColor="#D9ECC7" />
+          </linearGradient>
         </defs>
       </CenteredWave>
     </WaveContainer>
