@@ -7,12 +7,6 @@ import { devices } from '../../assets/devices'
 const StyledFooter = styled.footer`
   min-height: 23vh;
   width: 100%;
-  background: rgb(7, 163, 178);
-  background: linear-gradient(
-    58deg,
-    rgba(7, 163, 178, 1) 0%,
-    rgba(217, 236, 199, 1) 100%
-  );
   overflow: hidden;
 `
 
@@ -79,9 +73,17 @@ const FooterLink = styled(Link)`
   & > ${H2} {
     @media ${devices.mobile} {
       margin: 0 0 1rem 0;
+      max-width: 90%;
     }
     @media ${devices.tablet} {
+      max-width: 95%;
+    }
+    @media ${devices.laptop} {
       margin: 0 0 2rem 0;
+      max-width: 80%;
+    }
+    @media ${devices.desktop} {
+      max-width: 75%;
     }
   }
 `
@@ -89,10 +91,20 @@ const FooterLink = styled(Link)`
 const LeftList = styled.ul`
   padding: 0;
   list-style-type: none;
+  @media ${devices.mobile} {
+    width: 35vw;
+  }
+  @media ${devices.tablet} {
+    width: 24vw;
+  }
+  @media ${devices.laptop} {
+    width: 19vw;
+  }
 `
 
 const RightList = styled.ul`
   list-style-type: none;
+  padding: 0;
 `
 
 const FooterExternalLink = styled.a`

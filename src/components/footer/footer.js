@@ -17,30 +17,13 @@ import {
 import { Button } from '../button/button'
 import { H2, P } from '../../assets/fonts'
 import { colors } from '../../assets/colors'
-import { FooterWaveTop, FooterWaveBottom } from '../../assets/waves.js'
+import { FooterWaveBackground, FooterWaveTop, FooterWaveBottom } from '../../assets/waves.js'
 
 const Footer = () => {
   return (
-    <StaticQuery
-      query={graphql`
-        {
-          contentfulLogo(contentful_id: { eq: "3hnpJSkwyNGp6Vz23qHuIn" }) {
-            id
-            title
-            logoImage {
-              fixed(height: 100, width: 100) {
-                aspectRatio
-                src
-                width
-                height
-              }
-            }
-          }
-        }
-      `}
-      render={(data) => (
         <StyledFooter role="footer">
           <FooterWaveContainer>
+            <FooterWaveBackground />
             <FooterWaveTop />
             <FooterWaveBottom />
           </FooterWaveContainer>
@@ -98,8 +81,6 @@ const Footer = () => {
             </RightContainer>
           </FooterContainer>
         </StyledFooter>
-      )}
-    />
   )
 }
 

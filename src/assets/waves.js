@@ -612,9 +612,25 @@ const ContactWaveBottom = () => {
   )
 }
 
+const FooterWaveBackground = () => {
+  return (
+    <WaveContainer>
+      <CenteredWave height="721" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1920" height="721" fill="url(#paint11_linear)"/>
+        <defs>
+        <linearGradient id="paint11_linear" x1="3444.08" y1="-2503.48" x2="-1409.81" y2="-273.931" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#07A3B2"/>
+        <stop offset="1" stopColor="#D9ECC7"/>
+        </linearGradient>
+        </defs>
+      </CenteredWave>
+    </WaveContainer>
+  )
+}
+
 const FooterWaveBottom = () => {
   return (
-    <WaveContainer top="-501px">
+    <WaveContainer top="-1220px">
       <CenteredWave height="557" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M1559.61 223.728C1836.64 230.174 1916.63 446.559 1922 562H0V114.5C0 114.5 98.5 45.6957 205.5 20.9999C449.776 -35.3797 633.508 30.4246 789.201 143.184C944.894 255.943 1213.33 215.672 1559.61 223.728Z"
@@ -641,7 +657,7 @@ const FooterWaveBottom = () => {
 
 const FooterWaveTop = () => {
   return (
-    <WaveContainer top="62px">
+    <WaveContainer top="-665px">
       <CenteredWave height="639" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M1511.5 325.288C1788.24 333.98 1904.5 522 1920 638.5H0V170.174C0 170.174 83 72.7309 211.844 32.5847C455.866 -43.4501 632.849 18.105 788.38 170.174C943.911 322.244 1165.58 314.422 1511.5 325.288Z"
@@ -720,6 +736,7 @@ export {
   ContactWaveBackground,
   ContactWaveTop,
   ContactWaveBottom,
+  FooterWaveBackground,
   FooterWaveTop,
   FooterWaveBottom,
   TalentLifecyclePath
