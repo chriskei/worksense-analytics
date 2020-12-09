@@ -1,64 +1,93 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import {
   StyledFooter,
+  FooterWaveContainer,
+  FooterContainer,
   RightContainer,
+  FooterExternalLink,
   FooterLink,
-  List,
+  Lists,
+  LeftList,
+  RightList,
   LeftContainer,
-  FooterButtonContainer
+  ScoutTag
 } from '../footer/footer.styles.js'
+import { Twitter, LinkedIn } from '../../assets/icons'
 import { Button } from '../button/button'
+import { H2, P } from '../../assets/fonts'
+import { colors } from '../../assets/colors'
+import {
+  FooterWaveBackground,
+  FooterWaveTop,
+  FooterWaveBottom
+} from '../../assets/waves.js'
 
 const Footer = () => {
   return (
-    <StaticQuery
-      query={graphql`
-        {
-          contentfulLogo(contentful_id: { eq: "3hnpJSkwyNGp6Vz23qHuIn" }) {
-            id
-            title
-            logoImage {
-              fixed(height: 100, width: 100) {
-                aspectRatio
-                src
-                width
-                height
-              }
-            }
-          }
-        }
-      `}
-      render={(data) => (
-        <StyledFooter role="footer">
-          <LeftContainer>
-            <FooterLink to="/">
-              <Img
-                alt={data.contentfulLogo.title}
-                fixed={data.contentfulLogo.logoImage.fixed}
-              />
-            </FooterLink>
-            <List>
+    <StyledFooter role="footer">
+      <FooterWaveContainer>
+        <FooterWaveBackground />
+        <FooterWaveTop />
+        <FooterWaveBottom />
+      </FooterWaveContainer>
+      <FooterContainer>
+        <LeftContainer>
+          <FooterLink to="/">
+            <H2 color={colors.tan}>Empowering people leaders</H2>
+          </FooterLink>
+          <Lists>
+            <LeftList>
               <li>
-                <FooterLink to="/request-demo/">Contact Us</FooterLink>
+                <FooterLink to="/our-products/">
+                  <P>Products</P>
+                </FooterLink>
               </li>
               <li>
-                <FooterLink to="/our-products/">Products</FooterLink>
+                <FooterLink to="/our-team/">
+                  <P>Our Team</P>
+                </FooterLink>
               </li>
               <li>
-                <FooterLink to="/">Documentation</FooterLink>
+                <FooterLink to="/request-demo/">
+                  <P>Request Demo</P>
+                </FooterLink>
               </li>
-            </List>
-          </LeftContainer>
-          <RightContainer>
-            <FooterButtonContainer>
-              <Button primary text="Contact Us" />
-            </FooterButtonContainer>
-          </RightContainer>
-        </StyledFooter>
-      )}
-    />
+            </LeftList>
+            <RightList>
+              <li>
+                <FooterExternalLink
+                  href="https://twitter.com/work_sense"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Twitter />
+                  <P>Twitter</P>
+                </FooterExternalLink>
+              </li>
+              <li>
+                <FooterExternalLink
+                  href="https://www.linkedin.com/company/worksenseanalytics/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <LinkedIn />
+                  <P>LinkedIn</P>
+                </FooterExternalLink>
+              </li>
+            </RightList>
+          </Lists>
+        </LeftContainer>
+        <RightContainer>
+          <P>Got a question?</P>
+          <Link to="/request-demo/">
+            <Button primary text="Contact Us" />
+          </Link>
+          <ScoutTag>Made with love by Scout</ScoutTag>
+        </RightContainer>
+      </FooterContainer>
+    </StyledFooter>
   )
 }
 
