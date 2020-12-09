@@ -18,14 +18,14 @@ const FooterWaveContainer = styled.div`
 
 const FooterContainer = styled.div`
   display: flex;
-  height: 700px;
+  margin: auto;
   @media ${devices.mobile} {
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 400px;
+    width: 90%;
   }
   @media ${devices.tablet} {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    height: 600px;
+    width: 100%;
   }
 `
 
@@ -34,30 +34,31 @@ const LeftContainer = styled.div`
     z-index: 1;
   }
   @media ${devices.mobile} {
-    padding: 5rem 0 0 0;
-    width: 75%;
+    padding: 2rem 0 0 0;
+    width: 55%;
     margin: auto;
   }
   @media ${devices.tablet} {
     min-width: 50%;
     width: auto;
-    padding: 12rem 0 0 8rem;
+    padding: 10rem 0 0 8rem;
     margin: 0;
   }
   @media ${devices.laptop} {
-    padding: 12rem 0 0 10rem;
+    padding: 10rem 0 0 10rem;
   }
   @media ${devices.desktop} {
-    padding: 12rem 0 0 15rem;
+    padding: 10rem 0 0 15rem;
   }
 `
 
 const Lists = styled.div`
+  display: flex;
   @media ${devices.mobile} {
-    display: flex;
+    flex-direction: column;
   }
   @media ${devices.tablet} {
-    display: inline-flex;
+    flex-direction: row;
   }
 `
 
@@ -65,15 +66,20 @@ const FooterLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  width: 80%;
   color: ${colors.darkGreen};
+  @media ${devices.mobile} {
+    width: 300px;
+  }
+  @media ${devices.tablet} {
+    width: 80%;
+  }
   & > p {
     margin: 0.25rem 0 0.25rem 0;
   }
   & > ${H2} {
     @media ${devices.mobile} {
       margin: 0 0 1rem 0;
-      max-width: 90%;
+      max-width: 95%;
     }
     @media ${devices.tablet} {
       max-width: 95%;
@@ -105,12 +111,40 @@ const LeftList = styled.ul`
 const RightList = styled.ul`
   list-style-type: none;
   padding: 0;
+  display: flex;
+  @media ${devices.mobile} {
+    flex-direction: row;
+  }
+  @media ${devices.tablet} {
+    flex-direction: column;
+  }
 `
 
 const FooterExternalLink = styled.a`
   text-decoration: none;
   & > p {
-    margin: 0.25rem 0 0.4rem 0;
+    margin: 0.25rem 0 0.25rem 0;
+    @media ${devices.mobile} {
+      display: none;
+    }
+    @media ${devices.tablet} {
+      display: block;
+    }
+  }
+  & > svg {
+    @media ${devices.mobile} {
+      display: block;
+      padding: 0 2rem 0 0;
+    }
+    @media ${devices.tablet} {
+      display: none;
+    }
+  }
+  @media ${devices.mobile} {
+    display: inline-block;
+  }
+  @media ${devices.tablet} {
+    display: block;
   }
 `
 
@@ -119,22 +153,25 @@ const RightContainer = styled.div`
     z-index: 1;
     position: relative;
   }
+  margin: 0;
   @media ${devices.mobile} {
     padding: 0;
-    margin: 0 auto auto auto;
-    min-width: 75%;
+    min-width: 12%;
+    position: relative;
+    top: 90px;
+    padding: 5.5rem 0 0 0;
   }
   @media ${devices.tablet} {
     min-width: 50%;
-    padding: 12rem 0 0 0;
-    margin: 0;
+    top: 0;
+    padding: 10rem 0 0 0;
   }
 `
 
 const ScoutTag = styled(P)`
   position: relative;
   @media ${devices.mobile} {
-    top: 70px;
+    top: 20px;
   }
   @media ${devices.tablet} {
     top: 130px;

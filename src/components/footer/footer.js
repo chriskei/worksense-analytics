@@ -14,6 +14,7 @@ import {
   LeftContainer,
   ScoutTag
 } from '../footer/footer.styles.js'
+import { Twitter, LinkedIn } from '../../assets/icons'
 import { Button } from '../button/button'
 import { H2, P } from '../../assets/fonts'
 import { colors } from '../../assets/colors'
@@ -61,6 +62,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener"
                 >
+                  <Twitter />
                   <P>Twitter</P>
                 </FooterExternalLink>
               </li>
@@ -70,6 +72,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener"
                 >
+                  <LinkedIn />
                   <P>LinkedIn</P>
                 </FooterExternalLink>
               </li>
