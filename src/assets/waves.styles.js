@@ -37,11 +37,27 @@ const OurTeamBottomContainer = styled.div`
 `
 
 const LifecyclePathContainer = styled.div`
-  overflow: hidden;
-  position: relative;
+  position: absolute;
   margin-left: 50%;
   transform: translateX(-50%);
-  top: 300px;
+  @media ${devices.mobile} { 
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: block;
+    top: 55px;
+    svg {
+      transform: scale(-0.75);
+    }
+  }
+  @media ${devices.laptop} {
+    svg {
+      transform: scale(1);
+    }
+  }
+  @media ${devices.desktop} { 
+    top: 370px;
+  }
 `
 
 const WaveContainer = styled.div`

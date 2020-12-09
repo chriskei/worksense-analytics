@@ -12,13 +12,12 @@ import { ProductSpecs } from '../components/product-specs/product-specs'
 import {
   LandingWaveContainer,
   ButtonsContainer,
-  StatisticsContainer,
   TalentLifecycleContainer,
   TalentLifecycleHeaderText,
   StagesContainer,
   TalentLifecyclePathContainer,
   ProductsContainer,
-  ProductsButtonContainer
+  ProductsButtonContainer,
 } from '../pages-styles/index.styles.js'
 import {
   LandingWaveBackground,
@@ -106,7 +105,7 @@ class RootIndex extends React.Component {
         <Bias
           biasHeader={biasHeader}
           biasImage={biasImage}
-          largeBody={largeBody}
+          largeBody={largeBody} 
           smallBody={smallBody}
           learnMoreUrl={learnMoreUrl}
         />
