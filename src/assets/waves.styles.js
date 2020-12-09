@@ -40,7 +40,7 @@ const LifecyclePathContainer = styled.div`
   position: absolute;
   margin-left: 50%;
   transform: translateX(-50%);
-  @media ${devices.mobile} { 
+  @media ${devices.mobile} {
     display: none;
   }
   @media ${devices.tablet} {
@@ -55,7 +55,7 @@ const LifecyclePathContainer = styled.div`
       transform: scale(1);
     }
   }
-  @media ${devices.desktop} { 
+  @media ${devices.desktop} {
     top: 370px;
   }
 `

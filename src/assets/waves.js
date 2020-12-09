@@ -620,7 +620,7 @@ const TalentLifecyclePath = () => {
         width="393"
         height="1286"
         viewBox="0 0 393 1286"
-        fill="none" 
+        fill="none"
       >
         <path
           d="M332 512C290.674 524.534 199.629 581.187 166.057 707.527C132.484 833.868 80.0303 877.151 58 883"
