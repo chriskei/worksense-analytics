@@ -50,7 +50,8 @@ const Faq = (props) => {
                         index == delayedCategoryIndex
                           ? colors.blue
                           : colors.lightGreen
-                      }>
+                      }
+                    >
                       <ImageItem fluid={faqImages[index].fluid} />
                     </ImageBox>
                     <H3

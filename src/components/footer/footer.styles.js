@@ -155,8 +155,8 @@ const FooterExternalLink = styled.a`
 
   &:hover {
     & > p {
-    color: ${colors.tan};
-    transition: 200ms;
+      color: ${colors.tan};
+      transition: 200ms;
     }
   }
 `
