@@ -45,7 +45,7 @@ const LeftContainer = styled.div`
     margin: 0;
   }
   @media ${devices.laptop} {
-    padding: 10rem 0 0 10rem;
+    padding: 10rem 0 0 12rem;
   }
   @media ${devices.desktop} {
     padding: 10rem 0 0 15rem;
