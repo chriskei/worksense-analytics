@@ -78,6 +78,7 @@ const LinkText = styled(ButtonBody)`
 
   &:hover {
     color: ${colors.blue};
+    transition: 200ms;
   }
 `
 

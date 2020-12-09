@@ -100,6 +100,7 @@ const Email = styled.a`
 
   &:hover {
     color: ${colors.blue};
+    transition: 200ms;
   }
 `
 
