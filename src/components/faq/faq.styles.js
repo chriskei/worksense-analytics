@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
 import { H3 } from '../../assets/fonts'
 import { devices } from '../../assets/devices'
+import { animations } from '../../assets/animations'
 
 const CategoryContainer = styled.div`
   display: flex;
@@ -48,8 +49,20 @@ const ImageItem = styled(Img)`
   }
 `
 
+const fadeIn = keyframes`
+  0% { opacity: 0%; max-height: 0; }
+  100% { opacity: 100%; max-height: ${animations.faqQuestionsHeight}; }
+`
+
+const fadeOut = keyframes`
+  0% { opacity: 100%; max-height: ${animations.faqQuestionsHeight}; }
+  100% { opacity: 0%; max-height: 0; }
+`
+
 const ExpandedContainer = styled.div`
   margin: auto;
+  animation: ${(props) => (props.out ? fadeOut : fadeIn)}
+    ${animations.faqFadeLength}s 1;
   @media ${devices.mobile} {
     width: 20rem;
   }

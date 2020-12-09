@@ -24,7 +24,12 @@ const ButtonContainer = styled.button`
   &:hover {
     background-color: ${(props) =>
       props.primary ? `${colors.blue}` : 'inherit'};
-    transition: 200ms;
+    transition: 200ms; 
+    border: ${(props) => (props.primary ? 'none' : `2px solid ${props.color}`)};
+    & > * {
+      color: ${(props) => (props.primary ? 'none' : `${props.color}`)};
+      transition: 200ms;
+      }
   }
 `
 

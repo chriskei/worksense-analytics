@@ -38,7 +38,7 @@ const FirstStats = (props) => {
           <P color={colors.tan}>{description}</P>
           <StatsButtonContainer>
             <Link to="/our-products/">
-              <Button text="Learn More" />
+              <Button color={colors.blue} text="Learn More" />
             </Link>
           </StatsButtonContainer>
         </StatsText>
