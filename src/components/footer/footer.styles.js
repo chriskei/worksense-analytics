@@ -152,7 +152,6 @@ const FooterExternalLink = styled.a`
   @media ${devices.tablet} {
     display: block;
   }
-
   &:hover {
     & > p {
       color: ${colors.tan};
