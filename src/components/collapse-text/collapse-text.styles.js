@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { devices } from '../../assets/devices'
+import { animations } from '../../assets/animations'
 
 const CollapseContainer = styled.div`
   display: flex;
@@ -27,7 +28,23 @@ const ArrowContainer = styled.div`
   }
 `
 
+const open = keyframes`
+  0% { max-height: 0; opacity: 0%; }
+  100% { max-height: ${animations.collapseTextHeight}; opacity: 100%; }
+`
+
+const close = keyframes`
+  0% { max-height: ${animations.collapseTextHeight}; opacity: 100%; }
+  100% { max-height: 0; opacity: 0% }
+`
+
 const BodyContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  animation: ${(props) => (props.opening ? open : close)}
+    ${animations.collapseTextLength}s 1;
+  max-height: ${(props) =>
+    props.opening ? animations.collapseTextHeight : '0'};
   @media ${devices.mobile} {
     margin-left: 1.75rem;
   }
