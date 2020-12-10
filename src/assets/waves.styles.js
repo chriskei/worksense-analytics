@@ -44,7 +44,6 @@ const LifecyclePathContainer = styled.div`
     display: none;
   }
   @media ${devices.tablet} {
-
     display: block;
     svg {
       transform: scale(-0.75);
