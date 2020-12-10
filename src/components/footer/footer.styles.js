@@ -92,12 +92,6 @@ const FooterLink = styled(Link)`
       max-width: 75%;
     }
   }
-  &:hover {
-    & > ${P} {
-      color: ${colors.tan};
-      transition: 200ms;
-    }
-  }
 `
 
 const LeftList = styled.ul`
@@ -151,12 +145,6 @@ const FooterExternalLink = styled.a`
   }
   @media ${devices.tablet} {
     display: block;
-  }
-  &:hover {
-    & > p {
-      color: ${colors.tan};
-      transition: 200ms;
-    }
   }
 `
 

@@ -3,10 +3,10 @@ import { ButtonBody } from '../../assets/fonts'
 import { ButtonContainer } from './button.styles'
 
 const Button = (props) => {
-  const { primary, text, color } = props
+  const { primary, text } = props
 
   return (
-    <ButtonContainer primary={primary} color={color}>
+    <ButtonContainer primary={primary}>
       <ButtonBody>{text}</ButtonBody>
     </ButtonContainer>
   )

@@ -20,17 +20,6 @@ const ButtonContainer = styled.button`
     padding: ${(props) =>
       props.primary ? '12px 48px 12px 48px' : '10px 48px 10px 48px'};
   }
-
-  &:hover {
-    background-color: ${(props) =>
-      props.primary ? `${colors.blue}` : 'inherit'};
-    transition: 200ms;
-    border: ${(props) => (props.primary ? 'none' : `2px solid ${props.color}`)};
-    & > * {
-      color: ${(props) => (props.primary ? 'none' : `${props.color}`)};
-      transition: 200ms;
-    }
-  }
 `
 
 export { ButtonContainer }

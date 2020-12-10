@@ -25,7 +25,7 @@ const BiasCard = (props) => {
       </TextContainer>
       <LearnMoreContainer>
         <LinkContainer href={url} target="_blank">
-          <LinkText>Learn More</LinkText>
+          <LinkText color={colors.darkGreen}>Learn More</LinkText>
           <ChevronContainer>
             <ChevronRight />
           </ChevronContainer>
