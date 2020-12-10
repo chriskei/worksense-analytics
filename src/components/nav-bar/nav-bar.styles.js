@@ -26,6 +26,11 @@ const NavLink = styled(Link)`
   & > button {
     padding: 12px 18px 12px 18px;
   }
+  
+  &:hover {
+    color: ${colors.blue};
+    transition: 200ms;
+  }
 `
 
 const LogoImg = styled(Img)`

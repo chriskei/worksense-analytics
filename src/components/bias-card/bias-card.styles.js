@@ -74,6 +74,12 @@ const LinkContainer = styled.a`
 
 const LinkText = styled(ButtonBody)`
   margin: auto 0 auto 0;
+  color: ${colors.darkGreen};
+  
+  &:hover {
+    color: ${colors.blue};
+    transition: 200ms;
+  }
 `
 
 const ChevronContainer = styled.div`

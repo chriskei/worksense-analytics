@@ -2,11 +2,34 @@ import styled from 'styled-components'
 import { devices } from './devices'
 
 const LifecyclePathContainer = styled.div`
-  overflow: hidden;
-  position: relative;
+  position: absolute;
   margin-left: 50%;
   transform: translateX(-50%);
-  top: 300px;
+  @media ${devices.mobile} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    top: 80px;
+    display: block;
+    svg {
+      transform: scale(-0.75);
+    }
+  }
+  @media (min-width: 860px) {
+    top: 140px;
+    svg {
+      transform: scale(-0.85);
+    }
+  }
+  @media ${devices.laptop} {
+    top: 100px;
+    svg {
+      transform: scale(1);
+    }
+  }
+  @media ${devices.desktop} {
+    top: 370px;
+  }
 `
 
 const WaveContainer = styled.div`

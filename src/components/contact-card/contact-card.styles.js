@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { devices } from '../../assets/devices'
+import { colors } from '../../assets/colors'
 
 const fonts = {
   manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
@@ -96,6 +97,11 @@ const Text = styled.p`
 const Email = styled.a`
   text-decoration: none;
   color: black;
+
+  &:hover {
+    color: ${colors.blue};
+    transition: 200ms;
+  }
 `
 
 const Overlay = styled.div`
