@@ -17,14 +17,15 @@ const ButtonsContainer = styled.div`
   z-index: 2;
   justify-content: flex-start;
   & > :first-child {
-    margin-right: 2rem;
+       margin-right: 2rem;
+    }
   }
   @media ${devices.mobile} {
     width: 20rem;
     padding-top: 9rem;
     & > :first-child {
       margin-right: 1rem;
-    }
+   }
   }
   @media (min-width: 573px) {
     padding-top: 2rem;
@@ -52,10 +53,9 @@ const TalentLifecycleContainer = styled.div`
 `
 
 const TalentLifecyclePathContainer = styled.div`
-  position: relative;
-  display: flex;
-  margin: auto;
   width: 100%;
+  position: absolute;
+  display: flex;
 `
 
 const StagesContainer = styled.div`
