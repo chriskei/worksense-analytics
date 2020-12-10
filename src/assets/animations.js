@@ -1,8 +1,8 @@
 const animations = {
   pressFullCarouselLength: 5,
-  collapseTextHeight: '250px',
+  collapseTextHeight: '300px',
   collapseTextLength: 1,
-  faqQuestionsHeight: '1500px',
+  faqQuestionsHeight: '600px',
   faqFadeLength: 1
 }
 

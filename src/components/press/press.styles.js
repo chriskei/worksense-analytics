@@ -2,6 +2,24 @@ import styled, { keyframes } from 'styled-components'
 import { devices } from '../../assets/devices'
 import { animations } from '../../assets/animations'
 
+const PressContainer = styled.div`
+  position: relative;
+  @media ${devices.mobile} {
+    height: calc(11rem + 20vw);
+    top: -33rem;
+  }
+  @media ${devices.tablet} {
+    height: 12rem;
+    top: -28rem;
+  }
+  @media ${devices.laptop} {
+    height: 15rem;
+  }
+  @media ${devices.desktop} {
+    height: 19rem;
+  }
+`
+
 const PressHeaderContainer = styled.div`
   text-align: center;
   @media ${devices.mobile} {
@@ -62,6 +80,7 @@ const ArticleAnimation = styled.div`
 `
 
 export {
+  PressContainer,
   PressHeaderContainer,
   ArticleContainer,
   TabContainer,

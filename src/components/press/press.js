@@ -4,6 +4,7 @@ import { Article } from '../article/article'
 import { colors } from '../../assets/colors'
 import { GreenCarouselDot, GrayCarouselDot } from '../../assets/icons'
 import {
+  PressContainer,
   PressHeaderContainer,
   ArticleContainer,
   TabContainer,
@@ -44,7 +45,7 @@ const Press = (props) => {
   }, [earlyFadeOut])
 
   return (
-    <>
+    <PressContainer>
       <PressHeaderContainer>
         <SectionHeader title={pressHeader} color={colors.darkGreen} />
       </PressHeaderContainer>
@@ -86,7 +87,7 @@ const Press = (props) => {
           </SingleTab>
         ))}
       </TabContainer>
-    </>
+    </PressContainer>
   )
 }
 

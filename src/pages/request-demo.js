@@ -19,7 +19,8 @@ import { colors } from '../assets/colors'
 import {
   DemoWaveContainer,
   ContactWavesContainer,
-  SectionHeaderContainer
+  SectionHeaderContainer,
+  DemoContainer
 } from '../pages-styles/request-demo.styles'
 
 const RequestDemoPage = (props) => {
@@ -41,7 +42,9 @@ const RequestDemoPage = (props) => {
         <DemoWaveBottom />
         <DemoWaveTop />
       </DemoWaveContainer>
-      <Hero header={demoHeader} text={demoBody} imgData={demoImage} />
+      <DemoContainer>
+        <Hero header={demoHeader} text={demoBody} imgData={demoImage} />
+      </DemoContainer>
       <Form name="demo" />
       <FAQS />
       <Faq

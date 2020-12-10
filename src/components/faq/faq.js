@@ -7,6 +7,7 @@ import {
   ImageContainer,
   ImageBox,
   ImageItem,
+  ImageCategory,
   ExpandedContainer,
   SelectedCategory
 } from './faq.styles'
@@ -38,14 +39,16 @@ const Faq = (props) => {
             <CategoryContainer>
               {faqCategories.map((category, index) => {
                 return (
-                  <ImageContainer key={category}>
+                  <ImageContainer
+                    key={category}
+                    onClick={() => {
+                      if (index != categoryIndex) {
+                        setDelay(true)
+                        setDelayedCategoryIndex(index)
+                      }
+                    }}
+                  >
                     <ImageBox
-                      onClick={() => {
-                        if (index != categoryIndex) {
-                          setDelay(true)
-                          setDelayedCategoryIndex(index)
-                        }
-                      }}
                       color={
                         index == delayedCategoryIndex
                           ? colors.blue
@@ -54,7 +57,7 @@ const Faq = (props) => {
                     >
                       <ImageItem fluid={faqImages[index].fluid} />
                     </ImageBox>
-                    <H3
+                    <ImageCategory
                       color={
                         index == delayedCategoryIndex
                           ? colors.blue
@@ -62,7 +65,7 @@ const Faq = (props) => {
                       }
                     >
                       {category}
-                    </H3>
+                    </ImageCategory>
                   </ImageContainer>
                 )
               })}

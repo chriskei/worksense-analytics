@@ -17,6 +17,7 @@ import {
   ProductsWaveContainer,
   ProductHeroContainer,
   ProductPageContainer,
+  SectionHeaderContainer,
   ButtonContainer,
   ProductVideo
 } from '../pages-styles/our-products.styles'
@@ -38,10 +39,12 @@ const OurProductsPage = (props) => {
         <Hero header={productPageHeader} />
       </ProductHeroContainer>
       <ProductPageContainer>
-        <SectionHeader
-          title={ourProducts.productSpecsSectionHeader}
-          color={`${colors.darkGreen}`}
-        />
+        <SectionHeaderContainer>
+          <SectionHeader
+            title={ourProducts.productSpecsSectionHeader}
+            color={`${colors.darkGreen}`}
+          />
+        </SectionHeaderContainer>
         {specs.map((spec, index) => {
           return (
             <ProductSpecs

@@ -5,13 +5,16 @@ const BiasSectionContainer = styled.div`
   height: 0;
   position: relative;
   @media ${devices.mobile} {
-    bottom: 69rem;
+    bottom: 100rem;
   }
   @media ${devices.tablet} {
-    bottom: 71rem;
+    bottom: 102rem;
   }
   @media ${devices.laptop} {
-    bottom: calc(48rem + 14vw);
+    bottom: 87rem;
+  }
+  @media ${devices.desktop} {
+    bottom: 92rem;
   }
 `
 

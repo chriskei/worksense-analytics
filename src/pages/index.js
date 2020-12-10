@@ -12,7 +12,6 @@ import { ProductSpecs } from '../components/product-specs/product-specs'
 import {
   LandingWaveContainer,
   ButtonsContainer,
-  StatisticsContainer,
   TalentLifecycleContainer,
   TalentLifecycleHeaderText,
   StagesContainer,

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from '../../assets/colors'
 import { devices } from '../../assets/devices'
 
 const FormContainer = styled.form`
@@ -14,9 +13,12 @@ const FormContainer = styled.form`
   @media ${devices.tablet} {
     width: 40rem;
   }
+  @media ${devices.laptop} {
+    width: 52rem;
+    flex-direction: row;
+  }
   @media ${devices.desktop} {
     width: 64.375rem;
-    flex-direction: row;
   }
 `
 
@@ -24,7 +26,7 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media ${devices.desktop} {
+  @media ${devices.laptop} {
     margin-right: 2rem;
     width: 50%;
   }
@@ -34,7 +36,7 @@ const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media ${devices.desktop} {
+  @media ${devices.laptop} {
     margin-left: 2rem;
     width: 50%;
   }

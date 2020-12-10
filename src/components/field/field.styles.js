@@ -45,7 +45,7 @@ const TextArea = styled.textarea`
   @media ${devices.tablet} {
     height: 10rem;
   }
-  @media ${devices.desktop} {
+  @media ${devices.laptop} {
     height: 19.75rem;
   }
 `

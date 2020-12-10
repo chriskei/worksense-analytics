@@ -1,12 +1,5 @@
 import React from 'react'
 import {
-  LandingTopContainer,
-  LandingGreenContainer,
-  ProductsTopContainer,
-  ProductsBottomContainer,
-  OurTeamBackgroundContainer,
-  OurTeamTopContainer,
-  OurTeamBottomContainer,
   LifecyclePathContainer,
   WaveContainer,
   CenteredWave
@@ -181,7 +174,7 @@ const StatsWaveBottom = () => {
 
 const LandingBiasWave = () => {
   return (
-    <WaveContainer top="500px">
+    <WaveContainer>
       <CenteredWave
         height="1928"
         fill="none"
@@ -233,7 +226,7 @@ const LandingBiasWave = () => {
 
 const LandingProductsWave = () => {
   return (
-    <WaveContainer>
+    <WaveContainer top="-500px">
       <CenteredWave height="906" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"

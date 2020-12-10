@@ -7,45 +7,97 @@ import { animations } from '../../assets/animations'
 
 const CategoryContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin: auto;
+  position: relative;
   @media ${devices.mobile} {
-    margin: auto 1rem auto 1rem;
+    max-width: 11rem;
+    top: 6rem;
   }
   @media ${devices.tablet} {
-    margin: auto 3.5rem auto 3.5rem;
+    max-width: 22rem;
+    top: -1.5rem;
+  }
+  @media ${devices.laptop} {
+    flex-direction: row;
+    max-width: 52rem;
+    top: 5rem;
+  }
+  @media ${devices.desktop} {
+    max-width: 64.375rem;
+    top: 4rem;
   }
 `
 
 const ImageContainer = styled.div`
-  margin: 0.75rem;
   z-index: 1;
+  cursor: pointer;
+  @media ${devices.laptop} {
+    margin: 1rem;
+  }
+  @media ${devices.desktop} {
+    margin: 2rem;
+  }
 `
 
 const ImageBox = styled.div`
   padding: 1rem;
   background-color: ${(props) => props.color};
   box-shadow: 0px 4px 10px ${colors.darkGray};
-  cursor: pointer;
   @media ${devices.mobile} {
-    height: 7rem;
-    width: 7rem;
+    height: 9rem;
+    width: 9rem;
   }
   @media ${devices.tablet} {
-    height: 17rem;
-    width: 17rem;
+    height: 20rem;
+    width: 20rem;
+  }
+  @media ${devices.laptop} {
+    height: 13rem;
+    width: 13rem;
+  }
+  @media ${devices.desktop} {
+    height: 15.25rem;
+    width: 15.25rem;
   }
 `
 
 const ImageItem = styled(Img)`
   @media ${devices.mobile} {
-    max-height: 7rem;
-    max-width: 7rem;
+    max-height: 9rem;
+    max-width: 9rem;
   }
   @media ${devices.tablet} {
-    max-height: 17rem;
-    max-width: 17rem;
+    max-height: 20rem;
+    max-width: 20rem;
+  }
+  @media ${devices.laptop} {
+    max-height: 13rem;
+    max-width: 13rem;
+  }
+  @media ${devices.desktop} {
+    max-height: 15.25rem;
+    max-width: 15.25rem;
+  }
+`
+
+const ImageCategory = styled(H3)`
+  @media ${devices.mobile} {
+    margin: 1rem 0 2rem 0;
+    width: 9rem;
+  }
+  @media ${devices.tablet} {
+    margin: 1rem 0 3rem 0;
+    width: 20rem;
+  }
+  @media ${devices.laptop} {
+    margin: 1rem 0 0 0;
+    width: 13rem;
+  }
+  @media ${devices.desktop} {
+    width: 15.25rem;
   }
 `
 
@@ -65,22 +117,29 @@ const ExpandedContainer = styled.div`
     ${animations.faqFadeLength}s 1;
   @media ${devices.mobile} {
     width: 20rem;
+    padding-top: 5rem;
   }
   @media ${devices.tablet} {
     width: 40rem;
+    padding-top: 0;
+  }
+  @media ${devices.laptop} {
+    width: 52rem;
+    padding: 5rem 0 3rem 0;
   }
   @media ${devices.desktop} {
     width: 64.375rem;
+    padding-bottom: 0;
   }
 `
 
 const SelectedCategory = styled(H3)`
-  margin: 4rem 0 1rem 0.25rem;
+  margin: 4rem 0 1rem 0;
   @media ${devices.tablet} {
-    margin-left: 0.75rem;
+    padding-left: 1rem;
   }
   @media ${devices.desktop} {
-    margin-left: 1.25rem;
+    padding-left: 2rem;
   }
 `
 
@@ -89,6 +148,7 @@ export {
   ImageContainer,
   ImageBox,
   ImageItem,
+  ImageCategory,
   ExpandedContainer,
   SelectedCategory
 }

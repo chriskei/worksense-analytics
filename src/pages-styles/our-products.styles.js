@@ -43,6 +43,15 @@ const ProductPageContainer = styled.div`
   }
 `
 
+const SectionHeaderContainer = styled.div`
+  @media ${devices.mobile} {
+    margin-top: 8rem;
+  }
+  @media ${devices.tablet} {
+    margin-top: auto;
+  }
+`
+
 const ButtonContainer = styled.div`
   margin: 2rem 0 10rem 0;
   text-align: center;
@@ -63,6 +72,7 @@ export {
   ProductsWaveContainer,
   ProductHeroContainer,
   ProductPageContainer,
+  SectionHeaderContainer,
   ButtonContainer,
   ProductVideo
 }

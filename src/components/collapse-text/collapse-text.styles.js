@@ -10,18 +10,21 @@ const CollapseContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   cursor: pointer;
 `
 
 const ArrowContainer = styled.div`
   text-align: center;
-  width: 10rem;
   @media ${devices.mobile} {
     margin-top: 1rem;
+    min-width: 5rem;
   }
   @media ${devices.tablet} {
     margin-top: 1.3rem;
+  }
+  @media ${devices.laptop} {
+    margin-top: 1.5rem;
+    min-width: 8rem;
   }
   @media ${devices.desktop} {
     margin-top: 1.7rem;
@@ -46,13 +49,10 @@ const BodyContainer = styled.div`
   max-height: ${(props) =>
     props.opening ? animations.collapseTextHeight : '0'};
   @media ${devices.mobile} {
-    margin-left: 1.75rem;
+    margin-left: 5rem;
   }
-  @media ${devices.tablet} {
-    margin-left: 3rem;
-  }
-  @media ${devices.desktop} {
-    margin-left: 4rem;
+  @media ${devices.laptop} {
+    margin-left: 8rem;
   }
 `
 

@@ -29,7 +29,7 @@ const H2 = styled.h2`
   color: ${(props) => props.color};
 `
 
-const H3 = styled.h2`
+const H3 = styled.h3`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.h3};
   color: ${(props) => props.color};

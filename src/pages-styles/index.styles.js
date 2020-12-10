@@ -15,6 +15,7 @@ const ButtonsContainer = styled.div`
   position: relative;
   background: transparent;
   z-index: 2;
+  justify-content: flex-start;
   & > :first-child {
        margin-right: 2rem;
     }
@@ -36,8 +37,8 @@ const ButtonsContainer = styled.div`
     width: 52rem;
   }
   @media ${devices.desktop} {
-    padding-top: 0;
-    width: 80rem;
+    padding-top: calc(9vw - 1rem);
+    width: 64.375rem;
   }
 `
 
@@ -85,15 +86,16 @@ const TalentLifecycleHeaderText = styled(H1)`
 const ProductsContainer = styled.div`
   height: 0;
   position: relative;
-  bottom: 475px;
   @media ${devices.mobile} {
     margin: auto 2rem auto 2rem;
+    top: -975px;
   }
   @media ${devices.tablet} {
     margin: auto 4rem auto 4rem;
   }
   @media ${devices.laptop} {
     margin: auto 7rem auto 7rem;
+    top: -1000px;
   }
 `
 

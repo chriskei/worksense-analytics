@@ -16,7 +16,7 @@ const HeroContent = styled.div`
   }
   @media ${devices.mobile} {
     width: 20rem;
-    height: 80vw;
+    max-height: 80vw;
   }
   @media ${devices.tablet} {
     width: 40rem;
@@ -27,7 +27,7 @@ const HeroContent = styled.div`
     height: 50vw;
   }
   @media ${devices.desktop} {
-    width: 80rem;
+    width: 64.375rem;
     height: 42vw;
   }
 `
