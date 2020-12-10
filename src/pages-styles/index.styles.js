@@ -17,14 +17,14 @@ const ButtonsContainer = styled.div`
   z-index: 2;
   justify-content: flex-start;
   & > :first-child {
-       margin-right: 2rem;
-    }
+    margin-right: 2rem;
+  }
   @media ${devices.mobile} {
     width: 20rem;
     padding-top: 9rem;
     & > :first-child {
       margin-right: 1rem;
-   }
+    }
   }
   @media (min-width: 573px) {
     padding-top: 2rem;
@@ -39,7 +39,6 @@ const ButtonsContainer = styled.div`
     padding-top: calc(9vw - 1rem);
     width: 64.375rem;
   }
-
 `
 
 const TalentLifecycleContainer = styled.div`
