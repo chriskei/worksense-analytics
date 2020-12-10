@@ -44,13 +44,17 @@ const LifecyclePathContainer = styled.div`
     display: none;
   }
   @media ${devices.tablet} {
+
     display: block;
-    top: 55px;
     svg {
       transform: scale(-0.75);
     }
   }
+  @media (min-width: 860px) {
+    top: 55px;
+  }
   @media ${devices.laptop} {
+    top: 0px;
     svg {
       transform: scale(1);
     }
