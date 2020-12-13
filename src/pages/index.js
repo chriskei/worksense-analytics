@@ -41,7 +41,13 @@ class RootIndex extends React.Component {
     const firstStats = pageData.firstStatistics
     const talentLifecycle = pageData.talentLifecycle
     const lifecycleStages = talentLifecycle.lifecycleStages
-    const { biasHeader, biasImage, largeBody, smallBody, learnMoreUrl } = pageData.bias
+    const {
+      biasHeader,
+      biasImage,
+      largeBody,
+      smallBody,
+      learnMoreUrl
+    } = pageData.bias
     const {
       pressHeader,
       articleImages,
@@ -137,7 +143,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulLandingPage(contentful_id: {eq: "5dUtfY1OleZUZXZfUBuF7Z"}) {
+    contentfulLandingPage(contentful_id: { eq: "5dUtfY1OleZUZXZfUBuF7Z" }) {
       hero {
         header
         secondaryText {
