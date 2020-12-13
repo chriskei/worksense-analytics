@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../assets/colors'
 import { devices } from '../../assets/devices'
+import { animations } from '../../assets/animations'
 
 const Navigation = styled.nav`
   list-style: none;
@@ -40,20 +41,112 @@ const LogoImg = styled(Img)`
 const Logo = styled(Link)`
   display: inline-flex;
   align-items: center;
-  margin: 1rem 0rem 0rem 3rem;
+  margin: 1.4rem 0rem 0rem 1.5rem;
   z-index: 1;
+  @media ${devices.tablet} {
+    margin-left: 3rem;
+  }
 `
 
-const NavLinkContainer = styled.div`
+const SmallLogo = styled.div`
+  display: block;
+  @media ${devices.laptop} {
+    display: none;
+  }
+`
+
+const LargeLogo = styled.div`
+  display: none;
+  @media ${devices.laptop} {
+    display: block;
+  }
+`
+
+const LargeNavLinkContainer = styled.div`
   @media ${devices.mobile} {
     display: none;
   }
   @media ${devices.tablet} {
     display: inline-flex;
     float: right;
-    margin: 2rem 3rem 0rem 0rem;
+    margin: 2.65rem 2.65rem 0rem 0rem;
     z-index: 1;
   }
 `
 
-export { Navigation, NavLink, Logo, LogoImg, NavLinkContainer }
+const SmallNavLinkContainer = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+  @media ${devices.mobile} {
+    position: relative;
+    display: inline-flex;
+    float: right;
+    margin: 3.25rem 1.5rem 0rem 0rem;
+    z-index: 1;
+  }
+  @media ${devices.tablet} {
+    display: none;
+  }
+`
+
+const fadeIn = keyframes`
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+`
+
+const fadeOut = keyframes`
+  0% { opacity: 100%; }
+  100% { opacity: 0%; }
+`
+
+const SmallMenuContainer = styled.div`
+  position: absolute;
+  z-index: 2;
+  background: ${colors.tan};
+  top: 1rem;
+  right: 1rem;
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: ${colors.darkGreen};
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  animation: ${(props) => (props.out ? fadeOut : fadeIn)}
+    ${animations.navBarFadeLength}s 1;
+  @media ${devices.laptop} {
+    display: none;
+  }
+`
+
+const SmallLinksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  > * {
+    margin: 1rem;
+  }
+`
+
+const CrossContainer = styled.div`
+  position: relative;
+  margin: 0.4rem auto auto 85%;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export {
+  Navigation,
+  NavLink,
+  Logo,
+  LogoImg,
+  SmallLogo,
+  LargeLogo,
+  LargeNavLinkContainer,
+  SmallNavLinkContainer,
+  SmallMenuContainer,
+  SmallLinksContainer,
+  CrossContainer
+}
