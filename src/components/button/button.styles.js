@@ -23,7 +23,7 @@ const ButtonContainer = styled.button`
 
   &:hover {
     background-color: ${(props) =>
-      props.primary ? `${colors.blue}` : 'inherit'};
+      props.primary ? `rgb(8, 61, 68, 0.8)` : 'inherit'};
     transition: 200ms;
     border: ${(props) => (props.primary ? 'none' : `2px solid ${props.color}`)};
     & > * {
