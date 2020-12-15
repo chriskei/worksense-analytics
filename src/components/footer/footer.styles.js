@@ -94,6 +94,10 @@ const FooterLink = styled(Link)`
   }
 
   &:hover {
+    & > ${H2} {
+      color: ${colors.darkGreen};
+      transition: 200ms;
+    }
     & > ${P} {
       color: ${colors.tan};
       transition: 200ms;

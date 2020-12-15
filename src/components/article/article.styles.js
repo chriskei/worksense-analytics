@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { devices } from '../../assets/devices'
+import { colors } from '../../assets/colors'
 
 const ArticleContainer = styled.div`
   display: flex;
@@ -62,6 +63,13 @@ const TextContainer = styled.div`
 
 const LinkText = styled.a`
   text-decoration: none;
+
+  &:hover {
+    & > * {
+    color: ${colors.blue};
+    transition: 200ms;
+    }
+  }
 `
 
 export { ArticleContainer, LogoContainer, TextContainer, LinkText }

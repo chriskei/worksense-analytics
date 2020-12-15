@@ -35,23 +35,27 @@ import { Bias } from '../components/bias/bias'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const textNodes = get(this, 'props.data.allContentfulText.nodes')
-    const heroData = get(this, 'props.data.contentfulHero')
-    const firstStats = get(this, 'props.data.contentfulStats')
-    const talentLifecycle = get(this, 'props.data.contentfulTalentLifecycle')
+    const pageData = get(this, 'props.data.contentfulLandingPage')
+    const heroData = pageData.hero
+    const mission = pageData.missionStatement
+    const firstStats = pageData.firstStatistics
+    const talentLifecycle = pageData.talentLifecycle
     const lifecycleStages = talentLifecycle.lifecycleStages
-    const { biasHeader, biasImage, largeBody, smallBody, learnMoreUrl } = get(
-      this,
-      'props.data.contentfulBias'
-    )
+    const {
+      biasHeader,
+      biasImage,
+      largeBody,
+      smallBody,
+      learnMoreUrl
+    } = pageData.bias
     const {
       pressHeader,
       articleImages,
       articleExcerpts,
       articleTitles,
       articleUrLs
-    } = get(this, 'props.data.contentfulPress')
-    const { header, button } = get(this, 'props.data.contentfulSmallProducts')
+    } = pageData.press
+    const { header, button } = pageData.smallProducts
 
     return (
       <Layout>
@@ -74,7 +78,7 @@ class RootIndex extends React.Component {
             <Button color={colors.darkGreen} text="Learn More" />
           </Link>
         </ButtonsContainer>
-        <MissionStatement text={textNodes[0].text.text} />
+        <MissionStatement text={mission.text.text} />
         <FirstStats
           images={firstStats.images}
           header={firstStats.header}
@@ -139,118 +143,82 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulHero(contentful_id: { eq: "1tU16dA9FYnz2O11eaCJiN" }) {
-      header
-      secondaryText {
-        secondaryText
-      }
-      image {
-        fluid {
-          aspectRatio
-          src
-          sizes
-          srcSet
+    contentfulLandingPage(contentful_id: { eq: "5dUtfY1OleZUZXZfUBuF7Z" }) {
+      hero {
+        header
+        secondaryText {
+          secondaryText
+        }
+        image {
+          fluid {
+            aspectRatio
+            src
+            sizes
+            srcSet
+          }
         }
       }
-    }
-    contentfulAsset(contentful_id: { eq: "3tfuyKj6fbYPO0dFuphBAO" }) {
-      fluid {
-        aspectRatio
-        src
-        sizes
-        srcSet
-      }
-    }
-    contentfulProductSpecs(contentful_id: { eq: "7HwVJlMb3EG03qCpa0HZN3" }) {
-      title
-      specDescription {
-        specDescription
-      }
-      productImage {
-        fluid {
-          src
-          aspectRatio
-          sizes
-        }
-      }
-    }
-    allContentfulText(
-      filter: {
-        contentful_id: {
-          in: [
-            "4h3STN4dSDWuKkpmjOXskp"
-            "7ACUCUJzqiq7ivtRA7BOJv"
-            "1T9C8FZgiv01te3bLaw3BS"
-            "1lwPdXfrVB7f3qTLBkDOEn"
-            "4Jzc5NlkyQb1Q0EOvCZEww"
-            "3uMgGxmfbdUp6kbhIWNur6"
-            "19Zz0RUKpy1FQULSR783EM"
-            "v1VPCeu4WaWIdpM5pmDxc"
-          ]
-        }
-      }
-    ) {
-      nodes {
+      missionStatement {
         text {
           text
         }
       }
-    }
-    contentfulStats(contentful_id: { eq: "69XcYs1lBwiqxP1UqZXLgB" }) {
-      id
-      images {
-        fluid {
-          src
-          sizes
-          aspectRatio
-        }
-      }
-      header
-      description
-    }
-    contentfulBias {
-      biasHeader
-      biasImage {
-        fluid {
-          sizes
-          src
-          aspectRatio
-        }
-      }
-      largeBody
-      smallBody
-      learnMoreUrl
-    }
-    contentfulPress(contentful_id: { eq: "78QNMvTwaklGvUvTzJBZvg" }) {
-      articleExcerpts
-      articleImages {
-        fluid {
-          sizes
-          src
-          aspectRatio
-        }
-      }
-      articleTitles
-      articleUrLs
-      pressHeader
-    }
-    contentfulSmallProducts(contentful_id: { eq: "5P0oBlBPiPvXrtrF2sHBlG" }) {
-      button
-      header
-    }
-    contentfulTalentLifecycle(contentful_id: { eq: "3ig7cPwCbDY350SaJ7Bye1" }) {
-      header
-      lifecycleStages {
-        title
-        specDescription {
-          specDescription
-        }
-        productImage {
+      firstStatistics {
+        id
+        images {
           fluid {
-            aspectRatio
             src
+            sizes
+            aspectRatio
           }
         }
+        header
+        description
+      }
+      talentLifecycle {
+        header
+        lifecycleStages {
+          title
+          specDescription {
+            specDescription
+          }
+          productImage {
+            fluid {
+              aspectRatio
+              src
+            }
+          }
+        }
+      }
+      bias {
+        biasHeader
+        biasImage {
+          fluid {
+            sizes
+            src
+            aspectRatio
+          }
+        }
+        largeBody
+        smallBody
+        learnMoreUrl
+      }
+      smallProducts {
+        button
+        header
+      }
+      press {
+        articleExcerpts
+        articleImages {
+          fluid {
+            sizes
+            src
+            aspectRatio
+          }
+        }
+        articleTitles
+        articleUrLs
+        pressHeader
       }
     }
   }
