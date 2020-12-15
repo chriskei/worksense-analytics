@@ -12,7 +12,7 @@ const fonts = {
 
 const fontSizes = {
   name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
-  position: `calc(13px + (22 - 13) * ((100vw - 375px) / (1920 - 375)))`,
+  position: `calc(12px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
   text: `calc(10px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`
 }
 
@@ -51,6 +51,7 @@ const TextOverlay = styled.div`
   position: absolute;
   font-size: ${fontSizes.text};
   font-family: ${fonts.poppinsRegular};
+  color: ${colors.darkGreen};
   @media ${devices.mobile} {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -58,6 +59,7 @@ const TextOverlay = styled.div`
   }
   @media ${devices.tablet} {
     padding: 3rem;
+    line-height: 20px;
   }
   @media ${devices.desktop} {
     padding: 3rem;
@@ -96,7 +98,7 @@ const Text = styled.p`
 
 const Email = styled.a`
   text-decoration: none;
-  color: black;
+  color: ${colors.darkGreen};
 
   &:hover {
     color: ${colors.blue};
@@ -156,15 +158,16 @@ const LeftContainer = styled.div`
 const MemberName = styled.h2`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.name};
-  color: ${(props) => props.color};
+  color: ${colors.darkGreen};
   margin: auto;
   padding-top: 1rem;
 `
 
 const MemberPosition = styled.p`
-  font-family: ${fonts.poppinsRegular};
+  font-family: ${fonts.poppins};
   font-size: ${fontSizes.position};
-  color: ${(props) => props.color};
+  color: ${colors.darkGreen};
+  text-transform: uppercase;
   margin: auto;
 `
 
