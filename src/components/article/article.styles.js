@@ -66,8 +66,8 @@ const LinkText = styled.a`
 
   &:hover {
     & > * {
-    color: ${colors.blue};
-    transition: 200ms;
+      color: ${colors.blue};
+      transition: 200ms;
     }
   }
 `
