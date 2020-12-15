@@ -25,21 +25,24 @@ const ProductHeroContainer = styled.div`
 const ProductPageContainer = styled.div`
   margin: auto;
   @media ${devices.mobile} {
-    padding-top: 25rem;
+    padding-top: 15rem;
     width: 20rem;
   }
   @media (min-width: 573px) {
-    padding-top: 18rem;
+    padding-top: 12rem;
   }
   @media ${devices.tablet} {
-    padding-top: 8rem;
+    padding-top: 0;
     width: 40rem;
   }
   @media ${devices.laptop} {
     width: 52rem;
   }
   @media ${devices.desktop} {
-    width: 80rem;
+    width: 64.375rem;
+  }
+  & > div {
+    padding: 0;
   }
 `
 
