@@ -101,7 +101,7 @@ const Email = styled.a`
   color: ${colors.darkGreen};
 
   &:hover {
-    color: rgb(8, 61, 68, 0.65);
+    color: ${colors.blue};
     transition: 200ms;
   }
 `
