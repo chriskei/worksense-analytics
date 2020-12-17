@@ -55,9 +55,11 @@ const ContactCard = (props) => {
           <Icon href={socialMedia} target="_blank">
             <LinkedIn />
           </Icon>
-          <Icon href={twitter} target="_blank">
-            <Twitter />
-          </Icon>
+          {twitter !== 'None' && (
+            <Icon href={twitter} target="_blank">
+              <Twitter />
+            </Icon>
+          )}
         </RightContainer>
       </InfoContainer>
     </ContactCardContainer>
