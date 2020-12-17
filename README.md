@@ -92,7 +92,7 @@ Note that in general, you don't need to touch these unless you want to change yo
 
 ## <a name="issues"></a> Outstanding issues
 
-All issues can be found in the "Projects" tab of Github under "Worksense Jira".
+All outstanding issues can be found in the "Issues" tab of Github.
 
 ## <a name="devs"></a> Scout Developers
 
